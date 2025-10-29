@@ -3,16 +3,21 @@
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp, Users, Award } from "lucide-react";
 import Link from "next/link";
+import { useCountUp } from "@/hooks/useCountUp";
 
 export default function Hero() {
+  const empresasCount = useCountUp(500, 2000);
+  const creditosCount = useCountUp(95, 2000);
+  const experienciaCount = useCountUp(10, 2000);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0056D6] via-valto-blue to-[#0039A0] pt-20">
       {/* Animated background patterns */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
-          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-cyan-400 rounded-full blur-3xl opacity-15"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-300 rounded-full blur-3xl opacity-10"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 md:w-96 md:h-96 bg-blue-400 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute bottom-20 right-10 w-80 h-80 md:w-[500px] md:h-[500px] bg-cyan-400 rounded-full blur-3xl opacity-15"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[600px] md:h-[600px] bg-blue-300 rounded-full blur-3xl opacity-10"></div>
         </div>
         
         {/* Decorative elements */}
@@ -72,19 +77,29 @@ export default function Hero() {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link
-                href="/contacto"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-white text-valto-blue rounded-lg font-semibold text-lg hover:scale-105 transition-all shadow-xl hover:shadow-2xl"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Consulta Gratuita
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/servicios"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all border-2 border-white/30"
+                <Link
+                  href="#contacto"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-white text-valto-blue rounded-lg font-semibold text-lg transition-all shadow-xl hover:shadow-2xl"
+                >
+                  Consulta Gratuita
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Conocer Servicios
-              </Link>
+                <Link
+                  href="#servicios"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all border-2 border-white/30"
+                >
+                  Conocer Servicios
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Stats */}
@@ -94,16 +109,16 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/20"
             >
-              <div>
-                <div className="text-3xl lg:text-4xl font-bold mb-1">500+</div>
+              <div ref={empresasCount.ref}>
+                <div className="text-3xl lg:text-4xl font-bold mb-1">{empresasCount.count}+</div>
                 <div className="text-sm text-blue-200">Empresas Asesoradas</div>
               </div>
-              <div>
-                <div className="text-3xl lg:text-4xl font-bold mb-1">95%</div>
+              <div ref={creditosCount.ref}>
+                <div className="text-3xl lg:text-4xl font-bold mb-1">{creditosCount.count}%</div>
                 <div className="text-sm text-blue-200">Créditos Aprobados</div>
               </div>
-              <div>
-                <div className="text-3xl lg:text-4xl font-bold mb-1">10+</div>
+              <div ref={experienciaCount.ref}>
+                <div className="text-3xl lg:text-4xl font-bold mb-1">{experienciaCount.count}+</div>
                 <div className="text-sm text-blue-200">Años Experiencia</div>
               </div>
             </motion.div>

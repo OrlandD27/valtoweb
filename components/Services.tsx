@@ -135,13 +135,18 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Link
-            href="/servicios"
-            className="inline-flex items-center px-8 py-4 bg-valto-blue text-white rounded-lg font-semibold text-lg hover:bg-valto-blue-dark transition-all hover:scale-105 shadow-lg"
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Ver Todos los Servicios
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
+            <Link
+              href="/servicios"
+              className="inline-flex items-center px-8 py-4 bg-valto-blue text-white rounded-lg font-semibold text-lg hover:bg-valto-blue-dark transition-all shadow-lg hover:shadow-2xl"
+            >
+              Ver Todos los Servicios
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
