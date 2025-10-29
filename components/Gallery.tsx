@@ -74,7 +74,7 @@ export default function Gallery() {
   const selectedImageData = galleryImages.find(img => img.id === selectedImage);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="galeria">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

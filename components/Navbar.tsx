@@ -6,11 +6,12 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "/servicios" },
-  { name: "Nosotros", href: "/nosotros" },
-  { name: "Capacitaciones", href: "/capacitaciones" },
-  { name: "Contacto", href: "/contacto" },
+  { name: "Inicio", href: "#" },
+  { name: "Servicios", href: "#servicios" },
+  { name: "Nosotros", href: "#nosotros" },
+  { name: "Casos de Éxito", href: "#casos-exito" },
+  { name: "Galería", href: "#galeria" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -134,18 +135,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-700 font-semibold py-3 px-4 rounded-xl transition-all duration-300 hover:text-white"
-                    style={{
-                      backgroundColor: 'transparent'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#0047BB';
-                      e.currentTarget.style.color = 'white';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'transparent';
-                      e.currentTarget.style.color = '#374151';
-                    }}
+                    className="block text-gray-700 font-semibold py-3 px-4 rounded-xl transition-all duration-300"
                   >
                     {item.name}
                   </Link>
@@ -158,12 +148,10 @@ export default function Navbar() {
                 className="pt-4"
               >
                 <Link
-                  href="/contacto"
+                  href="#contacto"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
+                  className="block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg"
                   style={{ backgroundColor: '#0047BB' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#003088'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0047BB'}
                 >
                   Agendar Consulta
                 </Link>
