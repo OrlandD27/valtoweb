@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import FloatingSocial from "@/components/FloatingSocial";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <CTA />
       <Footer />
       <WhatsAppButton />
+      <FloatingSocial />
     </main>
   );
 }

@@ -12,10 +12,13 @@ export default function Hero() {
   const experienciaCount = useCountUp(4, 2000);
 
   // Estado para tipo de cambio
-  const [exchangeRate, setExchangeRate] = useState<number>(3.75);
+  const [exchangeRateBuy, setExchangeRateBuy] = useState<number>(3.75);
+  const [exchangeRateSell, setExchangeRateSell] = useState<number>(3.78);
   const [rateChange, setRateChange] = useState<number>(0);
   const [historicalData, setHistoricalData] = useState<number[]>([3.72, 3.73, 3.71, 3.74, 3.73, 3.75]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [currencyMode, setCurrencyMode] = useState<'USD_TO_PEN' | 'PEN_TO_USD'>('USD_TO_PEN');
+  const [inputAmount, setInputAmount] = useState<string>('100');
 
   useEffect(() => {
     // Función para obtener el tipo de cambio real
@@ -27,9 +30,14 @@ export default function Hero() {
         
         if (data && data.rates && data.rates.PEN) {
           const newRate = data.rates.PEN;
-          setRateChange(newRate - exchangeRate);
-          setExchangeRate(newRate);
-          setHistoricalData(prev => [...prev.slice(-5), newRate]);
+          // Simular spread de compra/venta (diferencia típica 0.03)
+          const buyRate = newRate - 0.015;
+          const sellRate = newRate + 0.015;
+          
+          setRateChange(buyRate - exchangeRateBuy);
+          setExchangeRateBuy(buyRate);
+          setExchangeRateSell(sellRate);
+          setHistoricalData(prev => [...prev.slice(-5), buyRate]);
           setLoading(false);
         }
       } catch (error) {
@@ -46,6 +54,32 @@ export default function Hero() {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Calcular conversión
+  const calculateConversion = () => {
+    const amount = parseFloat(inputAmount) || 0;
+    if (currencyMode === 'USD_TO_PEN') {
+      return (amount * exchangeRateBuy).toFixed(2);
+    } else {
+      return (amount / exchangeRateSell).toFixed(2);
+    }
+  };
+
+  const handleCurrencySwitch = () => {
+    setCurrencyMode(prev => {
+      const newMode = prev === 'USD_TO_PEN' ? 'PEN_TO_USD' : 'USD_TO_PEN';
+      // Convertir el monto actual al nuevo modo
+      const amount = parseFloat(inputAmount) || 0;
+      if (newMode === 'USD_TO_PEN') {
+        // Si cambiamos a USD->PEN, el input debe ser en USD
+        setInputAmount((amount / exchangeRateBuy).toFixed(2));
+      } else {
+        // Si cambiamos a PEN->USD, el input debe ser en PEN
+        setInputAmount((amount * exchangeRateBuy).toFixed(2));
+      }
+      return newMode;
+    });
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -325,45 +359,117 @@ export default function Hero() {
                   </motion.div>
                   <div>
                     <div className="text-white font-semibold">Tipo de Cambio</div>
-                    <div className="text-blue-200 text-xs">USD/PEN</div>
+                    <div className="text-blue-200 text-xs">
+                      {currencyMode === 'USD_TO_PEN' ? 'Dólares a Soles' : 'Soles a Dólares'}
+                    </div>
                   </div>
                 </div>
-                <div className="text-right">
-                  <motion.div 
-                    className="text-2xl font-bold text-white"
-                    animate={{
-                      scale: loading ? [1, 1.05, 1] : 1,
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: loading ? Infinity : 0,
-                    }}
-                  >
-                    {loading ? (
-                      <span className="animate-pulse">S/ ---.---</span>
-                    ) : (
-                      `S/ ${exchangeRate.toFixed(3)}`
-                    )}
-                  </motion.div>
-                  <motion.div 
-                    className={`text-xs flex items-center justify-end ${rateChange >= 0 ? 'text-green-300' : 'text-red-300'}`}
-                    animate={{
-                      y: rateChange >= 0 ? [-2, 0, -2] : [2, 0, 2],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                    }}
-                  >
-                    {!loading && (
-                      <>
-                        {rateChange >= 0 ? '↑' : '↓'} {Math.abs(rateChange).toFixed(3)}
-                      </>
-                    )}
-                  </motion.div>
-                </div>
+                <button
+                  onClick={handleCurrencySwitch}
+                  className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg text-white text-xs font-semibold transition-all"
+                >
+                  ⇄
+                </button>
               </motion.div>
-              <div className="h-24 bg-white/5 rounded-lg flex items-end justify-around p-3 gap-1">
+              
+              {/* Tasas Compra/Venta */}
+              <div className="bg-white/5 rounded-lg p-3 mb-3">
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div>
+                    <div className="text-blue-200 text-xs mb-1">Compra</div>
+                    <div className="text-base font-bold text-white">
+                      {loading ? (
+                        <span className="animate-pulse text-xs">-.---</span>
+                      ) : currencyMode === 'USD_TO_PEN' ? (
+                        `S/ ${exchangeRateBuy.toFixed(3)}`
+                      ) : (
+                        `$ ${(1 / exchangeRateSell).toFixed(3)}`
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="border-x border-white/20">
+                    <div className="text-blue-200 text-xs mb-1">Tipo Cambio</div>
+                    <div className="text-lg font-bold text-green-400">
+                      {loading ? (
+                        <span className="animate-pulse text-xs">-.---</span>
+                      ) : currencyMode === 'USD_TO_PEN' ? (
+                        `${((exchangeRateBuy + exchangeRateSell) / 2).toFixed(3)}`
+                      ) : (
+                        `${(1 / ((exchangeRateBuy + exchangeRateSell) / 2)).toFixed(3)}`
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <div className="text-blue-200 text-xs mb-1">Venta</div>
+                    <div className="text-base font-bold text-white">
+                      {loading ? (
+                        <span className="animate-pulse text-xs">-.---</span>
+                      ) : currencyMode === 'USD_TO_PEN' ? (
+                        `S/ ${exchangeRateSell.toFixed(3)}`
+                      ) : (
+                        `$ ${(1 / exchangeRateBuy).toFixed(3)}`
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Convertidor Móvil */}
+              <div className="bg-white/5 rounded-lg p-3 mb-3">
+                <div className="text-blue-200 text-xs mb-2">Tú Envías</div>
+                <div className="flex items-center gap-2 mb-2">
+                  <input
+                    type="number"
+                    value={inputAmount}
+                    onChange={(e) => setInputAmount(e.target.value)}
+                    className="flex-1 bg-white/10 text-white text-lg font-bold outline-none rounded px-2 py-1"
+                    placeholder="100"
+                  />
+                  <span className="bg-valto-dark px-2 py-1 rounded text-white text-xs font-bold">
+                    {currencyMode === 'USD_TO_PEN' ? 'Dólares' : 'Soles'}
+                  </span>
+                </div>
+                
+                <div className="flex justify-center -my-1">
+                  <button
+                    onClick={handleCurrencySwitch}
+                    className="bg-white/20 w-7 h-7 rounded-full flex items-center justify-center text-white text-sm transition-all hover:rotate-180 duration-300"
+                  >
+                    ⇄
+                  </button>
+                </div>
+
+                <div className="text-blue-200 text-xs mb-2 mt-2">Tú Recibes</div>
+                <div className="flex items-center gap-2">
+                  <div className="flex-1 bg-white/10 text-white text-lg font-bold rounded px-2 py-1">
+                    {calculateConversion()}
+                  </div>
+                  <span className="bg-valto-dark px-2 py-1 rounded text-white text-xs font-bold">
+                    {currencyMode === 'USD_TO_PEN' ? 'Soles' : 'Dólares'}
+                  </span>
+                </div>
+              </div>
+              
+              <motion.div 
+                className={`text-xs flex items-center justify-center ${rateChange >= 0 ? 'text-green-300' : 'text-red-300'}`}
+                animate={{
+                  y: rateChange >= 0 ? [-2, 0, -2] : [2, 0, 2],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                }}
+              >
+                {!loading && (
+                  <>
+                    {rateChange >= 0 ? '↑' : '↓'} {Math.abs(rateChange).toFixed(3)}
+                  </>
+                )}
+              </motion.div>
+              
+              <div className="h-24 bg-white/5 rounded-lg flex items-end justify-around p-3 gap-1 mt-3">
                 {historicalData.map((rate, i) => {
                   const minRate = Math.min(...historicalData);
                   const maxRate = Math.max(...historicalData);
@@ -396,7 +502,7 @@ export default function Hero() {
                   repeat: Infinity,
                 }}
               >
-                {loading ? 'Cargando...' : 'Actualización cada minuto'}
+                {loading ? 'Cargando...' : 'Tipo de Cambio  del dólar hoy en Perú'}
               </motion.div>
             </motion.div>
           </motion.div>
@@ -406,9 +512,9 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:block lg:ml-12 xl:ml-20"
           >
-            <div className="relative">
+            <div className="relative ml-8">
               {/* Main card - Tipo de Cambio */}
               <motion.div
                 animate={{
@@ -419,11 +525,11 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl"
+                className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl max-w-lg"
               >
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-12">
                       <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                         <DollarSign className="w-8 h-8 text-white" />
                       </div>
@@ -432,30 +538,120 @@ export default function Hero() {
                           Tipo de Cambio
                         </div>
                         <div className="text-blue-200 text-sm">
-                          USD/PEN
+                          {currencyMode === 'USD_TO_PEN' ? 'Dólares a Soles' : 'Soles a Dólares'}
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-white">
-                        {loading ? (
-                          <span className="animate-pulse">S/ ---.---</span>
-                        ) : (
-                          `S/ ${exchangeRate.toFixed(3)}`
-                        )}
+                    <button
+                      onClick={() => setCurrencyMode(prev => prev === 'USD_TO_PEN' ? 'PEN_TO_USD' : 'USD_TO_PEN')}
+                      className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-xl text-white text-sm font-semibold transition-all hover:scale-105"
+                    >
+                      ⇄ Cambiar
+                    </button>
+                  </div>
+
+                  {/* Compra y Venta */}
+                  <div className="bg-white/5 rounded-lg p-3">
+                    <div className="flex justify-between items-center mb-2">
+                      <div>
+                        <div className="text-blue-200 text-xs mb-1">Compra</div>
+                        <div className="text-xl font-bold text-white">
+                          {loading ? (
+                            <span className="animate-pulse">-.---</span>
+                          ) : currencyMode === 'USD_TO_PEN' ? (
+                            `S/ ${exchangeRateBuy.toFixed(3)}`
+                          ) : (
+                            `$ ${(1 / exchangeRateSell).toFixed(3)}`
+                          )}
+                        </div>
                       </div>
-                      <div className={`text-sm flex items-center justify-end ${rateChange >= 0 ? 'text-green-300' : 'text-red-300'}`}>
-                        {!loading && (
-                          <>
-                            {rateChange >= 0 ? '↑' : '↓'} {Math.abs(rateChange).toFixed(3)}
-                          </>
-                        )}
+                      
+                      <div className="text-center">
+                        <div className="text-blue-200 text-xs mb-1">Tipo de Cambio</div>
+                        <div className="text-2xl font-bold text-green-400">
+                          {loading ? (
+                            <span className="animate-pulse">-.---</span>
+                          ) : currencyMode === 'USD_TO_PEN' ? (
+                            `S/ ${((exchangeRateBuy + exchangeRateSell) / 2).toFixed(3)}`
+                          ) : (
+                            `$ ${(1 / ((exchangeRateBuy + exchangeRateSell) / 2)).toFixed(3)}`
+                          )}
+                        </div>
+                      </div>
+                      
+                      <div className="text-right">
+                        <div className="text-blue-200 text-xs mb-1">Venta</div>
+                        <div className="text-xl font-bold text-white">
+                          {loading ? (
+                            <span className="animate-pulse">-.---</span>
+                          ) : currencyMode === 'USD_TO_PEN' ? (
+                            `S/ ${exchangeRateSell.toFixed(3)}`
+                          ) : (
+                            `$ ${(1 / exchangeRateBuy).toFixed(3)}`
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
 
+                  {/* Convertidor Interactivo */}
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-lg p-3 border border-white/20">
+                    <div className="text-white text-xs font-semibold mb-2 text-center">
+                      Calculadora
+                    </div>
+                    
+                    {/* Input - Tú Envías */}
+                    <div className="bg-white/10 rounded-lg p-2 mb-2">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="text-blue-200 text-xs">Envías</span>
+                        <span className="bg-valto-dark px-2 py-0.5 rounded text-white text-xs font-bold">
+                          {currencyMode === 'USD_TO_PEN' ? 'Dólares' : 'Soles'}
+                        </span>
+                      </div>
+                      <input
+                        type="number"
+                        value={inputAmount}
+                        onChange={(e) => setInputAmount(e.target.value)}
+                        className="w-full bg-transparent text-white text-xl font-bold outline-none"
+                        placeholder="100"
+                      />
+                    </div>
+
+                    {/* Botón de cambio */}
+                    <div className="flex justify-center -my-1 relative z-10">
+                      <button
+                        onClick={handleCurrencySwitch}
+                        className="bg-white/20 hover:bg-white/30 w-8 h-8 rounded-full flex items-center justify-center text-white text-base font-bold transition-all hover:scale-110 hover:rotate-180 duration-300 border-2 border-valto-blue"
+                      >
+                        ⇄
+                      </button>
+                    </div>
+
+                    {/* Output - Tú Recibes */}
+                    <div className="bg-white/10 rounded-lg p-2 mt-2">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="text-blue-200 text-xs">Recibes</span>
+                        <span className="bg-valto-dark px-2 py-0.5 rounded text-white text-xs font-bold">
+                          {currencyMode === 'USD_TO_PEN' ? 'Soles' : 'Dólares'}
+                        </span>
+                      </div>
+                      <div className="text-white text-xl font-bold">
+                        {calculateConversion()}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Cambio */}
+                  <div className={`text-xs flex items-center justify-center ${rateChange >= 0 ? 'text-green-300' : 'text-red-300'}`}>
+                    {!loading && (
+                      <>
+                        {rateChange >= 0 ? '↑' : '↓'} {Math.abs(rateChange).toFixed(3)} últimas 24h
+                      </>
+                    )}
+                  </div>
+
                   {/* Gráfico mini */}
-                  <div className="h-40 bg-white/5 rounded-xl flex items-end justify-around p-4 gap-2">
+                  <div className="h-32 bg-white/5 rounded-lg flex items-end justify-around p-3 gap-2">
                     {historicalData.map((rate, i) => {
                       const minRate = Math.min(...historicalData);
                       const maxRate = Math.max(...historicalData);
@@ -478,8 +674,8 @@ export default function Hero() {
                     })}
                   </div>
                   
-                  <div className="text-xs text-blue-200 text-center">
-                    {loading ? 'Cargando...' : 'Actualización cada minuto'}
+                  <div className="text-sm text-blue-200 text-center">
+                    {loading ? 'Cargando...' : 'Tipo de Cambio  del dólar hoy en Perú'}
                   </div>
                 </div>
               </motion.div>
