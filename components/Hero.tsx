@@ -7,9 +7,9 @@ import { useCountUp } from "@/hooks/useCountUp";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const empresasCount = useCountUp(500, 2000);
+  const empresasCount = useCountUp(50, 2000);
   const creditosCount = useCountUp(95, 2000);
-  const experienciaCount = useCountUp(10, 2000);
+  const experienciaCount = useCountUp(4, 2000);
 
   // Estado para tipo de cambio
   const [exchangeRate, setExchangeRate] = useState<number>(3.75);
@@ -211,7 +211,7 @@ export default function Hero() {
             >
               <Award className="w-5 h-5 mr-2" />
               <span className="text-sm font-medium">
-                +10 años de experiencia empresarial
+                Asesorate con nosotros.
               </span>
             </motion.div>
 
@@ -233,8 +233,8 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed"
             >
-              Brindamos asesoría especializada en créditos, financiamiento y
-              capacitación empresarial para emprendedores y empresarios.
+              Valto Management Consulting es una firma de consultoría,
+              para negocios orientada a la pequeña y micro Empresa.
             </motion.p>
 
             <motion.div
@@ -281,7 +281,7 @@ export default function Hero() {
               </div>
               <div ref={creditosCount.ref}>
                 <div className="text-3xl lg:text-4xl font-bold mb-1">{creditosCount.count}%</div>
-                <div className="text-sm text-blue-200">Créditos Aprobados</div>
+                <div className="text-sm text-blue-200">De las Empresas confian en nosotros.</div>
               </div>
               <div ref={experienciaCount.ref}>
                 <div className="text-3xl lg:text-4xl font-bold mb-1">{experienciaCount.count}+</div>

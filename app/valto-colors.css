@@ -1,72 +1,121 @@
-/* VALTO Colors */
+/* VALTO Official Colors - Based on Pantone Guide */
+
+/* Primary Color - Pantone 2728 C */
 .bg-valto-blue {
   background-color: #0047BB;
-}
-
-.bg-valto-blue-dark {
-  background-color: #003088;
-}
-
-.bg-valto-blue-light {
-  background-color: #4A90E2;
 }
 
 .text-valto-blue {
   color: #0047BB;
 }
 
-.text-valto-blue-dark {
-  color: #003088;
-}
-
-.text-valto-blue-light {
-  color: #4A90E2;
-}
-
 .border-valto-blue {
   border-color: #0047BB;
 }
 
+/* Secondary Dark - Pantone 2147 C */
+.bg-valto-blue-dark {
+  background-color: #002677;
+}
+
+.text-valto-blue-dark {
+  color: #002677;
+}
+
 .border-valto-blue-dark {
-  border-color: #003088;
+  border-color: #002677;
 }
 
-.border-valto-blue-light {
-  border-color: #4A90E2;
+/* Secondary Light - Pantone 2162 U */
+.bg-valto-gray {
+  background-color: #9DA5B3;
 }
 
+.text-valto-gray {
+  color: #9DA5B3;
+}
+
+.border-valto-gray {
+  border-color: #9DA5B3;
+}
+
+/* Accent White - Bright White */
+.bg-valto-white {
+  background-color: #B7BCB4;
+}
+
+.text-valto-white {
+  color: #B7BCB4;
+}
+
+/* Gradient Classes */
 .from-valto-blue {
   --tw-gradient-from: #0047BB var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 71 187 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-valto-blue-dark {
-  --tw-gradient-to: rgb(0 48 136 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #003088 var(--tw-gradient-via-position), var(--tw-gradient-to);
+.via-valto-blue {
+  --tw-gradient-to: rgb(0 71 187 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #0047BB var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-valto-blue {
   --tw-gradient-to: #0047BB var(--tw-gradient-to-position);
 }
 
-.to-valto-blue-light {
-  --tw-gradient-to: #4A90E2 var(--tw-gradient-to-position);
+.from-valto-blue-dark {
+  --tw-gradient-from: #002677 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 38 119 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-valto-blue-light {
-  --tw-gradient-to: rgb(74 144 226 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #4A90E2 var(--tw-gradient-via-position), var(--tw-gradient-to);
+.via-valto-blue-dark {
+  --tw-gradient-to: rgb(0 38 119 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #002677 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.to-valto-blue-dark {
+  --tw-gradient-to: #002677 var(--tw-gradient-to-position);
+}
+
+.from-valto-gray {
+  --tw-gradient-from: #9DA5B3 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(157 165 179 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-valto-gray {
+  --tw-gradient-to: rgb(157 165 179 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #9DA5B3 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-valto-gray {
+  --tw-gradient-to: #9DA5B3 var(--tw-gradient-to-position);
+}
+
+/* Hover States */
 .hover\:bg-valto-blue:hover {
   background-color: #0047BB;
 }
 
 .hover\:bg-valto-blue-dark:hover {
-  background-color: #003088;
+  background-color: #002677;
 }
 
 .hover\:text-valto-blue:hover {
   color: #0047BB;
+}
+
+.hover\:text-valto-blue-dark:hover {
+  color: #002677;
+}
+
+/* Focus States */
+.focus\:ring-valto-blue:focus {
+  --tw-ring-color: #0047BB;
+}
+
+.focus\:border-valto-blue:focus {
+  border-color: #0047BB;
 }

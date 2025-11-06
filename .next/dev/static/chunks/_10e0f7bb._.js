@@ -388,9 +388,9 @@ var _s = __turbopack_context__.k.signature();
 ;
 function Hero() {
     _s();
-    const empresasCount = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCountUp$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCountUp"])(500, 2000);
+    const empresasCount = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCountUp$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCountUp"])(50, 2000);
     const creditosCount = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCountUp$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCountUp"])(95, 2000);
-    const experienciaCount = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCountUp$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCountUp"])(10, 2000);
+    const experienciaCount = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useCountUp$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCountUp"])(4, 2000);
     // Estado para tipo de cambio
     const [exchangeRate, setExchangeRate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(3.75);
     const [rateChange, setRateChange] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -756,7 +756,7 @@ function Hero() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "text-sm font-medium",
-                                            children: "+10 años de experiencia empresarial"
+                                            children: "Asesorate con nosotros."
                                         }, void 0, false, {
                                             fileName: "[project]/components/Hero.tsx",
                                             lineNumber: 213,
@@ -811,7 +811,7 @@ function Hero() {
                                         delay: 0.4
                                     },
                                     className: "text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed",
-                                    children: "Brindamos asesoría especializada en créditos, financiamiento y capacitación empresarial para emprendedores y empresarios."
+                                    children: "Valto Management Consulting es una firma de consultoría, para negocios orientada a la pequeña y micro Empresa."
                                 }, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
                                     lineNumber: 230,
@@ -946,7 +946,7 @@ function Hero() {
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "text-sm text-blue-200",
-                                                    children: "Créditos Aprobados"
+                                                    children: "De las Empresas confian en nosotros."
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Hero.tsx",
                                                     lineNumber: 284,

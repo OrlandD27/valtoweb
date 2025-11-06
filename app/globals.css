@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "./valto-colors.css";
 
+/* Tipografías VALTO */
+@font-face {
+  font-family: 'Futura LT';
+  src: local('Futura'), local('Futura LT');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,9 +19,24 @@ html, body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Futura LT', 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Clases de tipografía personalizadas */
+.font-futura-lux {
+  font-family: 'Futura', 'Futura LT', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.font-futura-book {
+  font-family: 'Futura LT', 'Futura', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
 }

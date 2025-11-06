@@ -469,10 +469,6 @@
     inset: calc(var(--spacing) * 0);
   }
 
-  .-top-8 {
-    top: calc(var(--spacing) * -8);
-  }
-
   .-top-10 {
     top: calc(var(--spacing) * -10);
   }
@@ -515,10 +511,6 @@
 
   .-right-6 {
     right: calc(var(--spacing) * -6);
-  }
-
-  .-right-8 {
-    right: calc(var(--spacing) * -8);
   }
 
   .-right-10 {
@@ -2582,36 +2574,44 @@
   background-color: #0047bb;
 }
 
-.bg-valto-blue-dark {
-  background-color: #003088;
-}
-
-.bg-valto-blue-light {
-  background-color: #4a90e2;
-}
-
 .text-valto-blue {
   color: #0047bb;
-}
-
-.text-valto-blue-dark {
-  color: #003088;
-}
-
-.text-valto-blue-light {
-  color: #4a90e2;
 }
 
 .border-valto-blue {
   border-color: #0047bb;
 }
 
-.border-valto-blue-dark {
-  border-color: #003088;
+.bg-valto-blue-dark {
+  background-color: #002677;
 }
 
-.border-valto-blue-light {
-  border-color: #4a90e2;
+.text-valto-blue-dark {
+  color: #002677;
+}
+
+.border-valto-blue-dark {
+  border-color: #002677;
+}
+
+.bg-valto-gray {
+  background-color: #9da5b3;
+}
+
+.text-valto-gray {
+  color: #9da5b3;
+}
+
+.border-valto-gray {
+  border-color: #9da5b3;
+}
+
+.bg-valto-white {
+  background-color: #b7bcb4;
+}
+
+.text-valto-white {
+  color: #b7bcb4;
 }
 
 .from-valto-blue {
@@ -2620,22 +2620,43 @@
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-valto-blue-dark {
-  --tw-gradient-to: #00308800 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #003088 var(--tw-gradient-via-position), var(--tw-gradient-to);
+.via-valto-blue {
+  --tw-gradient-to: #0047bb00 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #0047bb var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-valto-blue {
   --tw-gradient-to: #0047bb var(--tw-gradient-to-position);
 }
 
-.to-valto-blue-light {
-  --tw-gradient-to: #4a90e2 var(--tw-gradient-to-position);
+.from-valto-blue-dark {
+  --tw-gradient-from: #002677 var(--tw-gradient-from-position);
+  --tw-gradient-to: #00267700 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.via-valto-blue-light {
-  --tw-gradient-to: #4a90e200 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #4a90e2 var(--tw-gradient-via-position), var(--tw-gradient-to);
+.via-valto-blue-dark {
+  --tw-gradient-to: #00267700 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #002677 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-valto-blue-dark {
+  --tw-gradient-to: #002677 var(--tw-gradient-to-position);
+}
+
+.from-valto-gray {
+  --tw-gradient-from: #9da5b3 var(--tw-gradient-from-position);
+  --tw-gradient-to: #9da5b300 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-valto-gray {
+  --tw-gradient-to: #9da5b300 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #9da5b3 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-valto-gray {
+  --tw-gradient-to: #9da5b3 var(--tw-gradient-to-position);
 }
 
 .hover\:bg-valto-blue:hover {
@@ -2643,11 +2664,30 @@
 }
 
 .hover\:bg-valto-blue-dark:hover {
-  background-color: #003088;
+  background-color: #002677;
 }
 
 .hover\:text-valto-blue:hover {
   color: #0047bb;
+}
+
+.hover\:text-valto-blue-dark:hover {
+  color: #002677;
+}
+
+.focus\:ring-valto-blue:focus {
+  --tw-ring-color: #0047bb;
+}
+
+.focus\:border-valto-blue:focus {
+  border-color: #0047bb;
+}
+
+@font-face {
+  font-family: Futura LT;
+  src: local(Futura), local(Futura LT);
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -2662,7 +2702,21 @@ html, body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Futura LT, Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.font-futura-lux {
+  font-family: Futura, Futura LT, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.font-futura-book {
+  font-family: Futura LT, Futura, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @property --tw-translate-x {
