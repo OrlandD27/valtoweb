@@ -294,10 +294,10 @@ export default function Hero() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  href="#servicios"
+                  href="/videos"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all border-2 border-white/30"
                 >
-                  Conocer Servicios
+                  Aprende con nosotros
                 </Link>
               </motion.div>
             </motion.div>
@@ -413,42 +413,6 @@ export default function Hero() {
                       )}
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Convertidor Móvil */}
-              <div className="bg-white/5 rounded-lg p-3 mb-3">
-                <div className="text-blue-200 text-xs mb-2">Tú Envías</div>
-                <div className="flex items-center gap-2 mb-2">
-                  <input
-                    type="number"
-                    value={inputAmount}
-                    onChange={(e) => setInputAmount(e.target.value)}
-                    className="flex-1 bg-white/10 text-white text-lg font-bold outline-none rounded px-2 py-1"
-                    placeholder="100"
-                  />
-                  <span className="bg-valto-dark px-2 py-1 rounded text-white text-xs font-bold">
-                    {currencyMode === 'USD_TO_PEN' ? 'Dólares' : 'Soles'}
-                  </span>
-                </div>
-                
-                <div className="flex justify-center -my-1">
-                  <button
-                    onClick={handleCurrencySwitch}
-                    className="bg-white/20 w-7 h-7 rounded-full flex items-center justify-center text-white text-sm transition-all hover:rotate-180 duration-300"
-                  >
-                    ⇄
-                  </button>
-                </div>
-
-                <div className="text-blue-200 text-xs mb-2 mt-2">Tú Recibes</div>
-                <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-white/10 text-white text-lg font-bold rounded px-2 py-1">
-                    {calculateConversion()}
-                  </div>
-                  <span className="bg-valto-dark px-2 py-1 rounded text-white text-xs font-bold">
-                    {currencyMode === 'USD_TO_PEN' ? 'Soles' : 'Dólares'}
-                  </span>
                 </div>
               </div>
               
@@ -590,53 +554,6 @@ export default function Hero() {
                             `$ ${(1 / exchangeRateBuy).toFixed(3)}`
                           )}
                         </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Convertidor Interactivo */}
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-lg p-3 border border-white/20">
-                    <div className="text-white text-xs font-semibold mb-2 text-center">
-                      Calculadora
-                    </div>
-                    
-                    {/* Input - Tú Envías */}
-                    <div className="bg-white/10 rounded-lg p-2 mb-2">
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-blue-200 text-xs">Envías</span>
-                        <span className="bg-valto-dark px-2 py-0.5 rounded text-white text-xs font-bold">
-                          {currencyMode === 'USD_TO_PEN' ? 'Dólares' : 'Soles'}
-                        </span>
-                      </div>
-                      <input
-                        type="number"
-                        value={inputAmount}
-                        onChange={(e) => setInputAmount(e.target.value)}
-                        className="w-full bg-transparent text-white text-xl font-bold outline-none"
-                        placeholder="100"
-                      />
-                    </div>
-
-                    {/* Botón de cambio */}
-                    <div className="flex justify-center -my-1 relative z-10">
-                      <button
-                        onClick={handleCurrencySwitch}
-                        className="bg-white/20 hover:bg-white/30 w-8 h-8 rounded-full flex items-center justify-center text-white text-base font-bold transition-all hover:scale-110 hover:rotate-180 duration-300 border-2 border-valto-blue"
-                      >
-                        ⇄
-                      </button>
-                    </div>
-
-                    {/* Output - Tú Recibes */}
-                    <div className="bg-white/10 rounded-lg p-2 mt-2">
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-blue-200 text-xs">Recibes</span>
-                        <span className="bg-valto-dark px-2 py-0.5 rounded text-white text-xs font-bold">
-                          {currencyMode === 'USD_TO_PEN' ? 'Soles' : 'Dólares'}
-                        </span>
-                      </div>
-                      <div className="text-white text-xl font-bold">
-                        {calculateConversion()}
                       </div>
                     </div>
                   </div>

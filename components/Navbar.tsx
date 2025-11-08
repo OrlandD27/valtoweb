@@ -2,16 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { name: "Inicio", href: "#" },
+  { name: "Inicio", href: "/" },
   { name: "Servicios", href: "#servicios" },
   { name: "Nosotros", href: "#nosotros" },
-  { name: "Casos de Éxito", href: "#casos-exito" },
-  { name: "Galería", href: "#galeria" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Videos", href: "/videos" },
 ];
 
 export default function Navbar() {
@@ -155,6 +153,50 @@ export default function Navbar() {
                 >
                   Agendar Consulta
                 </Link>
+              </motion.div>
+
+              {/* Redes Sociales */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: (navItems.length + 1) * 0.1 }}
+                className="pt-6 border-t border-gray-200"
+              >
+                <p className="text-gray-500 text-sm font-semibold mb-4 px-4">Síguenos en:</p>
+                <div className="flex justify-center gap-4">
+                  <a
+                    href="https://www.facebook.com/gltbusinessconsulting"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg"
+                  >
+                    <Facebook size={20} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/valto.management/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 text-white rounded-xl flex items-center justify-center hover:scale-110 transition-all shadow-lg"
+                  >
+                    <Instagram size={20} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/gltbc/?viewAsMember=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-[#0077B5] text-white rounded-xl flex items-center justify-center hover:bg-[#006399] transition-all hover:scale-110 shadow-lg"
+                  >
+                    <Linkedin size={20} />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCeuMGEp2CE9-trNobwxEC7Q"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-[#FF0000] text-white rounded-xl flex items-center justify-center hover:bg-[#CC0000] transition-all hover:scale-110 shadow-lg"
+                  >
+                    <Youtube size={20} />
+                  </a>
+                </div>
               </motion.div>
             </div>
           </motion.div>
