@@ -6,38 +6,40 @@ import Link from "next/link";
 
 const services = [
   {
-    icon: CreditCard,
-    title: "Asesoría en Créditos",
+    icon: GraduationCap,
+    title: "Capacitación Empresarial",
     description:
-      "Te ayudamos a obtener el crédito perfecto para tu negocio con las mejores condiciones del mercado.",
+      "Formación teórica y práctica extraída de las mejores escuelas de negocios para fortalecer la toma de decisiones en tu empresa.",
     features: [
-      "Análisis de capacidad crediticia",
-      "Búsqueda de mejores tasas",
-      "Acompañamiento en el proceso",
+      "Material de élite de escuelas de negocios",
+      "Programas de formación especializados",
+      "Talleres prácticos para tomadores de decisiones",
     ],
     color: "from-blue-500 to-blue-600",
   },
   {
-    icon: TrendingUp,
-    title: "Financiamiento Empresarial",
+    icon: CreditCard,
+    title: "Consultoría de Negocios",
     description:
-      "Estrategias de financiamiento personalizadas para impulsar el crecimiento de tu empresa.",
+      "Te acompañamos desde la creación hasta el crecimiento de tu empresa, desarrollando estrategias para alcanzar tus objetivos.",
     features: [
-      "Estructuración financiera",
-      "Planes de inversión",
-      "Optimización de recursos",
+      "Constitución de empresas y razón social",
+      "Inscripción en Registros Públicos",
+      "Definición de público objetivo",
+      "Desarrollo de estrategias de negocio",
     ],
     color: "from-cyan-500 to-cyan-600",
   },
   {
-    icon: GraduationCap,
-    title: "Capacitación Empresarial",
+    icon: TrendingUp,
+    title: "Consultoría Financiera",
     description:
-      "Programas de formación diseñados para fortalecer las habilidades empresariales de tu equipo.",
+      "Gestión estratégica de ingresos, inversión y financiamiento para optimizar la toma de decisiones financieras en tu empresa.",
     features: [
-      "Talleres especializados",
-      "Consultoría estratégica",
-      "Herramientas prácticas",
+      "Distribución óptima de recursos",
+      "Inversión en capital de trabajo y activos fijos",
+      "Mapeo del ciclo financiero",
+      "Optimización de decisiones financieras",
     ],
     color: "from-indigo-500 to-indigo-600",
   },

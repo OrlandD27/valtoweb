@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calculator, DollarSign, TrendingUp, Calendar } from "lucide-react";
+import { Calculator, DollarSign, TrendingUp, Calendar, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 export default function CreditCalculator() {
   const [amount, setAmount] = useState("10000");
   const [rate, setRate] = useState("15");
   const [months, setMonths] = useState("12");
+  const [currency, setCurrency] = useState<"PEN" | "USD">("PEN");
   const [result, setResult] = useState<{
     monthlyPayment: number;
     totalPayment: number;
@@ -37,9 +39,9 @@ export default function CreditCalculator() {
   };
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("es-PE", {
+    return new Intl.NumberFormat(currency === "PEN" ? "es-PE" : "en-US", {
       style: "currency",
-      currency: "PEN",
+      currency: currency,
       minimumFractionDigits: 2,
     }).format(value);
   };
@@ -60,9 +62,17 @@ export default function CreditCalculator() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Calculadora de Créditos
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
             Simula tu crédito y conoce cuánto pagarías mensualmente
           </p>
+          <Link
+            href="/tipo-cambio"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#0047BB] text-white rounded-xl font-semibold hover:bg-[#003088] transition-all shadow-lg hover:shadow-xl"
+          >
+            <TrendingUp className="w-5 h-5" />
+            Ver Tipo de Cambio en Tiempo Real
+            <ExternalLink className="w-4 h-4" />
+          </Link>
         </motion.div>
 
         {/* Calculator Card */}
@@ -79,6 +89,38 @@ export default function CreditCalculator() {
               <h3 className="text-2xl font-bold text-white mb-6">
                 Datos del Crédito
               </h3>
+
+              {/* Selector de Moneda */}
+              <div className="mb-6">
+                <label className="flex items-center text-white mb-2 text-sm font-medium">
+                  <DollarSign className="w-4 h-4 mr-2" />
+                  Moneda
+                </label>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setCurrency("PEN")}
+                    className={`px-4 py-3 rounded-lg font-semibold transition-all ${
+                      currency === "PEN"
+                        ? "bg-white text-[#0047BB] shadow-lg"
+                        : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    }`}
+                  >
+                    S/ Soles
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setCurrency("USD")}
+                    className={`px-4 py-3 rounded-lg font-semibold transition-all ${
+                      currency === "USD"
+                        ? "bg-white text-[#0047BB] shadow-lg"
+                        : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    }`}
+                  >
+                    $ Dólares
+                  </button>
+                </div>
+              </div>
 
               {/* Monto del Préstamo */}
               <div className="mb-6">
