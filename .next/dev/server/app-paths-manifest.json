@@ -1,4 +1,10 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/agendar-cita/page": "app/agendar-cita/page.js",
+  "/api/tipo-cambio/route": "app/api/tipo-cambio/route.js",
+  "/centro-de-aprendizaje/page": "app/centro-de-aprendizaje/page.js",
   "/page": "app/page.js",
-  "/videos/page": "app/videos/page.js"
+  "/servicios/capacitacion-empresarial/page": "app/servicios/capacitacion-empresarial/page.js",
+  "/servicios/page": "app/servicios/page.js",
+  "/tipo-cambio/page": "app/tipo-cambio/page.js"
 }

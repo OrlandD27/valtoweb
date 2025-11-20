@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
+          {/* Servicios */}
           <div>
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2 text-sm">
@@ -50,29 +50,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-4">Empresa</h3>
+            <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/nosotros" className="text-gray-400 hover:text-white transition-colors">
-                  Nosotros
+                <Link href="/terminos-y-condiciones" className="text-gray-400 hover:text-white transition-colors">
+                  Términos y Condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/capacitaciones" className="text-gray-400 hover:text-white transition-colors">
-                  Capacitaciones
+                <Link href="/politica-de-privacidad" className="text-gray-400 hover:text-white transition-colors">
+                  Política de Privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-gray-400 hover:text-white transition-colors">
-                  Contacto
+                <Link href="/libro-de-reclamaciones" className="text-gray-400 hover:text-white transition-colors">
+                  Libro de Reclamaciones
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contacto */}
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3 text-sm">
@@ -123,14 +123,19 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>© 2025 VALTO Management Consulting. Todos los derechos reservados.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacidad" className="hover:text-white transition-colors">
-              Política de Privacidad
-            </Link>
-            <Link href="/terminos" className="hover:text-white transition-colors">
-              Términos y Condiciones
-            </Link>
-          </div>
+          <p>
+            Diseñado por{' '}
+            <a 
+              href="https://www.facebook.com/moderstudioo/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+            >
+              ModerStudio
+            </a>
+            {''}💙
+          </p>
+          <p>Marca registrada por indecopi.</p>
         </div>
       </div>
     </footer>

@@ -24,7 +24,7 @@ export default function TipoCambioPage() {
   const [convertedAmount, setConvertedAmount] = useState<number | null>(null);
   
   // Estado para filtro de tiempo del gráfico
-  const [timeFilter, setTimeFilter] = useState<'1D' | '1W' | '1M' | '3M' | '6M'>('1M');
+  const [timeFilter, setTimeFilter] = useState<'1D' | '1W' | '1M' | '3M' | '6M' | '1Y'>('1M');
 
   const fetchExchangeRate = async () => {
     setLoading(true);
@@ -417,6 +417,16 @@ export default function TipoCambioPage() {
                     >
                       6M
                     </button>
+                    <button
+                      onClick={() => setTimeFilter('1Y')}
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                        timeFilter === '1Y'
+                          ? 'bg-[#0047BB] text-white shadow-lg'
+                          : 'text-white/70 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      1A
+                    </button>
                   </div>
                 </div>
                 
@@ -518,7 +528,7 @@ export default function TipoCambioPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {history.map((rate, index) => {
+                    {history.slice(0, 20).map((rate, index) => {
                       const prevRate = history[index + 1];
                       const localTrend = prevRate 
                         ? rate.venta > prevRate.venta ? 'up' : rate.venta < prevRate.venta ? 'down' : 'stable'

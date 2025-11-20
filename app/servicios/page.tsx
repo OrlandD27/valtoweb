@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { GraduationCap, CreditCard, TrendingUp, CheckCircle2, ArrowRight, Target, Users, Briefcase, ChartBar, FileText, Calculator } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Target, Users, ChartBar, FileText, Calculator, CreditCard } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingSocial from '@/components/FloatingSocial';
@@ -10,7 +11,7 @@ import FloatingSocial from '@/components/FloatingSocial';
 export default function ServiciosPage() {
   const serviciosPrincipales = [
     {
-      icon: GraduationCap,
+      iconImage: "/icono_1.png",
       title: "Capacitación Empresarial",
       description: "Estamos convencidos que el éxito de una Empresa depende mucho del conocimiento adquirido por las personas que toman decisiones en ella. Es por esto que instruimos o capacitamos a estas personas con material teórico y práctico sacado de las mejores escuelas de negocios y ponemos a su disposición todo este material.",
       features: [
@@ -25,7 +26,7 @@ export default function ServiciosPage() {
       gradient: "linear-gradient(135deg, #0047BB, #002677)",
     },
     {
-      icon: Briefcase,
+      iconImage: "/icono_2.png",
       title: "Consultoría de Negocios",
       description: "Hacer una Empresa va desde elegir el nombre o la razón social, ver los objetos sociales que más se acomodan, inscripción en Registros Públicos, buscar un público objetivo, desarrollar las estrategias para obtener los resultados propuestos. Todo ello puedes hacer con nosotros.",
       features: [
@@ -40,7 +41,7 @@ export default function ServiciosPage() {
       gradient: "linear-gradient(135deg, #002677, #0047BB)",
     },
     {
-      icon: TrendingUp,
+      iconImage: "/icono_3.png",
       title: "Consultoría Financiera",
       description: "Las finanzas juegan un papel importante en la vida de una Empresa. Los ingresos y la distribución de estos en la operación del negocio, en la inversión en capital de trabajo o Activos fijos y en el financiamiento o pago de deudas es un ciclo que toda empresa debe tener totalmente mapeado para la óptima toma de decisiones financieras.",
       features: [
@@ -55,7 +56,7 @@ export default function ServiciosPage() {
       gradient: "linear-gradient(135deg, #0047BB, #002677)",
     },
     {
-      icon: Users,
+      iconImage: "/icono_4.png",
       title: "Formación de Emprendedores y Empresarios",
       description: "Una cosa es ser Emprendedor y una muy distinta ser empresario. El emprendedor tiene las ganas de hacer algo propio, algo diferente, pero esto no basta para tener éxito en el enmarañado mundo de los negocios. A ello es necesario sumarle conocimiento, habilidades financieras y diferentes soft skills que marcarán la diferencia en el ecosistema en que se mueve la empresa.",
       features: [
@@ -180,8 +181,6 @@ export default function ServiciosPage() {
 
           <div className="space-y-12">
             {serviciosPrincipales.map((servicio, index) => {
-              const Icon = servicio.icon;
-              
               return (
                 <motion.div
                   key={index}
@@ -204,8 +203,15 @@ export default function ServiciosPage() {
                           transition={{ duration: 0.5 }}
                           className="relative z-10"
                         >
-                          <div className="bg-white/20 backdrop-blur-sm p-6 rounded-2xl mb-6 group-hover:bg-white/30 transition-all">
-                            <Icon className="w-16 h-16 text-white" />
+                          <div className="bg-white p-6 rounded-2xl mb-6 group-hover:shadow-lg transition-all">
+                            <Image 
+                              src={servicio.iconImage} 
+                              alt={servicio.title}
+                              width={80}
+                              height={80}
+                              className="w-20 h-20 object-contain"
+                              unoptimized
+                            />
                           </div>
                         </motion.div>
                         
@@ -377,17 +383,19 @@ export default function ServiciosPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/#contacto"
+              <a
+                href="https://wa.me/51920000848?text=Hola%20%F0%9F%91%8B%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20consultor%C3%ADa%20%F0%9F%93%8A%F0%9F%92%BC"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 inline-flex items-center justify-center gap-2 font-futura-lux"
                 style={{ color: '#0047BB' }}
               >
                 Solicitar Consultoría
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
               
               <a
-                href="https://wa.me/51999999999"
+                href="https://wa.me/51920000848?text=Hola%20%F0%9F%91%8B%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20o%20una%20asesor%C3%ADa%20%F0%9F%93%8A%F0%9F%92%BC"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 inline-flex items-center justify-center gap-2 font-futura-lux"

@@ -1,5 +1,42 @@
-[00:00:01.142] Server  LOG      ✓ Ready in 775ms
-[00:00:06.021] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:38.521] Server  LOG      ✓ Compiled in 138ms
-[00:02:48.872] Server  LOG      ✓ Compiled in 93ms
-[00:03:23.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.035] Server  LOG      ✓ Ready in 724ms
+[00:00:03.699] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.236] Server  LOG     BCR API no disponible, usando API alternativa
+[00:00:10.633] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.755] Server  LOG     BCR API no disponible, usando API alternativa
+[00:01:18.274] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:18.425] Server  LOG     BCR API no disponible, usando API alternativa
+[00:02:14.644] Server  LOG      ✓ Compiled in 45ms
+[00:02:21.333] Server  LOG      ✓ Compiled in 39ms
+[00:02:31.166] Server  LOG      ✓ Compiled in 38ms
+[00:02:50.354] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:03:44.034] Server  LOG      ✓ Compiled in 69ms
+[00:03:46.666] Server  LOG      ✓ Compiled in 47ms
+[00:03:49.102] Server  LOG      ✓ Compiled in 93ms
+[00:04:13.730] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:13.977] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:05:13.121] Server  LOG      ✓ Compiled in 112ms
+[00:07:10.696] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:07:54.503] Server  LOG      ✓ Compiled in 42ms
+[00:07:56.951] Server  LOG      ✓ Compiled in 32ms
+[00:08:50.328] Server  LOG      ✓ Compiled in 60ms
+[00:10:49.803] Server  LOG      ✓ Compiled in 36ms
+[00:13:33.403] Server  LOG      ✓ Compiled in 36ms
+[00:13:40.589] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:57.112] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:00.419] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:11.435] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:14.680] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:15.514] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:15.781] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:14:16.760] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:17.842] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:18.190] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:14:54.930] Server  LOG      ✓ Compiled in 47ms
+[00:15:22.543] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:22.769] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:15:26.995] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:28.101] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:40.634] Server  LOG      ✓ Compiled in 34ms
+[00:15:43.411] Server  LOG     BCR API no disponible, usando API alternativa
+[00:15:43.965] Server  LOG     BCR API no disponible, usando API alternativa
+[00:15:46.732] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.

@@ -150,8 +150,8 @@ export default function NosotrosPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight font-futura-lux">
-              Sobre <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">Nosotros</span>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight font-futura-lux">
+              <span className="text-white">Sobre</span> <span style={{ color: '#0048bbff' }}>Nosotros</span> 
             </h1>
             <p className="text-2xl md:text-3xl text-gray-200 mb-8 font-light font-futura-book tracking-wide">
               VALTO Management Consulting
@@ -173,7 +173,7 @@ export default function NosotrosPage() {
           >
             <span className="font-futura-book" style={{ color: '#0047BB' }}>NUESTRA IDENTIDAD</span>
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mt-4 mb-6 font-futura-lux">
-              ¿Quiénes <span style={{ color: '#0047BB' }}>Somos?</span>
+              <span style={{ color: '#9da5b3d1' }}>¿Quienes</span> <span style={{ color: '#0047BB' }}>Somos?</span>
             </h2>
             <div className="h-1 w-24 mx-auto rounded-full mb-8" style={{ background: 'linear-gradient(to right, #0047BB, #002677)' }} />
           </motion.div>

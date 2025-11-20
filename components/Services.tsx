@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { CreditCard, TrendingUp, GraduationCap, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useRef } from "react";
 
 const services = [
   {
@@ -16,6 +17,9 @@ const services = [
       "Talleres prácticos para tomadores de decisiones",
     ],
     color: "from-blue-500 to-blue-600",
+    bgGradient: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+    iconBg: "#2563eb",
+    link: "/servicios/capacitacion-empresarial"
   },
   {
     icon: CreditCard,
@@ -29,6 +33,9 @@ const services = [
       "Desarrollo de estrategias de negocio",
     ],
     color: "from-cyan-500 to-cyan-600",
+    bgGradient: "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)",
+    iconBg: "#0891b2",
+    link: "/servicios/consultoria-negocios"
   },
   {
     icon: TrendingUp,
@@ -42,113 +49,219 @@ const services = [
       "Optimización de decisiones financieras",
     ],
     color: "from-indigo-500 to-indigo-600",
+    bgGradient: "linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)",
+    iconBg: "#6366f1",
+    link: "/servicios/consultoria-financiera"
+  },
+  {
+    icon: GraduationCap,
+    title: "Formación de Emprendedores",
+    description:
+      "Transforma tu mentalidad emprendedora en habilidades empresariales sólidas con conocimiento, estrategia y soft skills.",
+    features: [
+      "Desarrollo de mentalidad empresarial",
+      "Habilidades financieras prácticas",
+      "Soft skills esenciales para el éxito",
+    ],
+    color: "from-purple-500 to-purple-600",
+    bgGradient: "linear-gradient(135deg, #a855f7 0%, #9333ea 100%)",
+    iconBg: "#9333ea",
+    link: "/servicios/formacion-emprendedores"
   },
 ];
 
+function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Transform scroll to rotation (90deg to 0deg - card flips to reveal content)
+  const rotateX = useTransform(scrollYProgress, [0.2, 0.6], [90, 0]);
+  const opacity = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
+
+  return (
+    <div ref={cardRef} className="h-auto" style={{ perspective: "1000px" }}>
+      <motion.div
+        style={{
+          rotateX: rotateX,
+          opacity: opacity,
+          transformStyle: "preserve-3d",
+        }}
+        className="bg-white rounded-2xl shadow-lg p-6 md:p-8 flex flex-col h-full"
+      >
+        {/* Icon with solid background */}
+        <motion.div
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
+          style={{ backgroundColor: service.iconBg }}
+        >
+          <service.icon className="w-8 h-8 text-white" />
+        </motion.div>
+
+        {/* Title */}
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+          {service.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
+          {service.description}
+        </p>
+
+        {/* Features */}
+        <ul className="space-y-3 mb-6 flex-grow">
+          {service.features.map((feature, i) => (
+            <motion.li
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 + i * 0.1 }}
+              className="flex items-start"
+            >
+              <svg
+                className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="text-gray-700 text-sm">{feature}</span>
+            </motion.li>
+          ))}
+        </ul>
+
+        {/* CTA */}
+        <Link href={service.link}>
+          <motion.div
+            className="inline-flex items-center text-blue-600 font-semibold text-base group/link"
+            whileHover={{ gap: "0.5rem" }}
+            transition={{ duration: 0.3 }}
+          >
+            <span>Saber más</span>
+            <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
+          </motion.div>
+        </Link>
+      </motion.div>
+    </div>
+  );
+}
+
 export default function Services() {
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white" id="servicios">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 relative overflow-hidden" style={{ background: '#F5F7FA' }} id="servicios">
+      {/* Animated Background Elements */}
+      <motion.div
+        className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        animate={{
+          scale: [1, 1.2, 1],
+          x: [0, 50, 0],
+          y: [0, 30, 0],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
+        animate={{
+          scale: [1.2, 1, 1.2],
+          x: [0, -50, 0],
+          y: [0, -30, 0],
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Nuestros Servicios
-          </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Soluciones integrales para el crecimiento y desarrollo de tu empresa
-          </p>
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 4 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, type: "spring" }}
+            className="inline-block mb-4"
+          >
+            <span className="px-4 py-2 bg-valto-blue/10 text-valto-blue rounded-full text-sm font-semibold">
+              Nuestros Servicios
+            </span>
+          </motion.div>    
+          
+          <motion.p 
+            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            Crecimiento y desarrollo con estrategias personalizadas
+          </motion.p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-            >
-              {/* Gradient background on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-
-              <div className="relative p-8">
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <svg
-                        className="w-5 h-5 text-valto-blue mr-2 mt-0.5 flex-shrink-0"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <Link
-                  href="/servicios"
-                  className="inline-flex items-center text-valto-blue font-semibold group-hover:gap-2 transition-all"
-                >
-                  Saber más
-                  <ArrowRight className="ml-1 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </motion.div>
+            <ServiceCard key={service.title} service={service} index={index} />
           ))}
         </div>
 
         {/* CTA Button */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center mt-16"
         >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              href="/servicios"
-              className="inline-flex items-center px-8 py-4 bg-valto-blue text-white rounded-lg font-semibold text-lg hover:bg-valto-blue-dark transition-all shadow-lg hover:shadow-2xl"
+          <Link href="/servicios">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-2xl relative overflow-hidden group"
+              style={{ 
+                backgroundColor: '#0047BB',
+              }}
             >
-              Ver Todos los Servicios
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </motion.div>
+              {/* Animated Background */}
+              <motion.div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ backgroundColor: '#003088' }}
+              />
+              
+              <span className="relative z-10">Ver Todos los Servicios</span>
+              
+              <motion.div
+                className="relative z-10"
+                animate={{
+                  x: [0, 5, 0],
+                }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.div>
+
+              {/* Shine Effect */}
+              <motion.div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%" }}
+                transition={{ duration: 0.6 }}
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                }}
+              />
+            </motion.div>
+          </Link>
         </motion.div>
       </div>
     </section>

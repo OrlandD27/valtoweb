@@ -3,25 +3,54 @@ import { NextResponse } from 'next/server';
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
-    const period = searchParams.get('period') || '1M'; // 1D, 1W, 1M, 3M, 6M
+    const period = searchParams.get('period') || '1M'; // 1D, 1W, 1M, 3M, 6M, 1Y
     
-    // Usar exchangerate-api.com que es gratuito y tiene datos en tiempo real
-    const response = await fetch(
-      `https://api.exchangerate-api.com/v4/latest/USD`,
-      {
-        headers: {
-          'Accept': 'application/json',
-        },
-        cache: 'no-store'
+    // Intentar obtener datos del BCR (Banco Central de Reserva del Perú) primero
+    let currentRate = 3.75; // Valor por defecto
+    
+    try {
+      // API del BCR - Banco Central de Reserva del Perú
+      // Endpoint público del BCRP: https://estadisticas.bcrp.gob.pe/estadisticas/series/api/
+      // PD04638PD - Serie del tipo de cambio interbancario promedio
+      const bcrResponse = await fetch(
+        'https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04638PD/json',
+        {
+          headers: {
+            'Accept': 'application/json',
+          },
+          cache: 'no-store'
+        }
+      );
+      
+      if (bcrResponse.ok) {
+        const bcrData = await bcrResponse.json();
+        // El BCR devuelve un array con [fecha, valor]
+        if (bcrData && bcrData.periods && bcrData.periods.length > 0) {
+          const latestData = bcrData.periods[bcrData.periods.length - 1];
+          if (latestData && latestData.values && latestData.values.length > 0) {
+            currentRate = parseFloat(latestData.values[0]);
+          }
+        }
       }
-    );
+    } catch (bcrError) {
+      console.log('BCR API no disponible, usando API alternativa');
+      
+      // Fallback a exchangerate-api.com
+      const response = await fetch(
+        `https://api.exchangerate-api.com/v4/latest/USD`,
+        {
+          headers: {
+            'Accept': 'application/json',
+          },
+          cache: 'no-store'
+        }
+      );
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch exchange rate');
+      if (response.ok) {
+        const data = await response.json();
+        currentRate = data.rates.PEN; // Tipo de cambio USD a PEN
+      }
     }
-
-    const data = await response.json();
-    const currentRate = data.rates.PEN; // Tipo de cambio USD a PEN
     
     // Generar datos históricos basados en el período
     const endDate = new Date();
@@ -42,6 +71,9 @@ export async function GET(request: Request) {
         break;
       case '6M':
         startDate.setMonth(endDate.getMonth() - 6);
+        break;
+      case '1Y':
+        startDate.setFullYear(endDate.getFullYear() - 1);
         break;
       default:
         startDate.setMonth(endDate.getMonth() - 1);

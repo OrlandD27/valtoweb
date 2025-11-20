@@ -6,36 +6,24 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "¿Cuánto tiempo tarda la aprobación de un crédito?",
-    answer: "El tiempo de aprobación varía según la entidad financiera y el tipo de crédito, pero en promedio, con nuestra asesoría especializada, logramos aprobaciones en 7 a 15 días hábiles. Trabajamos para agilizar al máximo el proceso.",
+    question: "¿Cuáles son los requisitos para formalizar mi empresa?",
+    answer: "Para formalizar tu empresa necesitas: DNI vigente del titular o representante legal, búsqueda de nombre disponible en SUNARP, minuta de constitución firmada por un abogado, capital social mínimo según el tipo de empresa, y domicilio fiscal. En VALTO te guiamos paso a paso en todo el proceso.",
   },
   {
-    question: "¿Qué requisitos necesito para solicitar un crédito empresarial?",
-    answer: "Los requisitos básicos incluyen: RUC activo, antigüedad mínima de 1 año, estados financieros, declaraciones de impuestos, y flujo de caja proyectado. Nosotros te ayudamos a preparar toda la documentación necesaria.",
+    question: "¿Qué es la minuta de constitución y para qué sirve?",
+    answer: "La minuta de constitución es el documento legal que establece los acuerdos iniciales de tu empresa: razón social, objeto social, capital, aportes de cada socio, estatutos y otros aspectos fundamentales. Es el primer paso legal para constituir tu empresa formalmente ante notaría y registros públicos.",
   },
   {
-    question: "¿Cuánto cobran por sus servicios de asesoría?",
-    answer: "Ofrecemos una consulta inicial gratuita de 30 minutos para evaluar tu caso. Nuestros honorarios son flexibles y se ajustan según el tipo de servicio y complejidad. Trabajamos con tarifas competitivas y transparentes.",
+    question: "¿Cómo hago la búsqueda de nombre en SUNARP?",
+    answer: "La búsqueda de nombre en SUNARP (Superintendencia Nacional de los Registros Públicos) se realiza para verificar que el nombre que deseas para tu empresa no esté registrado por otra. Nosotros realizamos esta búsqueda por ti y te proponemos alternativas disponibles si el nombre está ocupado.",
   },
   {
-    question: "¿Trabajan con todas las entidades financieras?",
-    answer: "Sí, tenemos alianzas estratégicas con más de 15 bancos y entidades financieras en Perú, incluyendo banca múltiple, cajas municipales y financieras. Esto nos permite encontrar las mejores opciones para tu empresa.",
+    question: "¿Qué es la inscripción en Registros Públicos?",
+    answer: "La inscripción en Registros Públicos es el paso final para darle existencia legal a tu empresa. Aquí se registra oficialmente la minuta de constitución elevada a escritura pública. Una vez inscrita, tu empresa obtiene su partida registral y puede iniciar operaciones formalmente con RUC y todos los documentos legales.",
   },
   {
-    question: "¿Qué pasa si mi empresa tiene historial crediticio negativo?",
-    answer: "Contamos con estrategias especializadas para casos con historial crediticio complicado. Evaluamos tu situación actual y desarrollamos un plan personalizado para mejorar tu perfil crediticio y aumentar las posibilidades de aprobación.",
-  },
-  {
-    question: "¿Ofrecen asesoría para startups o empresas nuevas?",
-    answer: "¡Por supuesto! Tenemos programas especiales para emprendimientos y empresas en etapa inicial. Te ayudamos a estructurar tu proyecto de manera atractiva para inversionistas y entidades financieras.",
-  },
-  {
-    question: "¿Brindan seguimiento después de obtener el crédito?",
-    answer: "Sí, nuestro servicio incluye acompañamiento post-aprobación para asegurar el uso óptimo de los recursos y el cumplimiento de obligaciones. Tu éxito es nuestro éxito.",
-  },
-  {
-    question: "¿Puedo solicitar asesoría si estoy fuera de Lima?",
-    answer: "¡Absolutamente! Atendemos a nivel nacional. Realizamos consultas virtuales y tenemos procesos digitales que facilitan la comunicación y gestión de documentos desde cualquier parte del Perú.",
+    question: "¿Qué significa invertir en renta fija?",
+    answer: "Invertir en renta fija significa colocar tu dinero en instrumentos financieros que ofrecen rendimientos predecibles y estables, como bonos, depósitos a plazo o letras del tesoro. Son inversiones de bajo riesgo ideales para preservar capital y generar ingresos constantes. En VALTO te asesoramos para encontrar las mejores opciones según tu perfil.",
   },
 ];
 
@@ -118,7 +106,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600 mb-6">¿No encontraste tu respuesta?</p>
+          <p className="text-gray-600 mb-6">¿Deseas más información sobre estas preguntas? ¡te podemos ayudar!</p>
           <a
             href="#contacto"
             className="inline-block px-8 py-4 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg transform hover:scale-105"
