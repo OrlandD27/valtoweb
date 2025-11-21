@@ -39,8 +39,10 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Lo Que Dicen Nuestros Clientes
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-500 mb-4">
+            Lo Que Dicen <span className="font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  Nuestros Clientes
+                </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Historias de éxito de empresarios que confiaron en nosotros

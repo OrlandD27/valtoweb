@@ -5,25 +5,27 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="relative overflow-hidden text-white" style={{ background: 'linear-gradient(to bottom right, #0047BB, #002677, #001a4d)' }}>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img 
-                  src="/imagen2.png" 
-                  alt="VALTO Logo" 
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="text-xl font-bold">VALTO</span>
+            <div className="mb-4">
+              <img 
+                src="/logo222.png" 
+                alt="VALTO Management Consulting" 
+                className="h-20 w-auto object-contain"
+              />
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              Management Consulting
-            </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-white/80 text-sm">
               Impulsando el crecimiento empresarial con asesoría financiera especializada.
             </p>
           </div>
@@ -33,17 +35,17 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/servicios" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/servicios" className="text-white/80 hover:text-white transition-colors">
                   Asesoría en Créditos
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/servicios" className="text-white/80 hover:text-white transition-colors">
                   Financiamiento Empresarial
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/servicios" className="text-white/80 hover:text-white transition-colors">
                   Capacitación Empresarial
                 </Link>
               </li>
@@ -55,17 +57,17 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/terminos-y-condiciones" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/terminos-y-condiciones" className="text-white/80 hover:text-white transition-colors">
                   Términos y Condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/politica-de-privacidad" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/politica-de-privacidad" className="text-white/80 hover:text-white transition-colors">
                   Política de Privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/libro-de-reclamaciones" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/libro-de-reclamaciones" className="text-white/80 hover:text-white transition-colors">
                   Libro de Reclamaciones
                 </Link>
               </li>
@@ -76,52 +78,24 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Contacto</h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center text-gray-400">
+              <li className="flex items-center text-white/80">
                 <Phone className="w-4 h-4 mr-2" />
                 +51 985 123 456
               </li>
-              <li className="flex items-center text-gray-400">
+              <li className="flex items-center text-white/80">
                 <Mail className="w-4 h-4 mr-2" />
                 info@valto.com.gt
               </li>
-              <li className="flex items-start text-gray-400">
+              <li className="flex items-start text-white/80">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" />
                 Perú, Perú
               </li>
             </ul>
-
-            {/* Social */}
-            <div className="flex space-x-4 mt-6">
-              <a
-                href="https://www.facebook.com/gltbusinessconsulting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-valto-blue transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/valto.management/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-valto-blue transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-valto-blue transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/80">
           <p>© 2025 VALTO Management Consulting. Todos los derechos reservados.</p>
           <p>
             Diseñado por{' '}
@@ -129,7 +103,7 @@ export default function Footer() {
               href="https://www.facebook.com/moderstudioo/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+              className="text-white hover:text-white/80 transition-colors font-semibold"
             >
               ModerStudio
             </a>

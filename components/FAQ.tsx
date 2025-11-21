@@ -43,10 +43,12 @@ export default function FAQ() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: 'rgba(0, 71, 187, 0.1)' }}>
             <HelpCircle className="w-8 h-8" style={{ color: '#0047BB' }} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Preguntas Frecuentes
+          <h2 className="text-4xl md:text-5xl font-bold text-[#9DA5B3] mb-4">
+            Preguntas <span className="font-bold text-white bg-[#0056D6] px-2 sm:px-3 py-1 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  Frecuentes
+                </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-[#002677] max-w-2xl mx-auto">
             Resolvemos tus dudas sobre nuestros servicios y procesos
           </p>
         </motion.div>
@@ -67,7 +69,7 @@ export default function FAQ() {
                 className="w-full text-left bg-gray-50 hover:bg-gray-100 rounded-xl p-6 transition-colors duration-200"
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-900 pr-8">
+                  <h3 className="text-lg font-semibold text-[#0047BB] pr-8">
                     {faq.question}
                   </h3>
                   <motion.div

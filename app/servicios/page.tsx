@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingSocial from '@/components/FloatingSocial';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function ServiciosPage() {
   const serviciosPrincipales = [
@@ -132,6 +133,7 @@ export default function ServiciosPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <FloatingSocial />
+      <WhatsAppButton />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0047BB, #002677)' }}>

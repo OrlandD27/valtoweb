@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingSocial from '@/components/FloatingSocial';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function NosotrosPage() {
   const valores = [
@@ -79,6 +80,7 @@ export default function NosotrosPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <FloatingSocial />
+      <WhatsAppButton />
 
       {/* Hero Section with Parallax Effect */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">

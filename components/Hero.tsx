@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, TrendingUp, Users, Award, DollarSign } from "lucide-react";
+import { ArrowRight, Award, DollarSign } from "lucide-react";
 import Link from "next/link";
 import { useCountUp } from "@/hooks/useCountUp";
 import { useEffect, useState } from "react";
@@ -18,19 +18,15 @@ export default function Hero() {
   const [historicalData, setHistoricalData] = useState<number[]>([3.72, 3.73, 3.71, 3.74, 3.73, 3.75]);
   const [loading, setLoading] = useState<boolean>(true);
   const [currencyMode, setCurrencyMode] = useState<'USD_TO_PEN' | 'PEN_TO_USD'>('USD_TO_PEN');
-  const [inputAmount, setInputAmount] = useState<string>('100');
 
   useEffect(() => {
-    // Función para obtener el tipo de cambio real
     const fetchExchangeRate = async () => {
       try {
-        // API gratuita de ExchangeRate-API
         const response = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
         const data = await response.json();
         
         if (data && data.rates && data.rates.PEN) {
           const newRate = data.rates.PEN;
-          // Simular spread de compra/venta (diferencia típica 0.03)
           const buyRate = newRate - 0.015;
           const sellRate = newRate + 0.015;
           
@@ -46,587 +42,171 @@ export default function Hero() {
       }
     };
 
-    // Obtener tipo de cambio al cargar
     fetchExchangeRate();
-
-    // Actualizar cada 60 segundos (las APIs gratuitas tienen límites)
     const interval = setInterval(fetchExchangeRate, 60000);
-
     return () => clearInterval(interval);
   }, []);
 
-  // Calcular conversión
-  const calculateConversion = () => {
-    const amount = parseFloat(inputAmount) || 0;
-    if (currencyMode === 'USD_TO_PEN') {
-      return (amount * exchangeRateBuy).toFixed(2);
-    } else {
-      return (amount / exchangeRateSell).toFixed(2);
-    }
-  };
-
   const handleCurrencySwitch = () => {
-    setCurrencyMode(prev => {
-      const newMode = prev === 'USD_TO_PEN' ? 'PEN_TO_USD' : 'USD_TO_PEN';
-      // Convertir el monto actual al nuevo modo
-      const amount = parseFloat(inputAmount) || 0;
-      if (newMode === 'USD_TO_PEN') {
-        // Si cambiamos a USD->PEN, el input debe ser en USD
-        setInputAmount((amount / exchangeRateBuy).toFixed(2));
-      } else {
-        // Si cambiamos a PEN->USD, el input debe ser en PEN
-        setInputAmount((amount * exchangeRateBuy).toFixed(2));
-      }
-      return newMode;
-    });
+    setCurrencyMode(prev => prev === 'USD_TO_PEN' ? 'PEN_TO_USD' : 'USD_TO_PEN');
   };
 
   return (
-    <section className="w-full min-h-[80vh] flex flex-col justify-center items-center py-16 md:py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: '#0047BB' }}>
-      {/* Background image with parallax effect */}
+    <section className="w-full min-h-screen relative overflow-hidden bg-[#F5F7FA]">
+      {/* Imagen de fondo empresarial MÁS VISIBLE */}
       <div className="absolute inset-0">
-        {/* Imagen de fondo - Puedes reemplazar esta URL con tu propia imagen */}
-        <motion.div
-          initial={{ scale: 1.2 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
-          className="absolute inset-0"
-        >
-          <img
-            src="https://www.grupoioe.es/wp-content/uploads/2017/12/vision-empresarial-5.jpg"
-            alt="Financial Growth"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-        
-        {/* Gradient overlay animado - más transparente para ver mejor la imagen */}
-        <div className="absolute inset-0 bg-gradient-to-br from-valto-blue/85 via-[#0056D6]/80 to-[#0039A0]/85"></div>
-        
-        {/* Animated overlay patterns */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            animate={{
-              backgroundPosition: ["0% 0%", "100% 100%"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-              backgroundSize: "60px 60px",
-            }}
-          ></motion.div>
-          
-          {/* Círculos animados flotantes */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <motion.div
-              animate={{
-                y: [0, -30, 0],
-                x: [0, 20, 0],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute top-20 left-10 w-72 h-72 md:w-96 md:h-96 bg-blue-400 rounded-full blur-3xl opacity-20"
-            ></motion.div>
-            <motion.div
-              animate={{
-                y: [0, 40, 0],
-                x: [0, -30, 0],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute bottom-20 right-10 w-80 h-80 md:w-[500px] md:h-[500px] bg-cyan-400 rounded-full blur-3xl opacity-15"
-            ></motion.div>
-            <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.1, 0.15, 0.1],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[600px] md:h-[600px] bg-blue-300 rounded-full blur-3xl"
-            ></motion.div>
-          </div>
-          
-          {/* Líneas animadas que cruzan */}
-          <motion.div
-            animate={{
-              x: ["-100%", "100%"],
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
-          ></motion.div>
-          <motion.div
-            animate={{
-              x: ["100%", "-100%"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
-          ></motion.div>
-        </div>
-        
-        {/* Decorative floating elements */}
+        {/* Imagen con mejor visibilidad */}
         <div className="absolute inset-0">
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.5, 1, 0.5],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute top-40 right-20 w-3 h-3 bg-white rounded-full shadow-lg shadow-white/50"
-          ></motion.div>
-          <motion.div
-            animate={{
-              y: [0, -15, 0],
-              opacity: [0.3, 0.8, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1,
-            }}
-            className="absolute top-60 right-40 w-2 h-2 bg-white rounded-full shadow-lg shadow-white/50"
-          ></motion.div>
-          <motion.div
-            animate={{
-              y: [0, -25, 0],
-              opacity: [0.4, 0.9, 0.4],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2,
-            }}
-            className="absolute bottom-40 left-20 w-3 h-3 bg-white rounded-full shadow-lg shadow-white/50"
-          ></motion.div>
+          <img
+            src="https://www.shutterstock.com/image-photo/happy-middle-aged-business-man-600nw-2306186897.jpg"
+            alt="Business Growth"
+            className="w-full h-full object-cover opacity-90"
+            style={{ objectPosition: '65% 30%' }}
+          />
         </div>
+        
+        {/* Overlay degradado VALTO - más transparente en móviles para ver la imagen */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0047BB]/50 via-[#0056D6]/30 to-transparent lg:from-[#0047BB]/60 lg:via-[#0056D6]/40"></div>
+        
+        {/* Panel lateral izquierdo - más transparente en móviles */}
+        <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 bg-gradient-to-r from-[#0047BB]/60 via-[#0047BB]/40 to-transparent lg:from-[#0047BB]/75 lg:via-[#0047BB]/60"></div>
+        
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
+      {/* Contenido principal */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full py-12 sm:py-16 lg:py-20">
+          
+          {/* Left content - Texto principal estilo REGUM */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white"
+            className="text-white space-y-5 sm:space-y-6 lg:space-y-8"
           >
+            {/* Badge superior con colores VALTO */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6"
             >
-              <Award className="w-5 h-5 mr-2" />
-              <span className="text-sm font-medium">
-                Asesorate con nosotros.
-              </span>
             </motion.div>
 
-            <motion.h1
+            {/* Título principal empresarial */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
+              className="space-y-0"
             >
-              Impulsa tu Negocio al{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">
-                Siguiente Nivel
-              </span>
-            </motion.h1>
+              <h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white"
+                style={{ 
+                  fontFamily: 'Futura, -apple-system, sans-serif',
+                  letterSpacing: '-0.01em',
+                  lineHeight: '1.1'
+                }}
+              >
+                Transformamos
+              </h1>
+              <h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white"
+                style={{ 
+                  fontFamily: 'Futura, -apple-system, sans-serif',
+                  letterSpacing: '-0.01em',
+                  lineHeight: '1.0'
+                }}
+              >
+                tu negocio
+              </h1>
+              <h2 
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white/95 pt-2 sm:pt-3"
+                style={{ 
+                  fontFamily: 'Futura Lt Book, sans-serif',
+                  letterSpacing: '0.01em',
+                  lineHeight: '1.2'
+                }}
+              >
+                en una empresa{" "}
+                <span className="font-bold text-white bg-[#0056D6] px-2 sm:px-3 py-1 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  exitosa
+                </span>
+              </h2>
+            </motion.div>
 
+            {/* Descripción */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed"
+              className="text-base sm:text-lg lg:text-xl text-white/95 leading-relaxed max-w-2xl"
+              style={{ fontFamily: 'Arial, sans-serif' }}
             >
-              Valto Management Consulting es una firma de consultoría,
-              para negocios orientada a la pequeña y micro Empresa.
+              Consultoría empresarial especializada que impulsa el crecimiento de pequeñas y medianas empresas con estrategias probadas y resultados medibles.
             </motion.p>
 
+            {/* Botones CTA con colores VALTO */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <a
                   href="https://wa.me/51920000848?text=Hola,%20quisiera%20una%20consulta%20gratuita"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center justify-center px-8 py-4 bg-white text-valto-blue rounded-lg font-semibold text-lg transition-all shadow-xl hover:shadow-2xl"
+                  className="group inline-flex items-center justify-center w-full px-6 sm:px-8 py-3 sm:py-4 bg-white text-[#0047BB] rounded-lg font-bold text-base sm:text-lg transition-all shadow-2xl hover:shadow-white/50 hover:bg-[#F5F7FA]"
+                  style={{ fontFamily: 'Futura, sans-serif' }}
                 >
-                  Consulta Gratuita
+                  Consulta Con Nosotros
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                 <Link
-                  href="/videos"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all border-2 border-white/30"
+                  href="/centro-de-aprendizaje"
+                  className="inline-flex items-center justify-center w-full px-6 sm:px-8 py-3 sm:py-4 bg-[#0056D6] backdrop-blur-sm text-white rounded-lg font-bold text-base sm:text-lg hover:bg-[#0056D6]/30 transition-all border-2"
+                  style={{ fontFamily: 'Futura, sans-serif' }}
                 >
                   Centro de Aprendizaje
                 </Link>
               </motion.div>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats con colores VALTO */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/20"
+              className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-6 sm:pt-8 lg:pt-12 mt-6 sm:mt-8 lg:mt-12 border-t-2 border-white/30"
             >
-              <div ref={empresasCount.ref}>
-                <div className="text-3xl lg:text-4xl font-bold mb-1">{empresasCount.count}+</div>
-                <div className="text-sm text-blue-200">Empresas Asesoradas</div>
-              </div>
-              <div ref={creditosCount.ref}>
-                <div className="text-3xl lg:text-4xl font-bold mb-1">{creditosCount.count}%</div>
-                <div className="text-sm text-blue-200">De las Empresas confian en nosotros.</div>
-              </div>
-              <div ref={experienciaCount.ref}>
-                <div className="text-3xl lg:text-4xl font-bold mb-1">{experienciaCount.count}+</div>
-                <div className="text-sm text-blue-200">Años Experiencia</div>
-              </div>
-            </motion.div>
-
-            {/* Tipo de cambio para móviles */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="lg:hidden mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl"
-            >
-              <motion.div 
-                className="flex items-center justify-between mb-4"
-                animate={{
-                  y: [0, -5, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <div className="flex items-center space-x-3">
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: '#b3c7e6' }}
-                    animate={{
-                      rotate: [0, 10, -10, 0],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <DollarSign className="w-6 h-6 text-white" />
-                  </motion.div>
-                  <div>
-                    <div className="text-white font-semibold">Tipo de Cambio</div>
-                    <div className="text-blue-200 text-xs">
-                      {currencyMode === 'USD_TO_PEN' ? 'Dólares a Soles' : 'Soles a Dólares'}
-                    </div>
-                  </div>
+              <div ref={empresasCount.ref} className="text-center lg:text-left">
+                <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 text-white" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  {empresasCount.count}+
                 </div>
-                <button
-                  onClick={handleCurrencySwitch}
-                  className="bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg text-white text-xs font-semibold transition-all"
-                >
-                  ⇄
-                </button>
-              </motion.div>
-              
-              {/* Tasas Compra/Venta */}
-              <div className="bg-white/5 rounded-lg p-3 mb-3">
-                <div className="grid grid-cols-3 gap-2 text-center">
-                  <div>
-                    <div className="text-blue-200 text-xs mb-1">Compra</div>
-                    <div className="text-base font-bold text-white">
-                      {loading ? (
-                        <span className="animate-pulse text-xs">-.---</span>
-                      ) : currencyMode === 'USD_TO_PEN' ? (
-                        `S/ ${exchangeRateBuy.toFixed(3)}`
-                      ) : (
-                        `$ ${(1 / exchangeRateSell).toFixed(3)}`
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className="border-x border-white/20">
-                    <div className="text-blue-200 text-xs mb-1">Tipo Cambio</div>
-                    <div className="text-lg font-bold text-green-400">
-                      {loading ? (
-                        <span className="animate-pulse text-xs">-.---</span>
-                      ) : currencyMode === 'USD_TO_PEN' ? (
-                        `${((exchangeRateBuy + exchangeRateSell) / 2).toFixed(3)}`
-                      ) : (
-                        `${(1 / ((exchangeRateBuy + exchangeRateSell) / 2)).toFixed(3)}`
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="text-blue-200 text-xs mb-1">Venta</div>
-                    <div className="text-base font-bold text-white">
-                      {loading ? (
-                        <span className="animate-pulse text-xs">-.---</span>
-                      ) : currencyMode === 'USD_TO_PEN' ? (
-                        `S/ ${exchangeRateSell.toFixed(3)}`
-                      ) : (
-                        `$ ${(1 / exchangeRateBuy).toFixed(3)}`
-                      )}
-                    </div>
-                  </div>
+                <div className="text-xs sm:text-sm text-white/90 font-light leading-tight">Empresas<br/>Asesoradas</div>
+              </div>
+              <div ref={creditosCount.ref} className="text-center lg:text-left">
+                <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 text-white" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  {creditosCount.count}%
                 </div>
+                <div className="text-xs sm:text-sm text-white/90 font-light leading-tight">Tasa de<br/>Éxito</div>
               </div>
-              
-              <motion.div 
-                className={`text-xs flex items-center justify-center ${rateChange >= 0 ? 'text-green-300' : 'text-red-300'}`}
-                animate={{
-                  y: rateChange >= 0 ? [-2, 0, -2] : [2, 0, 2],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                }}
-              >
-                {!loading && (
-                  <>
-                    {rateChange >= 0 ? '↑' : '↓'} {Math.abs(rateChange).toFixed(3)}
-                  </>
-                )}
-              </motion.div>
-              
-              <div className="h-24 bg-white/5 rounded-lg flex items-end justify-around p-3 gap-1 mt-3">
-                {historicalData.map((rate, i) => {
-                  const minRate = Math.min(...historicalData);
-                  const maxRate = Math.max(...historicalData);
-                  const range = maxRate - minRate || 0.01;
-                  const height = ((rate - minRate) / range) * 80 + 20;
-                  
-                  return (
-                    <motion.div
-                      key={i}
-                      initial={{ height: 0 }}
-                      animate={{ height: `${height}%` }}
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ delay: 0.1 * i, duration: 0.5 }}
-                      className={`flex-1 rounded-t transition-all ${
-                        i === historicalData.length - 1 
-                          ? 'bg-gradient-to-t from-white to-blue-200' 
-                          : 'bg-gradient-to-t from-white/60 to-blue-200/60'
-                      }`}
-                    ></motion.div>
-                  );
-                })}
+              <div ref={experienciaCount.ref} className="text-center lg:text-left">
+                <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 text-white" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  {experienciaCount.count}+
+                </div>
+                <div className="text-xs sm:text-sm text-white/90 font-light leading-tight">Años<br/>Experiencia</div>
               </div>
-              <motion.div 
-                className="text-xs text-blue-200 text-center mt-3"
-                animate={{
-                  opacity: [0.7, 1, 0.7],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                }}
-              >
-                {loading ? 'Cargando...' : 'Tipo de Cambio  del dólar hoy en Perú'}
-              </motion.div>
             </motion.div>
           </motion.div>
 
-          {/* Right content - Illustration/Graphics (Desktop only) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden lg:block lg:ml-12 xl:ml-20"
-          >
-            <div className="relative ml-8">
-              {/* Main card - Tipo de Cambio */}
-              <motion.div
-                animate={{
-                  y: [0, -20, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl max-w-lg"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-12">
-                      <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
-                        <DollarSign className="w-8 h-8 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold text-lg">
-                          Tipo de Cambio
-                        </div>
-                        <div className="text-blue-200 text-sm">
-                          {currencyMode === 'USD_TO_PEN' ? 'Dólares a Soles' : 'Soles a Dólares'}
-                        </div>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => setCurrencyMode(prev => prev === 'USD_TO_PEN' ? 'PEN_TO_USD' : 'USD_TO_PEN')}
-                      className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-xl text-white text-sm font-semibold transition-all hover:scale-105"
-                    >
-                      ⇄ Cambiar
-                    </button>
-                  </div>
+          
 
-                  {/* Compra y Venta */}
-                  <div className="bg-white/5 rounded-lg p-3">
-                    <div className="flex justify-between items-center mb-2">
-                      <div>
-                        <div className="text-blue-200 text-xs mb-1">Compra</div>
-                        <div className="text-xl font-bold text-white">
-                          {loading ? (
-                            <span className="animate-pulse">-.---</span>
-                          ) : currencyMode === 'USD_TO_PEN' ? (
-                            `S/ ${exchangeRateBuy.toFixed(3)}`
-                          ) : (
-                            `$ ${(1 / exchangeRateSell).toFixed(3)}`
-                          )}
-                        </div>
-                      </div>
-                      
-                      <div className="text-center">
-                        <div className="text-blue-200 text-xs mb-1">Tipo de Cambio</div>
-                        <div className="text-2xl font-bold text-green-400">
-                          {loading ? (
-                            <span className="animate-pulse">-.---</span>
-                          ) : currencyMode === 'USD_TO_PEN' ? (
-                            `S/ ${((exchangeRateBuy + exchangeRateSell) / 2).toFixed(3)}`
-                          ) : (
-                            `$ ${(1 / ((exchangeRateBuy + exchangeRateSell) / 2)).toFixed(3)}`
-                          )}
-                        </div>
-                      </div>
-                      
-                      <div className="text-right">
-                        <div className="text-blue-200 text-xs mb-1">Venta</div>
-                        <div className="text-xl font-bold text-white">
-                          {loading ? (
-                            <span className="animate-pulse">-.---</span>
-                          ) : currencyMode === 'USD_TO_PEN' ? (
-                            `S/ ${exchangeRateSell.toFixed(3)}`
-                          ) : (
-                            `$ ${(1 / exchangeRateBuy).toFixed(3)}`
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Cambio */}
-                  <div className={`text-xs flex items-center justify-center ${rateChange >= 0 ? 'text-green-300' : 'text-red-300'}`}>
-                    {!loading && (
-                      <>
-                        {rateChange >= 0 ? '↑' : '↓'} {Math.abs(rateChange).toFixed(3)} últimas 24h
-                      </>
-                    )}
-                  </div>
-
-                  {/* Gráfico mini */}
-                  <div className="h-32 bg-white/5 rounded-lg flex items-end justify-around p-3 gap-2">
-                    {historicalData.map((rate, i) => {
-                      const minRate = Math.min(...historicalData);
-                      const maxRate = Math.max(...historicalData);
-                      const range = maxRate - minRate || 0.01;
-                      const height = ((rate - minRate) / range) * 80 + 20;
-                      
-                      return (
-                        <motion.div
-                          key={i}
-                          initial={{ height: 0 }}
-                          animate={{ height: `${height}%` }}
-                          transition={{ delay: 0.1 * i, duration: 0.5 }}
-                          className={`flex-1 rounded-t transition-all ${
-                            i === historicalData.length - 1 
-                              ? 'bg-gradient-to-t from-white to-blue-200' 
-                              : 'bg-gradient-to-t from-white/60 to-blue-200/60'
-                          }`}
-                        ></motion.div>
-                      );
-                    })}
-                  </div>
-                  
-                  <div className="text-sm text-blue-200 text-center">
-                    {loading ? 'Cargando...' : 'Tipo de Cambio  del dólar hoy en Perú'}
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating card - Solo Tasa de Éxito */}
-              <motion.div
-                animate={{
-                  y: [0, 15, 0],
-                  x: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-                className="absolute -bottom-8 -left-8 bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl"
-              >
-                <div className="w-8 h-8 flex items-center justify-center rounded-full mb-2" style={{ backgroundColor: '#b3c7e6' }}>
-                  <Award className="w-5 h-5 text-white" />
-                </div>
-
-
-                <div className="text-2xl font-bold text-white">95%</div>
-                <div className="text-sm text-blue-200">Tasa de Éxito</div>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
   );
 }
-

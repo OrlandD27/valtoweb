@@ -316,7 +316,7 @@ _Cita agendada desde www.valtomanagement.com_`;
                     <motion.button
                       key={index}
                       onClick={() => !isPast && !isSunday && handleDateClick(date)}
-                      disabled={!date || isPast === true || isSunday}
+                      disabled={!date || Boolean(isPast) || Boolean(isSunday)}
                       whileHover={date && !isPast && !isSunday ? { scale: 1.1 } : {}}
                       whileTap={date && !isPast && !isSunday ? { scale: 0.95 } : {}}
                       className={`

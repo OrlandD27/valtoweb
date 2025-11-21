@@ -6,6 +6,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
+import FloatingSocial from "@/components/FloatingSocial";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function ConsultoriaFinanciera() {
   const servicios = [
@@ -43,9 +45,11 @@ export default function ConsultoriaFinanciera() {
   return (
     <>
       <Navbar />
+      <FloatingSocial />
+      <WhatsAppButton />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden" style={{ background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)' }}>
+      <section className="relative pt-32 pb-20 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)' }}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <motion.div
             animate={{
@@ -82,16 +86,16 @@ export default function ConsultoriaFinanciera() {
               Consultoría Financiera
             </h1>
             
-            <p className="text-xl lg:text-2xl text-indigo-100 max-w-3xl mx-auto mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
+            <p className="text-xl lg:text-2xl text-blue-100 max-w-3xl mx-auto mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
               Decisiones financieras estratégicas para el crecimiento sostenible
             </p>
 
-            <Link href="#contacto">
+              <Link href="#contacto">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#6366f1', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
               >
                 Optimizar mis Finanzas
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -119,8 +123,8 @@ export default function ConsultoriaFinanciera() {
               <p className="text-lg mb-6" style={{ color: '#4B5563', fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif', lineHeight: '1.8' }}>
                 En VALTO te ayudamos a comprender y optimizar cada aspecto de este ciclo financiero, garantizando que cada decisión esté respaldada por análisis sólidos y estrategias probadas.
               </p>
-              <div className="flex items-center p-6 rounded-xl" style={{ backgroundColor: '#6366f110' }}>
-                <PieChart className="w-12 h-12 mr-4" style={{ color: '#6366f1' }} />
+              <div className="flex items-center p-6 rounded-xl" style={{ backgroundColor: '#0047BB10' }}>
+                <PieChart className="w-12 h-12 mr-4" style={{ color: '#0047BB' }} />
                 <div>
                   <h3 className="font-bold text-lg mb-1" style={{ color: '#002677', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}>
                     Diagnóstico Financiero
@@ -157,7 +161,7 @@ export default function ConsultoriaFinanciera() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-white rounded-2xl shadow-xl p-8"
             >
-              <h3 className="text-2xl font-bold mb-6" style={{ color: '#6366f1', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}>
+              <h3 className="text-2xl font-bold mb-6" style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}>
                 Servicios Financieros
               </h3>
               <ul className="grid md:grid-cols-2 gap-4">
@@ -169,7 +173,7 @@ export default function ConsultoriaFinanciera() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start"
                   >
-                    <CheckCircle className="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" style={{ color: '#6366f1' }} />
+                    <CheckCircle className="w-6 h-6 mr-3 mt-0.5 flex-shrink-0" style={{ color: '#0047BB' }} />
                     <span style={{ color: '#374151', fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
                       {servicio}
                     </span>
@@ -209,7 +213,7 @@ export default function ConsultoriaFinanciera() {
                 style={{ borderColor: '#E5E7EB' }}
               >
                 <div className="flex items-start">
-                  <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#6366f1' }}>
+                  <div className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#0047BB' }}>
                     <area.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="ml-6">
@@ -228,7 +232,7 @@ export default function ConsultoriaFinanciera() {
       </section>
 
       {/* CTA */}
-      <section className="py-20" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)' }}>
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #002677 0%, #0047BB 100%)' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -237,7 +241,7 @@ export default function ConsultoriaFinanciera() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}>
               Toma el Control de tus Finanzas
             </h2>
-            <p className="text-xl text-indigo-100 mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
+            <p className="text-xl text-blue-100 mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
               No dejes las decisiones financieras al azar. Trabaja con especialistas que entienden el ciclo completo de las finanzas empresariales y pueden ayudarte a maximizar cada peso invertido.
             </p>
             <Link href="/#contacto">
@@ -245,7 +249,7 @@ export default function ConsultoriaFinanciera() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#6366f1', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
               >
                 Solicitar Análisis
                 <ArrowRight className="ml-2 w-5 h-5" />

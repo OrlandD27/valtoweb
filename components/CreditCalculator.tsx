@@ -59,7 +59,7 @@ export default function CreditCalculator() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: 'rgba(0, 71, 187, 0.1)' }}>
             <Calculator className="w-8 h-8" style={{ color: '#0047BB' }} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0047BB] mb-4">
             Calculadora de Créditos
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">

@@ -6,6 +6,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
+import FloatingSocial from "@/components/FloatingSocial";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function FormacionEmprendedores() {
   const diferencias = [
@@ -54,6 +56,8 @@ export default function FormacionEmprendedores() {
   return (
     <>
       <Navbar />
+      <FloatingSocial />
+      <WhatsAppButton />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0047BB 0%, #6366f1 100%)' }}>

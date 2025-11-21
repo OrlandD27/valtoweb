@@ -4,7 +4,6 @@ import Services from "@/components/Services";
 import ValueProposition from "@/components/ValueProposition";
 import About from "@/components/About";
 import Process from "@/components/Process";
-import SuccessCases from "@/components/SuccessCases";
 import Testimonials from "@/components/Testimonials";
 import CreditCalculator from "@/components/CreditCalculator";
 import Gallery from "@/components/Gallery";
@@ -23,7 +22,6 @@ export default function Home() {
       <ValueProposition />
       <About />
       <Process />
-      <SuccessCases />
       <Testimonials />
       <CreditCalculator />
       <Gallery />

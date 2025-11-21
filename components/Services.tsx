@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { CreditCard, TrendingUp, GraduationCap, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import Lenis from '@studio-freight/lenis';
 
 const services = [
   {
@@ -16,9 +17,9 @@ const services = [
       "Programas de formación especializados",
       "Talleres prácticos para tomadores de decisiones",
     ],
-    color: "from-blue-500 to-blue-600",
-    bgGradient: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-    iconBg: "#2563eb",
+    color: "from-[#002677] to-[#0047BB]",
+    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
+    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
     link: "/servicios/capacitacion-empresarial"
   },
   {
@@ -32,9 +33,9 @@ const services = [
       "Definición de público objetivo",
       "Desarrollo de estrategias de negocio",
     ],
-    color: "from-cyan-500 to-cyan-600",
-    bgGradient: "linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)",
-    iconBg: "#0891b2",
+    color: "from-[#002677] to-[#0047BB]",
+    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
+    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
     link: "/servicios/consultoria-negocios"
   },
   {
@@ -48,9 +49,9 @@ const services = [
       "Mapeo del ciclo financiero",
       "Optimización de decisiones financieras",
     ],
-    color: "from-indigo-500 to-indigo-600",
-    bgGradient: "linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)",
-    iconBg: "#6366f1",
+    color: "from-[#002677] to-[#0047BB]",
+    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
+    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
     link: "/servicios/consultoria-financiera"
   },
   {
@@ -63,9 +64,9 @@ const services = [
       "Habilidades financieras prácticas",
       "Soft skills esenciales para el éxito",
     ],
-    color: "from-purple-500 to-purple-600",
-    bgGradient: "linear-gradient(135deg, #a855f7 0%, #9333ea 100%)",
-    iconBg: "#9333ea",
+    color: "from-[#002677] to-[#0047BB]",
+    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
+    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
     link: "/servicios/formacion-emprendedores"
   },
 ];
@@ -74,142 +75,162 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   const cardRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "start start"]
   });
 
-  // Transform scroll to rotation (90deg to 0deg - card flips to reveal content)
-  const rotateX = useTransform(scrollYProgress, [0.2, 0.6], [90, 0]);
-  const opacity = useTransform(scrollYProgress, [0.2, 0.5], [0, 1]);
+  // Movimiento horizontal basado en scroll
+  const x = useTransform(scrollYProgress, [0, 1], [index % 2 === 0 ? 100 : -100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
 
   return (
-    <div ref={cardRef} className="h-auto" style={{ perspective: "1000px" }}>
-      <motion.div
-        style={{
-          rotateX: rotateX,
-          opacity: opacity,
-          transformStyle: "preserve-3d",
-        }}
-        className="bg-white rounded-2xl shadow-lg p-6 md:p-8 flex flex-col h-full"
-      >
-        {/* Icon with solid background */}
-        <motion.div
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
-          style={{ backgroundColor: service.iconBg }}
+    <motion.div
+      ref={cardRef}
+      style={{
+        x,
+        opacity,
+      }}
+      className="mb-6"
+    >
+      <Link href={service.link}>
+        <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+          style={{ borderLeftColor: '#0047BB' }}
         >
-          <service.icon className="w-8 h-8 text-white" />
-        </motion.div>
-
-        {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-          {service.title}
-        </h3>
-
-        {/* Description */}
-        <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
-          {service.description}
-        </p>
-
-        {/* Features */}
-        <ul className="space-y-3 mb-6 flex-grow">
-          {service.features.map((feature, i) => (
-            <motion.li
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 + i * 0.1 }}
-              className="flex items-start"
+          <div className="flex flex-col md:flex-row md:items-start gap-4">
+            {/* Icon con gradient VALTO */}
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              className="w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md"
+              style={{ background: service.iconBg }}
             >
-              <svg
-                className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="text-gray-700 text-sm">{feature}</span>
-            </motion.li>
-          ))}
-        </ul>
+              <service.icon className="w-7 h-7 text-white" />
+            </motion.div>
 
-        {/* CTA */}
-        <Link href={service.link}>
-          <motion.div
-            className="inline-flex items-center text-blue-600 font-semibold text-base group/link"
-            whileHover={{ gap: "0.5rem" }}
-            transition={{ duration: 0.3 }}
-          >
-            <span>Saber más</span>
-            <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
-          </motion.div>
-        </Link>
-      </motion.div>
-    </div>
+            <div className="flex-1">
+              {/* Title */}
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#0047BB]" style={{ fontFamily: 'Futura, sans-serif' }}>
+                {service.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm md:text-base text-gray-700 mb-3 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }}>
+                {service.description}
+              </p>
+
+              {/* Features en grid horizontal */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {service.features.map((feature, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 + i * 0.1 }}
+                    className="flex items-start text-gray-700"
+                  >
+                    <svg
+                      className="w-4 h-4 text-[#0047BB] mr-2 mt-0.5 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-xs md:text-sm" style={{ fontFamily: 'Arial, sans-serif' }}>{feature}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Arrow indicator - Solo en desktop */}
+            <motion.div
+              whileHover={{ x: 5 }}
+              className="hidden md:flex w-10 h-10 rounded-full items-center justify-center flex-shrink-0"
+              style={{ background: 'linear-gradient(135deg, #002677 0%, #0047BB 100%)' }}
+            >
+              <ArrowRight className="w-5 h-5 text-white" />
+            </motion.div>
+          </div>
+        </div>
+      </Link>
+    </motion.div>
   );
 }
 
 export default function Services() {
-  return (
-    <section className="py-24 relative overflow-hidden" style={{ background: '#F5F7FA' }} id="servicios">
-      {/* Animated Background Elements */}
-      <motion.div
-        className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-          y: [0, 30, 0],
-        }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
-      <motion.div
-        className="absolute bottom-20 right-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          x: [0, -50, 0],
-          y: [0, -30, 0],
-        }}
-        transition={{ duration: 8, repeat: Infinity }}
-      />
+  // Inicializar Lenis para smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  return (
+    <section className="py-24 relative" style={{ background: '#F5F7FA' }} id="servicios">
+      
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <motion.div
             initial={{ scale: 0 }}
-            whileInView={{ scale: 4 }}
+            whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, type: "spring" }}
             className="inline-block mb-4"
           >
-            <span className="px-4 py-2 bg-valto-blue/10 text-valto-blue rounded-full text-sm font-semibold">
-              Nuestros Servicios
+            <span className="px-4 py-2 bg-[#0047BB]/10 text-[#0047BB] rounded-full text-sm font-bold" style={{ fontFamily: 'Futura, sans-serif' }}>
+              Tu éxito es nuestra máxima prioridad
             </span>
-          </motion.div>    
+          </motion.div>
+          
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold mb-4 text-[#0047BB]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            style={{ fontFamily: 'Futura, sans-serif' }}
+          >
+            Nuestros Servicios
+          </motion.h2>
           
           <motion.p 
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-[#9DA5B3] max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
+            style={{ fontFamily: 'Arial, sans-serif' }}
           >
             Crecimiento y desarrollo con estrategias personalizadas
           </motion.p>
         </motion.div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Services Stack - Cards horizontales con scroll */}
+        <div className="space-y-6">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} />
           ))}

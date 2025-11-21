@@ -1,50 +1,110 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Shield, Zap, Users, BookOpen, Award, HeartHandshake } from "lucide-react";
 import Link from "next/link";
+import { useRef, useEffect } from "react";
+import Lenis from '@studio-freight/lenis';
 
 const differentiators = [
   {
     icon: Shield,
     title: "Confianza y Transparencia",
-    description: "Sin costos ocultos. Te acompañamos en todo el proceso con total claridad.",
+    description: "Te acompañamos en todo el proceso con total claridad.",
+    leftDescription: "Trabajamos con <span class='font-bold text-[#0047BB]'>honestidad y claridad total</span> en cada proyecto. Nuestros procesos son transparentes y sin sorpresas, garantizando tu tranquilidad desde el primer contacto hasta el cierre exitoso.",
+    features: [
+      "Brindamos confianza",
+      "Procesos transparentes",
+      "Comunicación clara"
+    ],
     color: "#0047BB",
   },
   {
     icon: Zap,
     title: "Respuesta Rápida",
     description: "Evaluación en 24 horas. Resultados en tiempo récord para tu negocio.",
+    leftDescription: "Entendemos que <span class='font-bold text-[#0047BB]'>el tiempo es dinero</span> en los negocios. Por eso garantizamos evaluación inicial en 24 horas y respuestas ágiles en cada etapa del proyecto.",
+    features: [
+      "Evaluación en 24 horas",
+      "Implementación rápida",
+      "Estrategias ágiles"
+    ],
     color: "#0047BB",
   },
   {
     icon: Users,
     title: "Asesoría Personalizada",
     description: "Cada empresa es única. Soluciones a medida para tus necesidades específicas.",
+    leftDescription: "No hay dos empresas iguales. Por eso ofrecemos <span class='font-bold text-[#0047BB]'>estrategias personalizadas</span> diseñadas específicamente para tu industria, tamaño y objetivos únicos.",
+    features: [
+      "Análisis personalizado",
+      "Estrategias a medida",
+      "Seguimiento dedicado"
+    ],
     color: "#0047BB",
   },
   {
     icon: BookOpen,
     title: "Centro de Aprendizaje",
     description: "Accede a recursos gratuitos, tutoriales y soluciones rápidas cuando lo necesites.",
+    leftDescription: "Tu crecimiento es nuestra prioridad. Accede a nuestro <span class='font-bold text-[#0047BB]'>centro de recursos gratuitos</span> con videos, guías y material educativo para potenciar tu negocio.",
+    features: [
+      "Videos tutoriales",
+      "Guías descargables",
+      "Enseñarte a crecer"
+    ],
     color: "#0047BB",
     link: "/videos"
   },
   {
     icon: Award,
     title: "Experiencia Certificada",
-    description: "Equipo con certificaciones internacionales y +10 años en el sector.",
+    description: "Trabajamos +4 años en el sector. ayudando a crecer a muchas empresas.",
+    leftDescription: "Nuestro equipo cuenta con <span class='font-bold text-[#0047BB]'>experiencia suficiente</span> y más de 4 años de experiencia transformando pequeñas y medianas empresas en líderes de su sector.",
+    features: [
+      "+4 años de experiencia",
+      "Fortalecimiento empresarial",
+      "Casos de éxito probados"
+    ],
     color: "#0047BB",
   },
   {
     icon: HeartHandshake,
     title: "Compromiso con tu Éxito",
     description: "No cobramos hasta que tu crédito sea aprobado. Tu éxito es nuestro éxito.",
+    leftDescription: "Tu éxito es nuestro éxito. Trabajamos con un <span class='font-bold text-[#0047BB]'>compromiso genuino</span> por alcanzar tus objetivos, acompañándote en cada paso del camino.",
+    features: [
+      "Orientación 100% al resultado",
+      "Seguimiento personalizado",
+      "Garantía de satisfacción"
+    ],
     color: "#0047BB",
   },
 ];
 
 export default function ValueProposition() {
+  // Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <section className="py-24 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 50%, #FFFFFF 100%)' }}>
       {/* Background decoration */}
@@ -92,68 +152,238 @@ export default function ValueProposition() {
             transition={{ type: "spring", duration: 0.6 }}
             className="inline-block mb-4"
           >
-            <span className="px-4 py-2 bg-valto-blue/10 text-valto-blue rounded-full text-sm font-semibold">
+            <span className="px-4 py-2 bg-valto-blue/10 text-[#9DA5B3] rounded-full text-[30px] font-semibold">
               ¿Por qué elegirnos?
             </span>
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-futura-lux">
-            Lo que nos hace <span style={{ color: '#0047BB' }}>Diferentes</span>
+            <span style={{ color: '#0047BB ' }}>Lo que nos hace</span> <span className="font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  DIFERENTES
+                </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-futura-book">
             No somos solo consultores, somos tu socio estratégico comprometido con tu crecimiento
           </p>
         </motion.div>
 
-        {/* Differentiators Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {differentiators.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="group"
-            >
-              {item.link ? (
-                <Link href={item.link}>
-                  <div className="rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-blue-300 h-full cursor-pointer" style={{ background: 'linear-gradient(135deg, #0047BB 0%, #0056D6 100%)' }}>
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg transition-all bg-white/20 backdrop-blur-sm"
-                    >
-                      <item.icon className="w-8 h-8 text-white" />
-                    </motion.div>
-                    <h3 className="text-xl font-bold text-white mb-3 font-futura-lux">
-                      {item.title}
-                    </h3>
-                    <p className="text-blue-50 leading-relaxed font-arial">
-                      {item.description}
-                    </p>
-                    <div className="mt-4 flex items-center text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                      Ver más →
+        {/* Differentiators Grid - Estilo de la imagen */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 mb-16">
+          {differentiators.map((item, index) => {
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const cardRef = useRef<HTMLDivElement>(null);
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const { scrollYProgress } = useScroll({
+              target: cardRef,
+              offset: ["start 0.9", "end 0.1"]
+            });
+
+            // Alternamos entre izquierda y derecha según el índice
+            const isLeft = index % 2 === 0;
+            // Para desktop: parallax horizontal
+            const xDesktop = useTransform(scrollYProgress, [0, 1], [isLeft ? -150 : 150, 0]);
+            // Para móvil: fade in desde abajo
+            const yMobile = useTransform(scrollYProgress, [0, 1], [50, 0]);
+            const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]);
+            
+            return (
+              <motion.div
+                key={index}
+                ref={cardRef}
+                className="group w-full"
+              >
+                {/* Desktop wrapper - con parallax horizontal */}
+                <motion.div
+                  style={{ 
+                    x: xDesktop,
+                    opacity 
+                  }}
+                  transition={{ type: "spring", stiffness: 50, damping: 20 }}
+                  whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                  className="hidden md:block"
+                >
+                  {item.link ? (
+                    <Link href={item.link}>
+                      <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full cursor-pointer bg-white">
+                        <div className="grid grid-cols-2">
+                          {/* Left side - White background */}
+                          <div className="p-8 bg-white">
+                            <p className="text-gray-700 text-base mb-6 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
+                            
+                            {/* Features list */}
+                            <div className="space-y-3">
+                              {item.features.map((feature, i) => (
+                                <div key={i} className="flex items-center space-x-3">
+                                  <div className="w-6 h-6 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
+                                    <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </div>
+                                  <span className="text-gray-700 text-sm font-medium">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          
+                          {/* Right side - Blue VALTO background with gradient */}
+                          <div className="p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
+                            <motion.div
+                              whileHover={{ scale: 1.1 }}
+                              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 bg-white/10 backdrop-blur-sm mx-auto"
+                            >
+                              <item.icon className="w-10 h-10 text-white" />
+                            </motion.div>
+                            
+                            <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
+                              {item.title}
+                            </h3>
+                            
+                            <p className="text-white/90 leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full bg-white">
+                      <div className="grid grid-cols-2">
+                        {/* Left side - White background */}
+                        <div className="p-8 bg-white">
+                          <p className="text-gray-700 text-base mb-6 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
+                          
+                          {/* Features list */}
+                          <div className="space-y-3">
+                            {item.features.map((feature, i) => (
+                              <div key={i} className="flex items-center space-x-3">
+                                <div className="w-6 h-6 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
+                                  <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                </div>
+                                <span className="text-gray-700 text-sm font-medium">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Right side - Blue VALTO background with gradient */}
+                        <div className="p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 bg-white/10 backdrop-blur-sm mx-auto"
+                          >
+                            <item.icon className="w-10 h-10 text-white" />
+                          </motion.div>
+                          
+                          <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
+                            {item.title}
+                          </h3>
+                          
+                          <p className="text-white/90 leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              ) : (
-                <div className="rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-blue-300 h-full" style={{ background: 'linear-gradient(135deg, #0047BB 0%, #0056D6 100%)' }}>
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:shadow-lg transition-all bg-white/20 backdrop-blur-sm"
-                  >
-                    <item.icon className="w-8 h-8 text-white" />
-                  </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-futura-lux">
-                    {item.title}
-                  </h3>
-                  <p className="text-blue-50 leading-relaxed font-arial">
-                    {item.description}
-                  </p>
-                </div>
-              )}
-            </motion.div>
-          ))}
+                  )}
+                </motion.div>
+
+                {/* Mobile wrapper - con fade desde abajo */}
+                <motion.div
+                  style={{ 
+                    y: yMobile,
+                    opacity 
+                  }}
+                  transition={{ type: "spring", stiffness: 80, damping: 20 }}
+                  className="block md:hidden"
+                >
+                  {item.link ? (
+                    <Link href={item.link} className="block">
+                      <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full cursor-pointer bg-white">
+                        <div className="grid grid-cols-1">
+                          {/* Left side - White background */}
+                          <div className="p-5 bg-white">
+                            <p className="text-gray-700 text-sm mb-4 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
+                            
+                            {/* Features list */}
+                            <div className="space-y-2">
+                              {item.features.map((feature, i) => (
+                                <div key={i} className="flex items-center space-x-2">
+                                  <div className="w-5 h-5 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
+                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                  </div>
+                                  <span className="text-gray-700 text-xs font-medium">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          
+                          {/* Right side - Blue VALTO background with gradient */}
+                          <div className="p-5 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
+                            <motion.div
+                              className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 bg-white/10 backdrop-blur-sm mx-auto"
+                            >
+                              <item.icon className="w-8 h-8 text-white" />
+                            </motion.div>
+                            
+                            <h3 className="text-xl font-bold text-white mb-3 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
+                              {item.title}
+                            </h3>
+                            
+                            <p className="text-white/90 text-sm leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full bg-white">
+                      <div className="grid grid-cols-1">
+                        {/* Left side - White background */}
+                        <div className="p-5 bg-white">
+                          <p className="text-gray-700 text-sm mb-4 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
+                          
+                          {/* Features list */}
+                          <div className="space-y-2">
+                            {item.features.map((feature, i) => (
+                              <div key={i} className="flex items-center space-x-2">
+                                <div className="w-5 h-5 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
+                                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                </div>
+                                <span className="text-gray-700 text-xs font-medium">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* Right side - Blue VALTO background with gradient */}
+                        <div className="p-5 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
+                          <motion.div
+                            className="w-16 h-16 rounded-xl flex items-center justify-center mb-4 bg-white/10 backdrop-blur-sm mx-auto"
+                          >
+                            <item.icon className="w-8 h-8 text-white" />
+                          </motion.div>
+                          
+                          <h3 className="text-xl font-bold text-white mb-3 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
+                            {item.title}
+                          </h3>
+                          
+                          <p className="text-white/90 text-sm leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -74,8 +74,14 @@ export default function Gallery() {
   const selectedImageData = galleryImages.find(img => img.id === selectedImage);
 
   return (
-    <section className="py-20 bg-white" id="galeria">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-[#002677] via-[#0047BB] to-[#0056D6] relative overflow-hidden" id="galeria">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,13 +89,13 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: 'rgba(0, 71, 187, 0.1)' }}>
-            <ImageIcon className="w-8 h-8" style={{ color: '#0047BB' }} />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-white/20 backdrop-blur-sm">
+            <ImageIcon className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Futura, sans-serif' }}>
             Nuestra Galería
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8" style={{ fontFamily: 'Arial, sans-serif' }}>
             Conoce nuestro trabajo y las experiencias que compartimos con nuestros clientes
           </p>
 
@@ -101,10 +107,10 @@ export default function Gallery() {
                 onClick={() => setFilter(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                   filter === category
-                    ? "text-white shadow-lg transform scale-105"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-white text-[#0047BB] shadow-xl transform scale-105"
+                    : "bg-white/20 backdrop-blur-sm text-white hover:bg-white/30"
                 }`}
-                style={filter === category ? { backgroundColor: '#0047BB' } : {}}
+                style={{ fontFamily: 'Futura, sans-serif' }}
               >
                 {category}
               </button>
@@ -137,12 +143,12 @@ export default function Gallery() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#002677]/90 via-[#0047BB]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium mb-2">
+                    <span className="inline-block px-3 py-1 bg-white/30 backdrop-blur-sm rounded-full text-xs font-medium mb-2" style={{ fontFamily: 'Arial, sans-serif' }}>
                       {image.category}
                     </span>
-                    <h3 className="text-xl font-bold">{image.title}</h3>
+                    <h3 className="text-xl font-bold" style={{ fontFamily: 'Futura, sans-serif' }}>{image.title}</h3>
                   </div>
                 </div>
               </motion.div>
@@ -157,13 +163,13 @@ export default function Gallery() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-[#002677]/95 via-[#0047BB]/95 to-[#0056D6]/95 backdrop-blur-sm p-4"
               onClick={closeLightbox}
             >
               {/* Close Button */}
               <button
                 onClick={closeLightbox}
-                className="absolute top-4 right-4 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                className="absolute top-4 right-4 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors backdrop-blur-sm"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -174,7 +180,7 @@ export default function Gallery() {
                   e.stopPropagation();
                   prevImage();
                 }}
-                className="absolute left-4 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                className="absolute left-4 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors backdrop-blur-sm"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -185,7 +191,7 @@ export default function Gallery() {
                   e.stopPropagation();
                   nextImage();
                 }}
-                className="absolute right-4 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                className="absolute right-4 z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors backdrop-blur-sm"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -209,10 +215,10 @@ export default function Gallery() {
 
                 {/* Image Info */}
                 <div className="mt-4 text-center">
-                  <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-2">
+                  <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-2" style={{ fontFamily: 'Arial, sans-serif' }}>
                     {selectedImageData.category}
                   </span>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-white" style={{ fontFamily: 'Futura, sans-serif' }}>
                     {selectedImageData.title}
                   </h3>
                 </div>
