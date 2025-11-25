@@ -102,17 +102,18 @@ export default function CapacitacionEmpresarial() {
               Formación de élite para líderes que toman decisiones estratégicas
             </p>
 
-            <Link href="#contacto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
-              >
-                Solicitar Información
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </Link>
+            <motion.a
+              href="https://wa.me/51920000848?text=Hola,%20quisiera%20información%20sobre%20Capacitación%20Empresarial"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+              style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+            >
+              Solicitar Información
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </motion.a>
           </motion.div>
         </div>
       </section>

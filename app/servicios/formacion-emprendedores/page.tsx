@@ -101,17 +101,18 @@ export default function FormacionEmprendedores() {
               Conviértete en el empresario que el mercado necesita
             </p>
 
-            <Link href="#contacto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
-              >
-                Comenzar mi Transformación
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </Link>
+            <motion.a
+              href="https://wa.me/51920000848?text=Hola,%20quisiera%20información%20sobre%20Formación%20de%20Emprendedores"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+              style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+            >
+              Comenzar mi Transformación
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </motion.a>
           </motion.div>
         </div>
       </section>
@@ -297,17 +298,18 @@ export default function FormacionEmprendedores() {
             <p className="text-xl text-blue-100 mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
               No dejes que la falta de conocimiento limite tu potencial. Únete a nuestra comunidad de empresarios exitosos y transforma tu emprendimiento en un negocio sólido y rentable.
             </p>
-            <Link href="/#contacto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
-              >
-                Inscribirme Ahora
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </Link>
+            <motion.a
+              href="https://wa.me/51920000848?text=Hola,%20quisiera%20inscribirme%20en%20Formación%20de%20Emprendedores"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+              style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+            >
+              Inscribirme Ahora
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </motion.a>
           </motion.div>
         </div>
       </section>

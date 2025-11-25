@@ -90,17 +90,18 @@ export default function ConsultoriaNegocios() {
               Tu aliado estratégico desde la creación hasta el crecimiento de tu empresa
             </p>
 
-            <Link href="#contacto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
-              >
-                Iniciar mi Negocio
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </Link>
+            <motion.a
+              href="https://wa.me/51920000848?text=Hola,%20quisiera%20información%20sobre%20Consultoría%20de%20Negocios"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+              style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+            >
+              Iniciar mi Negocio
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </motion.a>
           </motion.div>
         </div>
       </section>
@@ -233,17 +234,18 @@ export default function ConsultoriaNegocios() {
             <p className="text-xl text-blue-50 mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
               No dejes al azar el futuro de tu negocio. Trabaja con expertos que han ayudado a decenas de empresas a establecerse y crecer exitosamente.
             </p>
-            <Link href="/#contacto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
-              >
-                Agendar Consulta
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </Link>
+            <motion.a
+              href="https://wa.me/51920000848?text=Hola,%20quisiera%20agendar%20una%20consulta%20de%20negocios"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
+              style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
+            >
+              Agendar Consulta
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </motion.a>
           </motion.div>
         </div>
       </section>

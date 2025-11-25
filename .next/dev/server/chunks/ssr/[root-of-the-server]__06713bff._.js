@@ -174,19 +174,18 @@ function Navbar() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex justify-around items-center h-20",
+                    className: `flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-3' : 'h-24 py-3'}`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
                             className: "flex items-center group",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-20 h-20 flex items-center justify-center",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "/logooficial.png",
-                                    alt: "VALTO Logo",
-                                    className: "h-16 w-86 object-contain transition-transform duration-300 group-hover:scale-110",
+                                    src: "/logo222.png",
+                                    alt: "VALTO Management Consulting",
+                                    className: "h-20 w-auto object-contain transition-all duration-500",
                                     style: {
-                                        filter: scrolled ? 'brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(3567%) hue-rotate(212deg) brightness(95%) contrast(105%)' : 'none'
+                                        filter: scrolled ? 'brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(2878%) hue-rotate(210deg) brightness(97%) contrast(101%)' : 'brightness(0) invert(1)'
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
@@ -213,27 +212,27 @@ function Navbar() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 href: item.href,
-                                                className: `relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${item.featured ? scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white/20 text-white hover:bg-white/30" : scrolled ? "text-[#0047BB] hover:text-[#003088] hover:bg-blue-50" : "text-white hover:bg-white/10"}`,
+                                                className: `relative px-4 py- text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${item.featured ? scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white/20 text-white hover:bg-white/30" : scrolled ? "text-[#0047BB] hover:text-[#003088] hover:bg-blue-50" : "text-white hover:bg-white/10"}`,
                                                 children: [
                                                     item.name,
                                                     item.hasDropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                         className: `w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Navbar.tsx",
-                                                        lineNumber: 121,
+                                                        lineNumber: 119,
                                                         columnNumber: 21
                                                     }, this),
                                                     !item.featured && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: `absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-3/4 ${scrolled ? "bg-valto-blue" : "bg-white"}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Navbar.tsx",
-                                                        lineNumber: 124,
+                                                        lineNumber: 122,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 105,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -260,23 +259,23 @@ function Navbar() {
                                                             children: subItem.name
                                                         }, idx, false, {
                                                             fileName: "[project]/components/Navbar.tsx",
-                                                            lineNumber: 141,
+                                                            lineNumber: 139,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 131,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 131,
+                                                lineNumber: 129,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, item.name, true, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 99,
                                         columnNumber: 15
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -285,13 +284,13 @@ function Navbar() {
                                     children: "Agendar Consulta"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 155,
+                                    lineNumber: 153,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 99,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -301,18 +300,18 @@ function Navbar() {
                                 size: 26
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 176,
+                                lineNumber: 174,
                                 columnNumber: 23
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 size: 26
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 176,
+                                lineNumber: 174,
                                 columnNumber: 41
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 168,
+                            lineNumber: 166,
                             columnNumber: 11
                         }, this)
                     ]
@@ -343,12 +342,15 @@ function Navbar() {
                     transition: {
                         duration: 0.3
                     },
-                    className: "lg:hidden bg-white shadow-2xl border-t border-gray-100 overflow-hidden",
+                    className: "lg:hidden shadow-2xl border-t border-white/20 overflow-hidden",
+                    style: {
+                        background: 'linear-gradient(135deg, #002677 0%, #0047BB 100%)'
+                    },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "max-h-[calc(100vh-5rem)] overflow-y-auto px-6 py-6 space-y-2",
                         style: {
                             scrollbarWidth: 'thin',
-                            scrollbarColor: '#0047BB #f5f7fa'
+                            scrollbarColor: '#ffffff #0047BB'
                         },
                         children: [
                             navItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -367,11 +369,11 @@ function Navbar() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: item.href,
                                             onClick: ()=>setIsOpen(false),
-                                            className: "block text-gray-800 font-semibold py-3 px-4 rounded-xl hover:bg-blue-50 hover:text-valto-blue transition-all duration-300",
+                                            className: "block text-white font-semibold py-3 px-4 rounded-xl hover:bg-white/10 transition-all duration-300",
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 204,
+                                            lineNumber: 203,
                                             columnNumber: 19
                                         }, this),
                                         item.hasDropdown && item.dropdownItems && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -379,22 +381,22 @@ function Navbar() {
                                             children: item.dropdownItems.map((subItem, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                     href: subItem.href,
                                                     onClick: ()=>setIsOpen(false),
-                                                    className: "block text-gray-600 text-sm py-2 px-4 rounded-lg hover:bg-blue-50 hover:text-valto-blue transition-all",
+                                                    className: "block text-white/80 text-sm py-2 px-4 rounded-lg hover:bg-white/10 hover:text-white transition-all",
                                                     children: subItem.name
                                                 }, idx, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 214,
+                                                    lineNumber: 213,
                                                     columnNumber: 25
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 212,
+                                            lineNumber: 211,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, item.name, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 197,
                                     columnNumber: 17
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -413,16 +415,16 @@ function Navbar() {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/agendar-cita",
                                     onClick: ()=>setIsOpen(false),
-                                    className: "block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg bg-valto-blue hover:bg-[#003088]",
+                                    className: "block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg bg-white/10 hover:bg-white/20 border-2 border-white",
                                     children: "Agendar Consulta"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 234,
+                                    lineNumber: 233,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 228,
+                                lineNumber: 227,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -437,14 +439,14 @@ function Navbar() {
                                 transition: {
                                     delay: (navItems.length + 1) * 0.1
                                 },
-                                className: "pt-6 border-t border-gray-200",
+                                className: "pt-6 border-t border-white/20",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-500 text-sm font-semibold mb-4 px-4",
+                                        className: "text-white/90 text-sm font-semibold mb-4 px-4",
                                         children: "Síguenos en:"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 250,
+                                        lineNumber: 249,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -454,113 +456,113 @@ function Navbar() {
                                                 href: "https://www.facebook.com/gltbusinessconsulting",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(FacebookIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 258,
+                                                    lineNumber: 257,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 252,
+                                                lineNumber: 251,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.instagram.com/valto.management/",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(InstagramIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 265,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 259,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.tiktok.com/@valto.management",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TikTokIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 274,
+                                                    lineNumber: 273,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 268,
+                                                lineNumber: 267,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.linkedin.com/company/gltbc/?viewAsMember=true",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LinkedinIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 281,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 276,
+                                                lineNumber: 275,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.youtube.com/channel/UCeuMGEp2CE9-trNobwxEC7Q",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(YoutubeIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 290,
+                                                    lineNumber: 289,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 284,
+                                                lineNumber: 283,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 250,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 244,
+                                lineNumber: 243,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 191,
+                        lineNumber: 190,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Navbar.tsx",
-                    lineNumber: 184,
+                    lineNumber: 182,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 182,
+                lineNumber: 180,
                 columnNumber: 7
             }, this)
         ]
@@ -591,7 +593,8 @@ function Footer() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         className: "relative overflow-hidden text-white",
         style: {
-            background: 'linear-gradient(to bottom right, #0047BB, #002677, #001a4d)'
+            background: 'linear-gradient(to bottom right, #0047BB, #002677, #001a4d)',
+            fontFamily: 'Arial, sans-serif'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -604,12 +607,12 @@ function Footer() {
                     }
                 }, void 0, false, {
                     fileName: "[project]/components/Footer.tsx",
-                    lineNumber: 11,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Footer.tsx",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -628,26 +631,26 @@ function Footer() {
                                             className: "h-20 w-auto object-contain"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.tsx",
-                                            lineNumber: 22,
+                                            lineNumber: 25,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 21,
+                                        lineNumber: 24,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-white/80 text-sm",
-                                        children: "Impulsando el crecimiento empresarial con asesoría financiera especializada."
+                                        children: "Construyendo valor para tus inversiones."
                                     }, void 0, false, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 31,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 20,
+                                lineNumber: 23,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -657,7 +660,7 @@ function Footer() {
                                         children: "Servicios"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 35,
+                                        lineNumber: 38,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -670,12 +673,12 @@ function Footer() {
                                                     children: "Asesoría en Créditos"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Footer.tsx",
-                                                    lineNumber: 38,
+                                                    lineNumber: 41,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 37,
+                                                lineNumber: 40,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -685,12 +688,12 @@ function Footer() {
                                                     children: "Financiamiento Empresarial"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Footer.tsx",
-                                                    lineNumber: 43,
+                                                    lineNumber: 46,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 42,
+                                                lineNumber: 45,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -700,24 +703,24 @@ function Footer() {
                                                     children: "Capacitación Empresarial"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Footer.tsx",
-                                                    lineNumber: 48,
+                                                    lineNumber: 51,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 47,
+                                                lineNumber: 50,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 36,
+                                        lineNumber: 39,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 34,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -727,7 +730,7 @@ function Footer() {
                                         children: "Legal"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 60,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -740,12 +743,12 @@ function Footer() {
                                                     children: "Términos y Condiciones"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Footer.tsx",
-                                                    lineNumber: 60,
+                                                    lineNumber: 63,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 59,
+                                                lineNumber: 62,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -755,12 +758,12 @@ function Footer() {
                                                     children: "Política de Privacidad"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Footer.tsx",
-                                                    lineNumber: 65,
+                                                    lineNumber: 68,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 64,
+                                                lineNumber: 67,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -770,24 +773,24 @@ function Footer() {
                                                     children: "Libro de Reclamaciones"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Footer.tsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 73,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 72,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 61,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 56,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -797,7 +800,7 @@ function Footer() {
                                         children: "Contacto"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -810,14 +813,14 @@ function Footer() {
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Footer.tsx",
-                                                        lineNumber: 82,
+                                                        lineNumber: 85,
                                                         columnNumber: 17
                                                     }, this),
                                                     "+51 985 123 456"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 81,
+                                                lineNumber: 84,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -827,14 +830,14 @@ function Footer() {
                                                         className: "w-4 h-4 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Footer.tsx",
-                                                        lineNumber: 86,
+                                                        lineNumber: 89,
                                                         columnNumber: 17
                                                     }, this),
                                                     "info@valto.com.gt"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 88,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -844,32 +847,32 @@ function Footer() {
                                                         className: "w-4 h-4 mr-2 mt-0.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Footer.tsx",
-                                                        lineNumber: 90,
+                                                        lineNumber: 93,
                                                         columnNumber: 17
                                                     }, this),
                                                     "Perú, Perú"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Footer.tsx",
-                                                lineNumber: 89,
+                                                lineNumber: 92,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 83,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 78,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Footer.tsx",
-                        lineNumber: 18,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -879,7 +882,7 @@ function Footer() {
                                 children: "© 2025 VALTO Management Consulting. Todos los derechos reservados."
                             }, void 0, false, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 99,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -894,7 +897,7 @@ function Footer() {
                                         children: "ModerStudio"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Footer.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 105,
                                         columnNumber: 13
                                     }, this),
                                     '',
@@ -902,26 +905,26 @@ function Footer() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 100,
+                                lineNumber: 103,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Marca registrada por indecopi."
                             }, void 0, false, {
                                 fileName: "[project]/components/Footer.tsx",
-                                lineNumber: 112,
+                                lineNumber: 115,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Footer.tsx",
-                        lineNumber: 98,
+                        lineNumber: 101,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Footer.tsx",
-                lineNumber: 17,
+                lineNumber: 20,
                 columnNumber: 7
             }, this)
         ]
@@ -1420,14 +1423,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/arrow-right.js [app-ssr] (ecmascript) <export default as ArrowRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-ssr] (ecmascript) <export default as Users>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$award$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Award$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/award.js [app-ssr] (ecmascript) <export default as Award>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Navbar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Navbar.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Footer.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ImageCarousel$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ImageCarousel.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$FloatingSocial$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/FloatingSocial.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$WhatsAppButton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/WhatsAppButton.tsx [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
@@ -1608,36 +1609,32 @@ function FormacionEmprendedores() {
                                     lineNumber: 100,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "#contacto",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                        whileHover: {
-                                            scale: 1.05
-                                        },
-                                        whileTap: {
-                                            scale: 0.95
-                                        },
-                                        className: "inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all",
-                                        style: {
-                                            color: '#0047BB',
-                                            fontFamily: 'Futura Lux, Futura, Arial, sans-serif'
-                                        },
-                                        children: [
-                                            "Comenzar mi Transformación",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                className: "ml-2 w-5 h-5"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                lineNumber: 112,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                        lineNumber: 105,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
+                                    href: "https://wa.me/51920000848?text=Hola,%20quisiera%20información%20sobre%20Formación%20de%20Emprendedores",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    whileHover: {
+                                        scale: 1.05
+                                    },
+                                    whileTap: {
+                                        scale: 0.95
+                                    },
+                                    className: "inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all",
+                                    style: {
+                                        color: '#0047BB',
+                                        fontFamily: 'Futura Lux, Futura, Arial, sans-serif'
+                                    },
+                                    children: [
+                                        "Comenzar mi Transformación",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                            className: "ml-2 w-5 h-5"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
+                                            lineNumber: 114,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
                                     lineNumber: 104,
                                     columnNumber: 13
@@ -1691,7 +1688,7 @@ function FormacionEmprendedores() {
                                         children: "Emprendedor vs Empresario"
                                     }, void 0, false, {
                                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 129,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1704,7 +1701,7 @@ function FormacionEmprendedores() {
                                         children: "Una cosa es ser emprendedor y una muy distinta ser empresario. El emprendedor es aquel que tiene las ganas de hacer algo propio, algo diferente, pero esto no basta para tener éxito en el enmarañado mundo de los negocios."
                                     }, void 0, false, {
                                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 132,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1717,13 +1714,13 @@ function FormacionEmprendedores() {
                                         children: "A ello es necesario sumarle conocimiento, habilidades financieras y diferentes soft skills que marcarán la diferencia en el ecosistema en que se mueve la empresa."
                                     }, void 0, false, {
                                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 135,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                lineNumber: 123,
+                                lineNumber: 124,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1749,28 +1746,28 @@ function FormacionEmprendedores() {
                                     interval: 5000
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 146,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                lineNumber: 139,
+                                lineNumber: 140,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                        lineNumber: 122,
+                        lineNumber: 123,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                    lineNumber: 121,
+                    lineNumber: 122,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                lineNumber: 120,
+                lineNumber: 121,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1804,7 +1801,7 @@ function FormacionEmprendedores() {
                                     children: "Emprendedor vs Empresario"
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 169,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1817,7 +1814,7 @@ function FormacionEmprendedores() {
                                     children: "Una cosa es ser emprendedor y una muy distinta ser empresario. El emprendedor es aquel que tiene las ganas de hacer algo propio, algo diferente, pero esto no basta para tener éxito en el enmarañado mundo de los negocios."
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 172,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1830,13 +1827,13 @@ function FormacionEmprendedores() {
                                     children: "A ello es necesario sumarle conocimiento, habilidades financieras y diferentes soft skills que marcarán la diferencia en el ecosistema en que se mueve la empresa."
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 175,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                            lineNumber: 162,
+                            lineNumber: 163,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1865,7 +1862,7 @@ function FormacionEmprendedores() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 190,
+                                                    lineNumber: 191,
                                                     columnNumber: 21
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$award$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Award$3e$__["Award"], {
                                                     className: "w-10 h-10 mr-4",
@@ -1874,7 +1871,7 @@ function FormacionEmprendedores() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 192,
+                                                    lineNumber: 193,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1886,13 +1883,13 @@ function FormacionEmprendedores() {
                                                     children: item.tipo
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 194,
+                                                    lineNumber: 195,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                            lineNumber: 188,
+                                            lineNumber: 189,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1907,7 +1904,7 @@ function FormacionEmprendedores() {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                            lineNumber: 201,
+                                                            lineNumber: 202,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1918,40 +1915,40 @@ function FormacionEmprendedores() {
                                                             children: car
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                            lineNumber: 202,
+                                                            lineNumber: 203,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, i, true, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 200,
+                                                    lineNumber: 201,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 199,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 181,
+                                    lineNumber: 182,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                            lineNumber: 179,
+                            lineNumber: 180,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                    lineNumber: 161,
+                    lineNumber: 162,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                lineNumber: 160,
+                lineNumber: 161,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1982,7 +1979,7 @@ function FormacionEmprendedores() {
                                     children: "Programa de Formación"
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 223,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1994,13 +1991,13 @@ function FormacionEmprendedores() {
                                     children: "Desarrolla las competencias esenciales del empresario exitoso"
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 225,
+                                    lineNumber: 226,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                            lineNumber: 217,
+                            lineNumber: 218,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2036,12 +2033,12 @@ function FormacionEmprendedores() {
                                                     className: "w-8 h-8 text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 243,
+                                                    lineNumber: 244,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                lineNumber: 242,
+                                                lineNumber: 243,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2056,7 +2053,7 @@ function FormacionEmprendedores() {
                                                         children: modulo.titulo
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                        lineNumber: 246,
+                                                        lineNumber: 247,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2068,29 +2065,29 @@ function FormacionEmprendedores() {
                                                         children: modulo.descripcion
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                        lineNumber: 249,
+                                                        lineNumber: 250,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                lineNumber: 245,
+                                                lineNumber: 246,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                        lineNumber: 241,
+                                        lineNumber: 242,
                                         columnNumber: 17
                                     }, this)
                                 }, index, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 232,
+                                    lineNumber: 233,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                            lineNumber: 230,
+                            lineNumber: 231,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2113,7 +2110,7 @@ function FormacionEmprendedores() {
                                     children: "Lo que Obtendrás"
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 264,
+                                    lineNumber: 265,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2139,7 +2136,7 @@ function FormacionEmprendedores() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 276,
+                                                    lineNumber: 277,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2151,35 +2148,35 @@ function FormacionEmprendedores() {
                                                     children: beneficio
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                                    lineNumber: 277,
+                                                    lineNumber: 278,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                            lineNumber: 269,
+                                            lineNumber: 270,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 267,
+                                    lineNumber: 268,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                            lineNumber: 259,
+                            lineNumber: 260,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                    lineNumber: 216,
+                    lineNumber: 217,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                lineNumber: 215,
+                lineNumber: 216,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2207,7 +2204,7 @@ function FormacionEmprendedores() {
                                 children: "Da el Salto de Emprendedor a Empresario"
                             }, void 0, false, {
                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                lineNumber: 294,
+                                lineNumber: 295,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2218,62 +2215,58 @@ function FormacionEmprendedores() {
                                 children: "No dejes que la falta de conocimiento limite tu potencial. Únete a nuestra comunidad de empresarios exitosos y transforma tu emprendimiento en un negocio sólido y rentable."
                             }, void 0, false, {
                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                lineNumber: 297,
+                                lineNumber: 298,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                href: "/#contacto",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
-                                    whileHover: {
-                                        scale: 1.05
-                                    },
-                                    whileTap: {
-                                        scale: 0.95
-                                    },
-                                    className: "inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all",
-                                    style: {
-                                        color: '#0047BB',
-                                        fontFamily: 'Futura Lux, Futura, Arial, sans-serif'
-                                    },
-                                    children: [
-                                        "Inscribirme Ahora",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                            className: "ml-2 w-5 h-5"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                            lineNumber: 308,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                    lineNumber: 301,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].a, {
+                                href: "https://wa.me/51920000848?text=Hola,%20quisiera%20inscribirme%20en%20Formación%20de%20Emprendedores",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                whileHover: {
+                                    scale: 1.05
+                                },
+                                whileTap: {
+                                    scale: 0.95
+                                },
+                                className: "inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all",
+                                style: {
+                                    color: '#0047BB',
+                                    fontFamily: 'Futura Lux, Futura, Arial, sans-serif'
+                                },
+                                children: [
+                                    "Inscribirme Ahora",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                        className: "ml-2 w-5 h-5"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
+                                        lineNumber: 311,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                                lineNumber: 300,
+                                lineNumber: 301,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                        lineNumber: 290,
+                        lineNumber: 291,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                    lineNumber: 289,
+                    lineNumber: 290,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                lineNumber: 288,
+                lineNumber: 289,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/servicios/formacion-emprendedores/page.tsx",
-                lineNumber: 315,
+                lineNumber: 317,
                 columnNumber: 7
             }, this)
         ]

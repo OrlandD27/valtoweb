@@ -1684,36 +1684,32 @@ function CapacitacionEmpresarial() {
                                     lineNumber: 101,
                                     columnNumber: 13
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "#contacto",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                        whileHover: {
-                                            scale: 1.05
-                                        },
-                                        whileTap: {
-                                            scale: 0.95
-                                        },
-                                        className: "inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all",
-                                        style: {
-                                            color: '#0047BB',
-                                            fontFamily: 'Futura Lux, Futura, Arial, sans-serif'
-                                        },
-                                        children: [
-                                            "Solicitar Información",
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                className: "ml-2 w-5 h-5"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                lineNumber: 113,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                        lineNumber: 106,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].a, {
+                                    href: "https://wa.me/51920000848?text=Hola,%20quisiera%20información%20sobre%20Capacitación%20Empresarial",
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                    whileHover: {
+                                        scale: 1.05
+                                    },
+                                    whileTap: {
+                                        scale: 0.95
+                                    },
+                                    className: "inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all",
+                                    style: {
+                                        color: '#0047BB',
+                                        fontFamily: 'Futura Lux, Futura, Arial, sans-serif'
+                                    },
+                                    children: [
+                                        "Solicitar Información",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
+                                            className: "ml-2 w-5 h-5"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
+                                            lineNumber: 115,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
                                     lineNumber: 105,
                                     columnNumber: 13
@@ -1768,7 +1764,7 @@ function CapacitacionEmpresarial() {
                                             children: "El Conocimiento es la Clave del Éxito"
                                         }, void 0, false, {
                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 130,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1781,7 +1777,7 @@ function CapacitacionEmpresarial() {
                                             children: "Estamos convencidos que el éxito de una empresa depende mucho del conocimiento adquirido por las personas que toman decisiones en ella. Es por esto que instruimos y capacitamos a estas personas con material teórico y práctico extraído de las mejores escuelas de negocios del mundo."
                                         }, void 0, false, {
                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                            lineNumber: 132,
+                                            lineNumber: 133,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1794,7 +1790,7 @@ function CapacitacionEmpresarial() {
                                             children: "Nuestros programas están diseñados para transformar líderes en estrategas capaces de enfrentar los desafíos del mercado moderno con confianza y conocimiento de vanguardia."
                                         }, void 0, false, {
                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1810,7 +1806,7 @@ function CapacitacionEmpresarial() {
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 140,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1824,7 +1820,7 @@ function CapacitacionEmpresarial() {
                                                             children: "Certificación Profesional"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                            lineNumber: 141,
+                                                            lineNumber: 142,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1835,25 +1831,25 @@ function CapacitacionEmpresarial() {
                                                             children: "Reconocida internacionalmente"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                            lineNumber: 144,
+                                                            lineNumber: 145,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                    lineNumber: 140,
+                                                    lineNumber: 141,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 139,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 125,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1879,18 +1875,18 @@ function CapacitacionEmpresarial() {
                                         interval: 5000
                                     }, void 0, false, {
                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 158,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 152,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                            lineNumber: 123,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1919,7 +1915,7 @@ function CapacitacionEmpresarial() {
                                         children: "¿Por Qué Elegirnos?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                        lineNumber: 176,
+                                        lineNumber: 177,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1945,7 +1941,7 @@ function CapacitacionEmpresarial() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                        lineNumber: 188,
+                                                        lineNumber: 189,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1956,40 +1952,40 @@ function CapacitacionEmpresarial() {
                                                         children: beneficio
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                        lineNumber: 189,
+                                                        lineNumber: 190,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 182,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 180,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                lineNumber: 170,
+                                lineNumber: 171,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                            lineNumber: 169,
+                            lineNumber: 170,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                    lineNumber: 122,
+                    lineNumber: 123,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                lineNumber: 121,
+                lineNumber: 122,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2020,7 +2016,7 @@ function CapacitacionEmpresarial() {
                                     children: "Nuestros Módulos de Formación"
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                    lineNumber: 208,
+                                    lineNumber: 209,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2032,13 +2028,13 @@ function CapacitacionEmpresarial() {
                                     children: "Programas diseñados para potenciar cada área de tu gestión empresarial"
                                 }, void 0, false, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 212,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                            lineNumber: 203,
+                            lineNumber: 204,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2074,12 +2070,12 @@ function CapacitacionEmpresarial() {
                                                     className: "w-8 h-8 text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                    lineNumber: 229,
+                                                    lineNumber: 230,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                lineNumber: 228,
+                                                lineNumber: 229,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2094,7 +2090,7 @@ function CapacitacionEmpresarial() {
                                                         children: modulo.titulo
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                        lineNumber: 232,
+                                                        lineNumber: 233,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2106,40 +2102,40 @@ function CapacitacionEmpresarial() {
                                                         children: modulo.descripcion
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                        lineNumber: 235,
+                                                        lineNumber: 236,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                                lineNumber: 231,
+                                                lineNumber: 232,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                        lineNumber: 227,
+                                        lineNumber: 228,
                                         columnNumber: 17
                                     }, this)
                                 }, index, false, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                    lineNumber: 218,
+                                    lineNumber: 219,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                            lineNumber: 216,
+                            lineNumber: 217,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                    lineNumber: 202,
+                    lineNumber: 203,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                lineNumber: 201,
+                lineNumber: 202,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2167,7 +2163,7 @@ function CapacitacionEmpresarial() {
                                 children: "Invierte en el Futuro de tu Empresa"
                             }, void 0, false, {
                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                lineNumber: 253,
+                                lineNumber: 254,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2178,7 +2174,7 @@ function CapacitacionEmpresarial() {
                                 children: "Da el primer paso hacia la excelencia empresarial. Nuestro equipo está listo para diseñar un programa de capacitación a la medida de tus necesidades."
                             }, void 0, false, {
                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                lineNumber: 256,
+                                lineNumber: 257,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -2201,39 +2197,39 @@ function CapacitacionEmpresarial() {
                                             className: "ml-2 w-5 h-5"
                                         }, void 0, false, {
                                             fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                            lineNumber: 267,
+                                            lineNumber: 268,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                    lineNumber: 260,
+                                    lineNumber: 261,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                                lineNumber: 259,
+                                lineNumber: 260,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                        lineNumber: 249,
+                        lineNumber: 250,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                    lineNumber: 248,
+                    lineNumber: 249,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                lineNumber: 247,
+                lineNumber: 248,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/servicios/capacitacion-empresarial/page.tsx",
-                lineNumber: 274,
+                lineNumber: 275,
                 columnNumber: 7
             }, this)
         ]

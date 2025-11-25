@@ -104,7 +104,7 @@ export default function NosotrosPage() {
             src="/capacitaciones2.png" 
             alt="VALTO Team" 
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             quality={100}
             priority
             sizes="100vw"
@@ -134,7 +134,7 @@ export default function NosotrosPage() {
             >
             </motion.div>
 
-            <h1 className="text-7xl md:text-9xl font-bold mb-8 leading-none font-futura-lux">
+            <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold mb-8 leading-none font-futura-lux">
               <motion.span 
                 className="block text-white"
                 initial={{ opacity: 0, x: -50 }}
@@ -157,7 +157,7 @@ export default function NosotrosPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9 }}
-              className="text-2xl md:text-3xl text-gray-200 font-futura-book mb-12"
+              className="text-lg sm:text-2xl md:text-3xl text-gray-200 font-futura-book mb-12"
             >
               Transformamos negocios en historias de éxito
             </motion.p>
@@ -168,39 +168,40 @@ export default function NosotrosPage() {
               transition={{ delay: 1.1 }}
               className="flex flex-wrap gap-4 justify-center"
             >
-              <Link
+              <motion.a
                 href="#mision"
-                className="group bg-white text-[#0047BB] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#0047BB] hover:text-white transition-all shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+                className="group bg-white text-[#0047BB] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#0047BB] hover:text-white transition-all shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+                animate={{
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               >
                 Nuestra Misión
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <a
-                href="https://wa.me/51999999999"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-600 hover:to-green-700 transition-all shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+              <motion.a
+                href="#valores"
+                className="group bg-white text-[#0047BB] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#0047BB] hover:text-white transition-all shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+                animate={{
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5
+                }}
               >
-                Contáctanos
-              </a>
+                Nuestros Valores
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-8 h-12 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-            <motion.div
-              className="w-1.5 h-3 bg-white rounded-full"
-              animate={{ y: [0, 16, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
       </section>
 
       {/* Quienes Somos Section */}
@@ -286,7 +287,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 px-4 bg-gray-50 relative overflow-hidden">
+      <section id="mision" className="py-24 px-4 bg-gray-50 relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full filter blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-100 rounded-full filter blur-3xl opacity-20 translate-x-1/2 translate-y-1/2" />
@@ -418,7 +419,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* Valores */}
-      <section className="py-20 px-4 bg-white relative overflow-hidden">
+      <section id="valores" className="py-20 px-4 bg-white relative overflow-hidden">
         {/* Animated background gradient */}
         <motion.div 
           className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full filter blur-3xl opacity-30"

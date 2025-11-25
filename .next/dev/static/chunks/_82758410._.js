@@ -181,19 +181,18 @@ function Navbar() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex justify-around items-center h-20",
+                    className: `flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-3' : 'h-24 py-3'}`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
                             className: "flex items-center group",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-20 h-20 flex items-center justify-center",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                    src: "/logooficial.png",
-                                    alt: "VALTO Logo",
-                                    className: "h-16 w-86 object-contain transition-transform duration-300 group-hover:scale-110",
+                                    src: "/logo222.png",
+                                    alt: "VALTO Management Consulting",
+                                    className: "h-20 w-auto object-contain transition-all duration-500",
                                     style: {
-                                        filter: scrolled ? 'brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(3567%) hue-rotate(212deg) brightness(95%) contrast(105%)' : 'none'
+                                        filter: scrolled ? 'brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(2878%) hue-rotate(210deg) brightness(97%) contrast(101%)' : 'brightness(0) invert(1)'
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
@@ -220,27 +219,27 @@ function Navbar() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: item.href,
-                                                className: `relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${item.featured ? scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white/20 text-white hover:bg-white/30" : scrolled ? "text-[#0047BB] hover:text-[#003088] hover:bg-blue-50" : "text-white hover:bg-white/10"}`,
+                                                className: `relative px-4 py- text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${item.featured ? scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white/20 text-white hover:bg-white/30" : scrolled ? "text-[#0047BB] hover:text-[#003088] hover:bg-blue-50" : "text-white hover:bg-white/10"}`,
                                                 children: [
                                                     item.name,
                                                     item.hasDropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                         className: `w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Navbar.tsx",
-                                                        lineNumber: 121,
+                                                        lineNumber: 119,
                                                         columnNumber: 21
                                                     }, this),
                                                     !item.featured && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         className: `absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-3/4 ${scrolled ? "bg-valto-blue" : "bg-white"}`
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/Navbar.tsx",
-                                                        lineNumber: 124,
+                                                        lineNumber: 122,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 105,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -267,23 +266,23 @@ function Navbar() {
                                                             children: subItem.name
                                                         }, idx, false, {
                                                             fileName: "[project]/components/Navbar.tsx",
-                                                            lineNumber: 141,
+                                                            lineNumber: 139,
                                                             columnNumber: 25
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 131,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 131,
+                                                lineNumber: 129,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, item.name, true, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 99,
                                         columnNumber: 15
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -292,13 +291,13 @@ function Navbar() {
                                     children: "Agendar Consulta"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 155,
+                                    lineNumber: 153,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 99,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -308,18 +307,18 @@ function Navbar() {
                                 size: 26
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 176,
+                                lineNumber: 174,
                                 columnNumber: 23
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 size: 26
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 176,
+                                lineNumber: 174,
                                 columnNumber: 41
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Navbar.tsx",
-                            lineNumber: 168,
+                            lineNumber: 166,
                             columnNumber: 11
                         }, this)
                     ]
@@ -350,12 +349,15 @@ function Navbar() {
                     transition: {
                         duration: 0.3
                     },
-                    className: "lg:hidden bg-white shadow-2xl border-t border-gray-100 overflow-hidden",
+                    className: "lg:hidden shadow-2xl border-t border-white/20 overflow-hidden",
+                    style: {
+                        background: 'linear-gradient(135deg, #002677 0%, #0047BB 100%)'
+                    },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "max-h-[calc(100vh-5rem)] overflow-y-auto px-6 py-6 space-y-2",
                         style: {
                             scrollbarWidth: 'thin',
-                            scrollbarColor: '#0047BB #f5f7fa'
+                            scrollbarColor: '#ffffff #0047BB'
                         },
                         children: [
                             navItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -374,11 +376,11 @@ function Navbar() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: item.href,
                                             onClick: ()=>setIsOpen(false),
-                                            className: "block text-gray-800 font-semibold py-3 px-4 rounded-xl hover:bg-blue-50 hover:text-valto-blue transition-all duration-300",
+                                            className: "block text-white font-semibold py-3 px-4 rounded-xl hover:bg-white/10 transition-all duration-300",
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 204,
+                                            lineNumber: 203,
                                             columnNumber: 19
                                         }, this),
                                         item.hasDropdown && item.dropdownItems && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -386,22 +388,22 @@ function Navbar() {
                                             children: item.dropdownItems.map((subItem, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                     href: subItem.href,
                                                     onClick: ()=>setIsOpen(false),
-                                                    className: "block text-gray-600 text-sm py-2 px-4 rounded-lg hover:bg-blue-50 hover:text-valto-blue transition-all",
+                                                    className: "block text-white/80 text-sm py-2 px-4 rounded-lg hover:bg-white/10 hover:text-white transition-all",
                                                     children: subItem.name
                                                 }, idx, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 214,
+                                                    lineNumber: 213,
                                                     columnNumber: 25
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/components/Navbar.tsx",
-                                            lineNumber: 212,
+                                            lineNumber: 211,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, item.name, true, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 198,
+                                    lineNumber: 197,
                                     columnNumber: 17
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -420,16 +422,16 @@ function Navbar() {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/agendar-cita",
                                     onClick: ()=>setIsOpen(false),
-                                    className: "block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg bg-valto-blue hover:bg-[#003088]",
+                                    className: "block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg bg-white/10 hover:bg-white/20 border-2 border-white",
                                     children: "Agendar Consulta"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
-                                    lineNumber: 234,
+                                    lineNumber: 233,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 228,
+                                lineNumber: 227,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -444,14 +446,14 @@ function Navbar() {
                                 transition: {
                                     delay: (navItems.length + 1) * 0.1
                                 },
-                                className: "pt-6 border-t border-gray-200",
+                                className: "pt-6 border-t border-white/20",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-500 text-sm font-semibold mb-4 px-4",
+                                        className: "text-white/90 text-sm font-semibold mb-4 px-4",
                                         children: "Síguenos en:"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 250,
+                                        lineNumber: 249,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -461,113 +463,113 @@ function Navbar() {
                                                 href: "https://www.facebook.com/gltbusinessconsulting",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FacebookIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 258,
+                                                    lineNumber: 257,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 252,
+                                                lineNumber: 251,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.instagram.com/valto.management/",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InstagramIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 266,
+                                                    lineNumber: 265,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 259,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.tiktok.com/@valto.management",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TikTokIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 274,
+                                                    lineNumber: 273,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 268,
+                                                lineNumber: 267,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.linkedin.com/company/gltbc/?viewAsMember=true",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LinkedinIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 282,
+                                                    lineNumber: 281,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 276,
+                                                lineNumber: 275,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                 href: "https://www.youtube.com/channel/UCeuMGEp2CE9-trNobwxEC7Q",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
-                                                className: "w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg",
+                                                className: "w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(YoutubeIcon, {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/Navbar.tsx",
-                                                    lineNumber: 290,
+                                                    lineNumber: 289,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Navbar.tsx",
-                                                lineNumber: 284,
+                                                lineNumber: 283,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Navbar.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 250,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Navbar.tsx",
-                                lineNumber: 244,
+                                lineNumber: 243,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Navbar.tsx",
-                        lineNumber: 191,
+                        lineNumber: 190,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Navbar.tsx",
-                    lineNumber: 184,
+                    lineNumber: 182,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Navbar.tsx",
-                lineNumber: 182,
+                lineNumber: 180,
                 columnNumber: 7
             }, this)
         ]
