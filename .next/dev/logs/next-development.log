@@ -1,33 +1,14 @@
-[00:00:01.396] Server  LOG      ✓ Ready in 1065ms
-[00:02:08.138] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:08.438] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:02:32.219] Browser WARN    Image with src "/capacitaciones2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:03:34.089] Server  LOG      ✓ Compiled in 62ms
-[00:04:50.762] Server  LOG      ✓ Compiled in 189ms
-[00:06:33.800] Server  LOG      ✓ Compiled in 120ms
-[00:06:44.197] Server  LOG      ✓ Compiled in 59ms
-[00:06:51.542] Server  LOG      ✓ Compiled in 37ms
-[00:07:46.680] Server  LOG      ✓ Compiled in 42ms
-[00:08:03.973] Server  LOG      ✓ Compiled in 38ms
-[00:08:55.012] Server  LOG      ✓ Compiled in 36ms
-[00:09:02.629] Server  WARN    Image with src "/capacitaciones2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:09:02.826] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:02.997] Browser WARN    Image with src "/capacitaciones2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:09:02.997] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:09:14.850] Browser WARN    Image with src "/capacitaciones2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:09:14.850] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:10:53.948] Server  LOG      ✓ Compiled in 75ms
-[00:11:25.104] Server  WARN    Image with src "/capacitaciones2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:11:25.337] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:25.534] Browser WARN    Image with src "/capacitaciones2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:11:25.534] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:12:17.901] Browser WARN    Image with src "/valtoimage.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[00:12:18.349] Server  LOG     BCR API no disponible, usando API alternativa
-[00:12:18.931] Server  LOG     BCR API no disponible, usando API alternativa
+[00:00:01.259] Server  LOG      ✓ Ready in 857ms
+[00:00:09.216] Server  LOG      ○ Compiling / ...
+[00:00:10.697] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.076] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:01:39.355] Server  LOG      ✓ Compiled in 110ms
+[00:02:04.262] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:34.706] Server  LOG      ✓ Compiled in 92ms
+[00:04:30.777] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:31.195] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:04:57.739] Server  LOG      ✓ Compiled in 76ms
+[00:05:00.303] Server  LOG      ✓ Compiled in 41ms
+[00:05:25.867] Server  LOG      ✓ Compiled in 49ms
+[00:06:47.822] Server  LOG      ✓ Compiled in 44ms
+[00:09:01.754] Server  LOG      ✓ Compiled in 63ms

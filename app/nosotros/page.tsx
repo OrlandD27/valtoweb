@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronLeft, Target, Eye, Users, Briefcase, GraduationCap, TrendingUp, Building2, Lightbulb, Award, Rocket, Heart, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ChevronLeft, Target, Eye, Users, Briefcase, GraduationCap, TrendingUp, Building2, Lightbulb, Award, Rocket, Heart, CheckCircle2, ArrowRight, Play } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
@@ -132,6 +132,20 @@ export default function NosotrosPage() {
               transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
               className="inline-block mb-6"
             >
+              <motion.div
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center shadow-2xl"
+                style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)' }}
+                animate={{
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Play className="w-10 h-10 sm:w-12 sm:h-12 text-white fill-white" />
+              </motion.div>
             </motion.div>
 
             <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold mb-8 leading-none font-futura-lux">

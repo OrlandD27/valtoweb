@@ -29,18 +29,28 @@ export default function Hero() {
     <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#002677' }}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-80"
-          style={{
-            backgroundImage: 'url(/hero-background.gif)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
+        <picture>
+          <source 
+            media="(max-width: 768px)" 
+            srcSet="/hero-background.gif"
+          />
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{
+              backgroundImage: 'url(/hero-background.gif)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              WebkitBackfaceVisibility: 'hidden',
+              WebkitTransform: 'translateZ(0)',
+              transform: 'translateZ(0)'
+            }}
+          />
+        </picture>
         <div 
           className="absolute inset-0"
           style={{
-            background: 'linear-gradient(135deg, rgba(0,38,119,0.5) 0%, rgba(0,71,187,0.45) 100%)'
+            background: 'linear-gradient(135deg, rgba(0,38,119,0.3) 0%, rgba(0,71,187,0.25) 100%)'
           }}
         />
       </div>
