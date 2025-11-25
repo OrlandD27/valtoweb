@@ -1,21 +1,31 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronLeft, Target, Eye, Users, Briefcase, GraduationCap, TrendingUp, Building2, Lightbulb, Award, Rocket, Heart, CheckCircle2, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingSocial from '@/components/FloatingSocial';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { useRef } from 'react';
 
 export default function NosotrosPage() {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
   const valores = [
     {
       icon: Award,
       title: "Excelencia",
       description: "Compromiso con la calidad en cada proyecto",
-      primaryColor: "#0047BB", // Pantone 2728 C
-      secondaryColor: "#002677", // Pantone 2147 C
+      primaryColor: "#0047BB",
+      secondaryColor: "#002677",
       bgColor: "from-blue-50 to-indigo-50"
     },
     {
@@ -82,85 +92,115 @@ export default function NosotrosPage() {
       <FloatingSocial />
       <WhatsAppButton />
 
-      {/* Hero Section with Parallax Effect */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
-        {/* Background Image with Parallax and Animation */}
+      {/* Modern Hero Section with Parallax */}
+      <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Parallax Background */}
         <motion.div 
           className="absolute inset-0 z-0"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5 }}
+          style={{ scale }}
         >
-          {/* Multiple overlay layers for depth */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60 z-10" />
-          
-          {/* Animated gradient overlay */}
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-tr from-[#0047BB]/40 via-transparent to-cyan-500/30 z-10"
-            animate={{
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          
-          {/* Background Image */}
-          <motion.div 
-            className="w-full h-full"
-            animate={{
-              scale: [1, 1.05, 1],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <img 
-              src="/capacitaciones2.png" 
-              alt="VALTO Background" 
-              className="w-full h-full object-cover object-top"
-            />
-          </motion.div>
-          
-          {/* Animated light effect */}
-          <motion.div
-            className="absolute inset-0 z-20"
-            style={{
-              background: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)'
-            }}
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0047BB]/60 via-purple-900/40 to-black/60 z-10 mix-blend-multiply" />
+          <Image 
+            src="/capacitaciones2.png" 
+            alt="VALTO Team" 
+            fill
+            className="object-cover object-center"
+            quality={100}
+            priority
+            sizes="100vw"
           />
         </motion.div>
 
-        {/* Content */}
+        {/* Animated Gradient Overlay */}
+        <motion.div
+          className="absolute inset-0 z-10"
+          style={{ opacity }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+        </motion.div>
+
+        {/* Hero Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight font-futura-lux">
-              <span className="text-white">Sobre</span> <span style={{ color: '#0048bbff' }}>Nosotros</span> 
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
+              className="inline-block mb-6"
+            >
+            </motion.div>
+
+            <h1 className="text-7xl md:text-9xl font-bold mb-8 leading-none font-futura-lux">
+              <motion.span 
+                className="block text-white"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                Sobre
+              </motion.span>
+              <motion.span 
+                className="block text-[#B7BCB4]"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.7 }}
+              >
+                Nosotros
+              </motion.span>
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-200 mb-8 font-light font-futura-book tracking-wide">
-              VALTO Management Consulting
-            </p>
-            <div className="h-1 w-32 mx-auto rounded-full" style={{ background: 'linear-gradient(to right, #0047BB, #002677)' }} />
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="text-2xl md:text-3xl text-gray-200 font-futura-book mb-12"
+            >
+              Transformamos negocios en historias de éxito
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1 }}
+              className="flex flex-wrap gap-4 justify-center"
+            >
+              <Link
+                href="#mision"
+                className="group bg-white text-[#0047BB] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#0047BB] hover:text-white transition-all shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+              >
+                Nuestra Misión
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <a
+                href="https://wa.me/51999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-600 hover:to-green-700 transition-all shadow-2xl hover:shadow-green-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+              >
+                Contáctanos
+              </a>
+            </motion.div>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="w-8 h-12 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+            <motion.div
+              className="w-1.5 h-3 bg-white rounded-full"
+              animate={{ y: [0, 16, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </div>
+        </motion.div>
       </section>
 
       {/* Quienes Somos Section */}
@@ -259,7 +299,7 @@ export default function NosotrosPage() {
             className="text-center mb-16"
           >
             <span className="font-futura-book text-sm uppercase tracking-wider" style={{ color: '#0047BB' }}>Nuestro Propósito</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 font-futura-lux">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0047BB] mt-4 font-futura-lux">
               Visión & Misión
             </h2>
           </motion.div>
@@ -300,7 +340,7 @@ export default function NosotrosPage() {
                     <Eye className="w-8 h-8 text-white" />
                   </motion.div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2 font-futura-lux">Visión</h3>
+                    <h3 className="text-3xl font-bold text-[#0047BB] mb-2 font-futura-lux">Visión</h3>
                     <div className="h-1 w-16 rounded-full" style={{ background: 'linear-gradient(to right, #0047BB, #002677)' }} />
                   </div>
                 </div>
@@ -355,7 +395,7 @@ export default function NosotrosPage() {
                     <Target className="w-8 h-8 text-white" />
                   </motion.div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2 font-futura-lux">Misión</h3>
+                    <h3 className="text-3xl font-bold text-[#0047BB] mb-2 font-futura-lux">Misión</h3>
                     <div className="h-1 w-16 rounded-full" style={{ background: 'linear-gradient(to right, #002677, #0047BB)' }} />
                   </div>
                 </div>
@@ -402,7 +442,9 @@ export default function NosotrosPage() {
           >
             <span className="font-futura-book text-sm uppercase tracking-wider mb-2 block" style={{ color: '#0047BB' }}>Nuestros Principios</span>
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 font-futura-lux">
-              Nuestros <span style={{ color: '#0047BB' }}>Valores</span>
+             <span style={{ color: '#0047BB' }}>Nuestros</span> <span className="font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
+                  Valores
+                </span>
             </h3>
           </motion.div>
 
@@ -450,7 +492,7 @@ export default function NosotrosPage() {
                       />
                     </motion.div>
                     
-                    <h4 className="text-2xl font-bold text-gray-900 mb-3 transition-colors font-futura-lux" style={{ color: index === 1 ? '#0047BB' : undefined }}>
+                    <h4 className="text-2xl font-bold text-[#002677] mb-3 transition-colors font-futura-lux" style={{ color: index === 1 ? '#0047BB' : undefined }}>
                       {valor.title}
                     </h4>
                     
@@ -490,8 +532,8 @@ export default function NosotrosPage() {
             className="text-center mb-16"
           >
             <span className="font-futura-book text-sm uppercase tracking-wider" style={{ color: '#0047BB' }}>A Quiénes Servimos</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6 font-futura-lux">
-              Clientes <span style={{ color: '#0047BB' }}>Objetivos</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#B7BCB4] mt-4 mb-6 font-futura-lux">
+              Clientes <span style={{ color: '#0047bbff' }}>Objetivos</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto font-futura-book">
               Trabajamos con empresas y emprendedores comprometidos con el crecimiento y la excelencia
@@ -514,7 +556,7 @@ export default function NosotrosPage() {
                   <div className="p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(to bottom right, #0047BB, #002677)' }}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 font-futura-lux">
+                  <h3 className="text-2xl font-bold text-[#002677] mb-2 font-futura-lux">
                     {servicio.title}
                   </h3>
                   <p className="text-gray-600 mb-4 font-futura-book">

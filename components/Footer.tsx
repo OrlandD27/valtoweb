@@ -5,7 +5,10 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden text-white" style={{ background: 'linear-gradient(to bottom right, #0047BB, #002677, #001a4d)' }}>
+    <footer className="relative overflow-hidden text-white" style={{ 
+      background: 'linear-gradient(to bottom right, #0047BB, #002677, #001a4d)',
+      fontFamily: 'Arial, sans-serif'
+    }}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -26,7 +29,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/80 text-sm">
-              Impulsando el crecimiento empresarial con asesoría financiera especializada.
+              Construyendo valor para tus inversiones.
             </p>
           </div>
 

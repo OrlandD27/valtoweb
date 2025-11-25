@@ -1,0 +1,18 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/agendar-cita/page": "app/agendar-cita/page.js",
+  "/api/tipo-cambio/route": "app/api/tipo-cambio/route.js",
+  "/centro-de-aprendizaje/page": "app/centro-de-aprendizaje/page.js",
+  "/libro-de-reclamaciones/page": "app/libro-de-reclamaciones/page.js",
+  "/nosotros/page": "app/nosotros/page.js",
+  "/page": "app/page.js",
+  "/politica-de-privacidad/page": "app/politica-de-privacidad/page.js",
+  "/servicios/capacitacion-empresarial/page": "app/servicios/capacitacion-empresarial/page.js",
+  "/servicios/consultoria-financiera/page": "app/servicios/consultoria-financiera/page.js",
+  "/servicios/consultoria-negocios/page": "app/servicios/consultoria-negocios/page.js",
+  "/servicios/formacion-emprendedores/page": "app/servicios/formacion-emprendedores/page.js",
+  "/servicios/page": "app/servicios/page.js",
+  "/terminos-y-condiciones/page": "app/terminos-y-condiciones/page.js",
+  "/tipo-cambio/page": "app/tipo-cambio/page.js"
+}

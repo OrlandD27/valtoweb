@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TrendingUp, TrendingDown, DollarSign, RefreshCw, ArrowLeft, BarChart3 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
@@ -109,13 +110,76 @@ export default function TipoCambioPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-[#0047BB] via-[#0056D6] to-[#003088] pt-28 md:pt-32 pb-20">
-        {/* Background Effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 opacity-[0.05]"
+      <div className="min-h-screen relative pt-28 md:pt-32 pb-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src="/valtoimage.png" 
+            alt="Business Background" 
+            fill
+            className="object-cover object-center"
+            quality={100}
+            priority
+            sizes="100vw"
+          />
+          {/* Dark overlay with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0047BB]/95 via-[#0056D6]/90 to-[#003088]/95" />
+          
+          {/* Animated business pattern overlay */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0"
+              style={{
+                backgroundImage: `
+                  repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 35px,
+                    rgba(255, 255, 255, 0.1) 35px,
+                    rgba(255, 255, 255, 0.1) 70px
+                  ),
+                  repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 35px,
+                    rgba(255, 255, 255, 0.05) 35px,
+                    rgba(255, 255, 255, 0.05) 70px
+                  )
+                `,
+              }}
+            />
+          </div>
+          
+          {/* Money symbols pattern */}
+          <div className="absolute inset-0 opacity-5"
             style={{
               backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
+              backgroundSize: '50px 50px'
+            }}
+          />
+          
+          {/* Animated gradient orbs */}
+          <motion.div
+            className="absolute top-0 -right-40 w-96 h-96 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-full filter blur-3xl"
+            animate={{
+              y: [0, 50, 0],
+              x: [0, 30, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-500/30 to-pink-500/30 rounded-full filter blur-3xl"
+            animate={{
+              y: [0, -50, 0],
+              x: [0, -30, 0],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
           />
         </div>

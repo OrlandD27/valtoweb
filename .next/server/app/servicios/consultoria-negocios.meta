@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/servicios/layout,_N_T_/servicios/consultoria-negocios/layout,_N_T_/servicios/consultoria-negocios/page,_N_T_/servicios/consultoria-negocios"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/servicios/consultoria-negocios/__PAGE__",
+    "/servicios/consultoria-negocios",
+    "/servicios",
+    "/_index"
+  ]
+}

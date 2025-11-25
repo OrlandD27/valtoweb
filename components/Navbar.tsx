@@ -80,17 +80,15 @@ export default function Navbar() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-around items-center h-20">
+        <div className={`flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-3' : 'h-24 py-3'}`}>
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="w-20 h-20 flex items-center justify-center">
+            <div>
               <img 
-                src="/logooficial.png" 
-                alt="VALTO Logo" 
-                className="h-16 w-86 object-contain transition-transform duration-300 group-hover:scale-110"
-                style={{ 
-                  filter: scrolled ? 'brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(3567%) hue-rotate(212deg) brightness(95%) contrast(105%)' : 'none'
-                }}
+                src="/logo222.png" 
+                alt="VALTO Management Consulting" 
+                className="h-20 w-auto object-contain transition-all duration-500"
+                style={{ filter: scrolled ? 'brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(2878%) hue-rotate(210deg) brightness(97%) contrast(101%)' : 'brightness(0) invert(1)' }}
               />
             </div>
           </Link>
@@ -106,7 +104,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${
+                  className={`relative px-4 py- text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${
                     item.featured
                       ? scrolled
                         ? "bg-valto-blue text-white hover:bg-[#003088]"
@@ -186,12 +184,13 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white shadow-2xl border-t border-gray-100 overflow-hidden"
+            className="lg:hidden shadow-2xl border-t border-white/20 overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #002677 0%, #0047BB 100%)' }}
           >
             <div className="max-h-[calc(100vh-5rem)] overflow-y-auto px-6 py-6 space-y-2"
               style={{ 
                 scrollbarWidth: 'thin',
-                scrollbarColor: '#0047BB #f5f7fa'
+                scrollbarColor: '#ffffff #0047BB'
               }}
             >
               {navItems.map((item, index) => (
@@ -204,7 +203,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-gray-800 font-semibold py-3 px-4 rounded-xl hover:bg-blue-50 hover:text-valto-blue transition-all duration-300"
+                    className="block text-white font-semibold py-3 px-4 rounded-xl hover:bg-white/10 transition-all duration-300"
                   >
                     {item.name}
                   </Link>
@@ -215,7 +214,7 @@ export default function Navbar() {
                           key={idx}
                           href={subItem.href}
                           onClick={() => setIsOpen(false)}
-                          className="block text-gray-600 text-sm py-2 px-4 rounded-lg hover:bg-blue-50 hover:text-valto-blue transition-all"
+                          className="block text-white/80 text-sm py-2 px-4 rounded-lg hover:bg-white/10 hover:text-white transition-all"
                         >
                           {subItem.name}
                         </Link>
@@ -234,7 +233,7 @@ export default function Navbar() {
                 <Link
                   href="/agendar-cita"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg bg-valto-blue hover:bg-[#003088]"
+                  className="block w-full text-center text-white px-6 py-4 rounded-xl font-semibold transition-all shadow-lg bg-white/10 hover:bg-white/20 border-2 border-white"
                 >
                   Agendar Consulta
                 </Link>
@@ -245,15 +244,15 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: (navItems.length + 1) * 0.1 }}
-                className="pt-6 border-t border-gray-200"
+                className="pt-6 border-t border-white/20"
               >
-                <p className="text-gray-500 text-sm font-semibold mb-4 px-4">Síguenos en:</p>
+                <p className="text-white/90 text-sm font-semibold mb-4 px-4">Síguenos en:</p>
                 <div className="grid grid-cols-5 gap-3 px-4">
                   <a
                     href="https://www.facebook.com/gltbusinessconsulting"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg"
+                    className="w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg"
                   >
                     <FacebookIcon size={18} />
                   </a>
@@ -261,7 +260,7 @@ export default function Navbar() {
                     href="https://www.instagram.com/valto.management/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg"
+                    className="w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg"
                   >
                     <InstagramIcon size={18} />
                   </a>
@@ -269,7 +268,7 @@ export default function Navbar() {
                     href="https://www.tiktok.com/@valto.management"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg"
+                    className="w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg"
                   >
                     <TikTokIcon size={18} />
                   </a>
@@ -277,7 +276,7 @@ export default function Navbar() {
                     href="https://www.linkedin.com/company/gltbc/?viewAsMember=true"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg"
+                    className="w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg"
                   >
                     <LinkedinIcon size={18} />
                   </a>
@@ -285,7 +284,7 @@ export default function Navbar() {
                     href="https://www.youtube.com/channel/UCeuMGEp2CE9-trNobwxEC7Q"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full aspect-square bg-[#0047BB] text-white rounded-xl flex items-center justify-center hover:bg-[#003088] transition-all hover:scale-110 shadow-lg"
+                    className="w-full aspect-square bg-white text-[#0047BB] rounded-xl flex items-center justify-center hover:bg-white/90 transition-all hover:scale-110 shadow-lg"
                   >
                     <YoutubeIcon size={18} />
                   </a>

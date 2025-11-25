@@ -8,65 +8,51 @@ import Lenis from '@studio-freight/lenis';
 
 const services = [
   {
-    icon: GraduationCap,
-    title: "Capacitación Empresarial",
-    description:
-      "Formación teórica y práctica extraída de las mejores escuelas de negocios para fortalecer la toma de decisiones en tu empresa.",
-    features: [
-      "Material de élite de escuelas de negocios",
-      "Programas de formación especializados",
-      "Talleres prácticos para tomadores de decisiones",
-    ],
-    color: "from-[#002677] to-[#0047BB]",
-    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
-    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
-    link: "/servicios/capacitacion-empresarial"
-  },
-  {
-    icon: CreditCard,
-    title: "Consultoría de Negocios",
-    description:
-      "Te acompañamos desde la creación hasta el crecimiento de tu empresa, desarrollando estrategias para alcanzar tus objetivos.",
-    features: [
-      "Constitución de empresas y razón social",
-      "Inscripción en Registros Públicos",
-      "Definición de público objetivo",
-      "Desarrollo de estrategias de negocio",
-    ],
-    color: "from-[#002677] to-[#0047BB]",
-    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
-    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
-    link: "/servicios/consultoria-negocios"
-  },
-  {
     icon: TrendingUp,
-    title: "Consultoría Financiera",
+    title: "CAPACITACION EMPRESARIAL",
     description:
-      "Gestión estratégica de ingresos, inversión y financiamiento para optimizar la toma de decisiones financieras en tu empresa.",
+      "Descubre lo que podemos hacer por ti en el campo financiero: Planeamiento financiero – Flujos de caja – Presupuestos – Análisis de estados financieros – Optimización de gastos y procesos.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
     features: [
-      "Distribución óptima de recursos",
-      "Inversión en capital de trabajo y activos fijos",
-      "Mapeo del ciclo financiero",
-      "Optimización de decisiones financieras",
     ],
     color: "from-[#002677] to-[#0047BB]",
-    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
-    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
+    bgColor: "#E8F0FE",
     link: "/servicios/consultoria-financiera"
   },
   {
-    icon: GraduationCap,
-    title: "Formación de Emprendedores",
+    icon: CreditCard,
+    title: "CONSULTORIA DE NEGOCIOS",
     description:
-      "Transforma tu mentalidad emprendedora en habilidades empresariales sólidas con conocimiento, estrategia y soft skills.",
+      "Descubre lo que podemos hacer por ti en el área contable: Registro de información y auditoría, Presentación de estados financieros con ratios – Renta mensual y anual – Política de control interno – Análisis de estados.",
+    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80",
     features: [
-      "Desarrollo de mentalidad empresarial",
-      "Habilidades financieras prácticas",
-      "Soft skills esenciales para el éxito",
     ],
     color: "from-[#002677] to-[#0047BB]",
-    bgGradient: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
-    iconBg: "linear-gradient(135deg, #002677 0%, #0047BB 100%)",
+    bgColor: "#F0F4F8",
+    link: "/servicios/consultoria-negocios"
+  },
+  {
+    icon: GraduationCap,
+    title: "CONTULTORIA FINANCIERA",
+    description:
+      "Conoce nuestro servicio de Gestión Empresarial: Planeamiento financiero y tributario – Diagnóstico empresarial – Planeamiento estratégico – Atención al proceso – Organigrama empresarial – Manuales de función – Flujo de caja.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    features: [
+    ],
+    color: "from-[#002677] to-[#0047BB]",
+    bgColor: "#E8F0FE",
+    link: "/servicios/capacitacion-empresarial"
+  },
+  {
+    icon: GraduationCap,
+    title: "FORMACION DE EMPRENDEDORES",
+    description:
+      "Transforma tu mentalidad emprendedora en habilidades empresariales sólidas con conocimiento, estrategia y soft skills.",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+    features: [
+    ],
+    color: "from-[#002677] to-[#0047BB]",
+    bgColor: "#F0F4F8",
     link: "/servicios/formacion-emprendedores"
   },
 ];
@@ -75,86 +61,102 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   const cardRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
-    offset: ["start end", "start start"]
+    offset: ["start end", "start center"]
   });
 
-  // Movimiento horizontal basado en scroll
-  const x = useTransform(scrollYProgress, [0, 1], [index % 2 === 0 ? 100 : -100, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.5], [50, 0]);
+
+  // Alternar layout: par a la izquierda, impar a la derecha
+  const isEven = index % 2 === 0;
 
   return (
     <motion.div
       ref={cardRef}
-      style={{
-        x,
-        opacity,
-      }}
-      className="mb-6"
+      style={{ opacity, y }}
+      className="mb-0"
     >
-      <Link href={service.link}>
-        <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-[1.02]"
-          style={{ borderLeftColor: '#0047BB' }}
-        >
-          <div className="flex flex-col md:flex-row md:items-start gap-4">
-            {/* Icon con gradient VALTO */}
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className="w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md"
-              style={{ background: service.iconBg }}
-            >
-              <service.icon className="w-7 h-7 text-white" />
-            </motion.div>
-
-            <div className="flex-1">
-              {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#0047BB]" style={{ fontFamily: 'Futura, sans-serif' }}>
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm md:text-base text-gray-700 mb-3 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }}>
-                {service.description}
-              </p>
-
-              {/* Features en grid horizontal */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                {service.features.map((feature, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 + i * 0.1 }}
-                    className="flex items-start text-gray-700"
-                  >
-                    <svg
-                      className="w-4 h-4 text-[#0047BB] mr-2 mt-0.5 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-xs md:text-sm" style={{ fontFamily: 'Arial, sans-serif' }}>{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Arrow indicator - Solo en desktop */}
-            <motion.div
-              whileHover={{ x: 5 }}
-              className="hidden md:flex w-10 h-10 rounded-full items-center justify-center flex-shrink-0"
-              style={{ background: 'linear-gradient(135deg, #002677 0%, #0047BB 100%)' }}
-            >
-              <ArrowRight className="w-5 h-5 text-white" />
-            </motion.div>
+      <div 
+        className="grid md:grid-cols-2 min-h-[300px] md:min-h-[400px]"
+        style={{ backgroundColor: service.bgColor }}
+      >
+        {/* Imagen - Izquierda en pares, derecha en impares */}
+        <div className={`relative overflow-hidden min-h-[250px] md:min-h-[400px] ${!isEven ? 'md:order-2' : ''}`}>
+          <div className="absolute inset-0">
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0" style={{ 
+              background: 'linear-gradient(135deg, rgba(0,38,119,0.7) 0%, rgba(0,71,187,0.5) 100%)'
+            }} />
           </div>
         </div>
-      </Link>
+
+        {/* Contenido - Derecha en pares, izquierda en impares */}
+        <div className={`flex flex-col justify-center p-6 md:p-8 lg:p-12 ${!isEven ? 'md:order-1' : ''}`}>
+          <motion.h3 
+            className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 md:mb-4 uppercase"
+            style={{ color: '#0047BB', fontFamily: 'Futura, Arial, sans-serif' }}
+            initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            {service.title}
+          </motion.h3>
+
+          <motion.p
+            className="text-sm md:text-base text-gray-700 mb-4 md:mb-6 leading-relaxed"
+            style={{ fontFamily: 'Arial, sans-serif' }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            {service.description}
+          </motion.p>
+
+          {/* Features List */}
+          <motion.div
+            className="space-y-2 mb-4 md:mb-6"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+          >
+            {service.features.map((feature, i) => (
+              <div key={i} className="flex items-start text-gray-700">
+                <svg
+                  className="w-4 h-4 md:w-5 md:h-5 text-[#0047BB] mr-2 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="text-xs md:text-sm" style={{ fontFamily: 'Arial, sans-serif' }}>{feature}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          <Link href={service.link}>
+            <motion.button
+              className="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 rounded-full text-white font-bold text-xs md:text-sm shadow-lg hover:shadow-xl transition-all"
+              style={{ backgroundColor: '#0047BB', fontFamily: 'Futura, Arial, sans-serif' }}
+              whileHover={{ scale: 1.05, x: 5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Más información
+              <ArrowRight className="ml-2 w-3 h-3 md:w-4 md:h-4" />
+            </motion.button>
+          </Link>
+        </div>
+      </div>
     </motion.div>
   );
 }
@@ -237,53 +239,7 @@ export default function Services() {
         </div>
 
         {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <Link href="/servicios">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center px-8 py-4 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-2xl relative overflow-hidden group"
-              style={{ 
-                backgroundColor: '#0047BB',
-              }}
-            >
-              {/* Animated Background */}
-              <motion.div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ backgroundColor: '#003088' }}
-              />
-              
-              <span className="relative z-10">Ver Todos los Servicios</span>
-              
-              <motion.div
-                className="relative z-10"
-                animate={{
-                  x: [0, 5, 0],
-                }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.div>
 
-              {/* Shine Effect */}
-              <motion.div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100"
-                initial={{ x: "-100%" }}
-                whileHover={{ x: "100%" }}
-                transition={{ duration: 0.6 }}
-                style={{
-                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
-                }}
-              />
-            </motion.div>
-          </Link>
-        </motion.div>
       </div>
     </section>
   );

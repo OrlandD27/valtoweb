@@ -1,0 +1,140 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/agendar-cita",
+      "regex": "^/agendar\\-cita(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/agendar\\-cita(?:/)?$"
+    },
+    {
+      "page": "/api/tipo-cambio",
+      "regex": "^/api/tipo\\-cambio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/tipo\\-cambio(?:/)?$"
+    },
+    {
+      "page": "/centro-de-aprendizaje",
+      "regex": "^/centro\\-de\\-aprendizaje(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/centro\\-de\\-aprendizaje(?:/)?$"
+    },
+    {
+      "page": "/libro-de-reclamaciones",
+      "regex": "^/libro\\-de\\-reclamaciones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/libro\\-de\\-reclamaciones(?:/)?$"
+    },
+    {
+      "page": "/nosotros",
+      "regex": "^/nosotros(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/nosotros(?:/)?$"
+    },
+    {
+      "page": "/politica-de-privacidad",
+      "regex": "^/politica\\-de\\-privacidad(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/politica\\-de\\-privacidad(?:/)?$"
+    },
+    {
+      "page": "/servicios",
+      "regex": "^/servicios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/servicios(?:/)?$"
+    },
+    {
+      "page": "/servicios/capacitacion-empresarial",
+      "regex": "^/servicios/capacitacion\\-empresarial(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/servicios/capacitacion\\-empresarial(?:/)?$"
+    },
+    {
+      "page": "/servicios/consultoria-financiera",
+      "regex": "^/servicios/consultoria\\-financiera(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/servicios/consultoria\\-financiera(?:/)?$"
+    },
+    {
+      "page": "/servicios/consultoria-negocios",
+      "regex": "^/servicios/consultoria\\-negocios(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/servicios/consultoria\\-negocios(?:/)?$"
+    },
+    {
+      "page": "/servicios/formacion-emprendedores",
+      "regex": "^/servicios/formacion\\-emprendedores(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/servicios/formacion\\-emprendedores(?:/)?$"
+    },
+    {
+      "page": "/terminos-y-condiciones",
+      "regex": "^/terminos\\-y\\-condiciones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terminos\\-y\\-condiciones(?:/)?$"
+    },
+    {
+      "page": "/tipo-cambio",
+      "regex": "^/tipo\\-cambio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tipo\\-cambio(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
