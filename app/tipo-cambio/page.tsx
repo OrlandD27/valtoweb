@@ -6,6 +6,8 @@ import { TrendingUp, TrendingDown, DollarSign, RefreshCw, ArrowLeft, BarChart3 }
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import FloatingSocial from "@/components/FloatingSocial";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 interface ExchangeRate {
@@ -144,6 +146,8 @@ export default function TipoCambioPage() {
   return (
     <>
       <Navbar />
+      <FloatingSocial />
+      <WhatsAppButton />
       <div className="min-h-screen relative pt-28 md:pt-32 pb-20 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">

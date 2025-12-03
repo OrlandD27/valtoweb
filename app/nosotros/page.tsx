@@ -120,7 +120,7 @@ export default function NosotrosPage() {
         </motion.div>
 
         {/* Hero Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center flex items-end h-full pb-22 sm:pb-28 md:pb-32">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center flex items-center h-full pb-22 sm:pb-28 md:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -207,56 +207,90 @@ export default function NosotrosPage() {
 
       {/* Quienes Somos Section */}
       <section className="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <span className="font-futura-book" style={{ color: '#0047BB' }}>NUESTRA IDENTIDAD</span>
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mt-4 mb-6 font-futura-lux">
-              <span style={{ color: '#9da5b3d1' }}>¿Quienes</span> <span style={{ color: '#0047BB' }}>Somos?</span>
-            </h2>
-            <div className="h-1 w-24 mx-auto rounded-full mb-8" style={{ background: 'linear-gradient(to right, #0047BB, #002677)' }} />
-          </motion.div>
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Left Side - Video */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative rounded-3xl overflow-hidden shadow-2xl"
+              >
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full object-cover"
+                  style={{
+                    height: '740px',
+                    WebkitBackfaceVisibility: 'hidden',
+                    WebkitTransform: 'translateZ(0)',
+                    transform: 'translateZ(0)'
+                  }}
+                >
+                  <source src="/videovalto1.mp4" type="video/mp4" />
+                </video>
+              </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100"
-          >
-            <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-12 flex flex-col justify-center">
-                <p className="text-xl text-gray-700 leading-relaxed mb-6 font-futura-book">
-                  Somos una <span className="font-bold font-futura-lux" style={{ color: '#0047BB' }}>firma de consultoría para negocios</span> orientada a la pequeña y micro empresa, comprometidos con el crecimiento y desarrollo empresarial en todo el Perú.
-                </p>
-                <div className="space-y-4">
-                  {["Experiencia comprobada", "Enfoque personalizado", "Resultados medibles"].map((item, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-center gap-3"
-                    >
-                      <CheckCircle2 className="w-6 h-6 flex-shrink-0" style={{ color: '#0047BB' }} />
-                      <span className="text-gray-700 font-medium font-arial">{item}</span>
-                    </motion.div>
-                  ))}
+              {/* Right Side - Title and Card */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col"
+              >
+                {/* Title */}
+                <div className="mb-8 text-center">
+                  <span className="font-futura-book text-sm uppercase tracking-wider" style={{ color: '#0047BB' }}>NUESTRA IDENTIDAD</span>
+                  <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mt-4 mb-4 font-futura-lux">
+                    <span style={{ color: '#9da5b3d1' }}>¿Quiénes</span> <span style={{ color: '#0047BB' }}>Somos?</span>
+                  </h2>
+                  <div className="h-1 w-24 mx-auto rounded-full" style={{ background: 'linear-gradient(to right, #0047BB, #002677)' }} />
                 </div>
-              </div>
-              <div className="p-12 flex flex-col justify-center text-white" style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)' }}>
-                <Building2 className="w-16 h-16 mb-6 text-blue-200" />
-                <h3 className="text-3xl font-bold mb-4 font-futura-lux">Nuestro Compromiso</h3>
-                <p className="text-blue-100 text-lg leading-relaxed font-futura-book">
-                  Transformar negocios en empresas exitosas mediante estrategias innovadoras y soluciones personalizadas que generan valor real.
-                </p>
-              </div>
+
+                {/* Card */}
+                <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+                  <div className="grid grid-cols-1 gap-0">
+                    <div className="p-8 lg:p-10 flex flex-col justify-center text-white" style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)' }}>
+                      <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-futura-lux">Nuestro Compromiso</h3>
+                      <p className="text-blue-100 text-base lg:text-lg leading-relaxed mb-4 font-futura-book">
+                        Transformar negocios en empresas exitosas mediante estrategias innovadoras y soluciones personalizadas que generan valor real.
+                      </p>
+                      <Building2 className="w-14 h-14 text-blue-200" />
+                    </div>
+                    <div className="p-8 lg:p-10 flex flex-col justify-center bg-white">
+                      <p className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 font-futura-book">
+                        Somos una <span className="font-bold font-futura-lux" style={{ color: '#0047BB' }}>firma de consultoría para negocios</span> orientada a la pequeña y micro empresa, comprometidos con el crecimiento y desarrollo empresarial en todo el Perú.
+                      </p>
+                      <div className="space-y-3 mb-6">
+                        {["Experiencia comprobada", "Enfoque personalizado", "Resultados medibles"].map((item, index) => (
+                          <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="flex items-center gap-3"
+                          >
+                            <CheckCircle2 className="w-6 h-6 flex-shrink-0" style={{ color: '#0047BB' }} />
+                            <span className="text-gray-700 font-medium font-arial">{item}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

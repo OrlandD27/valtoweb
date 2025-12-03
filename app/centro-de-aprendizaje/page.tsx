@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Play, ChevronRight, BookOpen, TrendingUp, Users, Scale, AlertTriangle, DollarSign, FileText } from "lucide-react";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import FloatingSocial from "@/components/FloatingSocial";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const categories = [
   {
@@ -395,6 +397,8 @@ export default function VideosPage() {
   return (
     <>
       <Navbar />
+      <FloatingSocial />
+      <WhatsAppButton />
       <div className="min-h-screen pt-28 md:pt-32 pb-20 relative overflow-hidden">
         {/* Background Image Layer */}
         <div className="absolute inset-0 z-0">

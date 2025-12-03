@@ -12,3 +12,30 @@
 [00:09:26.679] Server  LOG      ✓ Compiled in 71ms
 [00:09:50.151] Browser WARN    Image with src "/fotoportada2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:13:58.057] Server  LOG      ✓ Compiled in 231ms
+[00:14:33.678] Server  LOG      ✓ Compiled in 67ms
+[00:15:44.708] Server  LOG      ✓ Compiled in 143ms
+[00:16:13.826] Server  LOG      ✓ Compiled in 102ms
+[00:16:33.962] Server  LOG      ✓ Compiled in 68ms
+[00:16:57.346] Server  LOG      ✓ Compiled in 117ms
+[00:17:05.617] Server  LOG      ✓ Compiled in 42ms
+[00:17:19.173] Server  LOG      ✓ Compiled in 38ms
+[00:18:05.743] Server  LOG      ✓ Compiled in 62ms
+[00:18:32.322] Server  LOG      ✓ Compiled in 36ms
+[00:18:34.531] Server  LOG      ✓ Compiled in 40ms
+[00:18:36.700] Server  LOG      ✓ Compiled in 36ms
+[00:18:39.693] Server  LOG      ✓ Compiled in 37ms
+[00:18:42.092] Server  LOG      ✓ Compiled in 42ms
+[00:19:58.591] Server  LOG      ✓ Compiled in 53ms
+[00:20:48.663] Server  LOG      ✓ Compiled in 51ms
+[00:21:17.635] Browser WARN    Image with src "/valtoimage.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:21:18.107] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
+[00:21:18.205] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
+[00:22:02.619] Server  LOG      ✓ Compiled in 32ms
+[00:22:54.607] Server  LOG      ✓ Compiled in 42ms
+[00:22:59.307] Server  LOG      ✓ Compiled in 46ms
+[00:23:06.724] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
+[00:23:06.813] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
+[00:23:27.337] Server  LOG      ✓ Compiled in 80ms
+[00:23:41.626] Server  LOG      ✓ Compiled in 216ms
