@@ -175,22 +175,23 @@ function Navbar() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
         className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "shadow-xl backdrop-blur-xl" : "backdrop-blur-md"}`,
         style: {
-            backgroundColor: scrolled ? 'rgba(245, 247, 250, 0.98)' : 'rgba(0, 71, 187, 0.92)'
+            backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(0, 71, 187, 0.95)'
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-3' : 'h-24 py-3'}`,
+                    className: `flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-4' : 'h-28 py-5'}`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/",
                             className: "flex items-center group",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: "/logo222.png",
                                     alt: "VALTO Management Consulting",
-                                    className: "h-20 w-auto object-contain transition-all duration-500",
+                                    className: "h-16 md:h-22 w-auto object-contain transition-all duration-500",
                                     style: {
                                         filter: scrolled ? 'brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(2878%) hue-rotate(210deg) brightness(97%) contrast(101%)' : 'brightness(0) invert(1)'
                                     }
@@ -219,7 +220,7 @@ function Navbar() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: item.href,
-                                                className: `relative px-4 py- text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${item.featured ? scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white/20 text-white hover:bg-white/30" : scrolled ? "text-[#0047BB] hover:text-[#003088] hover:bg-blue-50" : "text-white hover:bg-white/10"}`,
+                                                className: `relative px-5 py-3 text-base font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${item.featured ? scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white/20 text-white hover:bg-white/30" : scrolled ? "text-[#0047BB] hover:text-[#003088] hover:bg-blue-50" : "text-white hover:bg-white/10"}`,
                                                 children: [
                                                     item.name,
                                                     item.hasDropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
@@ -287,7 +288,7 @@ function Navbar() {
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/agendar-cita",
-                                    className: `ml-4 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl ${scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white text-valto-blue hover:bg-blue-50"}`,
+                                    className: `ml-4 px-7 py-3.5 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl ${scrolled ? "bg-valto-blue text-white hover:bg-[#003088]" : "bg-white text-valto-blue hover:bg-blue-50"}`,
                                     children: "Agendar Consulta"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Navbar.tsx",
@@ -1016,80 +1017,121 @@ function VideosPage() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "min-h-screen bg-gradient-to-br from-[#0047BB] via-[#0056D6] to-[#003088] pt-28 md:pt-32 pb-20 relative overflow-hidden",
+                className: "min-h-screen pt-28 md:pt-32 pb-20 relative overflow-hidden",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 overflow-hidden pointer-events-none",
+                        className: "absolute inset-0 z-0",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute inset-0 opacity-[0.05]",
+                                className: "absolute inset-0 w-full h-full opacity-50",
                                 style: {
-                                    backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-                                    backgroundSize: '40px 40px'
+                                    backgroundImage: 'url(/valtoimage.png)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat'
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 402,
-                                columnNumber: 9
+                                lineNumber: 401,
+                                columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                animate: {
-                                    background: [
-                                        "radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)",
-                                        "radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.12) 0%, transparent 50%)",
-                                        "radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)"
-                                    ]
-                                },
-                                transition: {
-                                    duration: 15,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                },
-                                className: "absolute inset-0"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0",
+                                style: {
+                                    background: 'linear-gradient(135deg, #0047BB 0%, #002677 50%, #0047BB 100%)'
+                                }
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
                                 lineNumber: 411,
-                                columnNumber: 9
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 opacity-30",
+                                style: {
+                                    background: `
+                radial-gradient(circle at 20% 30%, rgba(0,71,187,0.8) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(0,38,119,0.7) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(0,71,187,0.6) 0%, transparent 60%)
+              `
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
+                                lineNumber: 418,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 opacity-15",
+                                style: {
+                                    background: `
+                linear-gradient(45deg, transparent 20%, rgba(255,255,255,0.6) 50%, transparent 80%),
+                linear-gradient(-45deg, transparent 30%, rgba(255,255,255,0.4) 60%, transparent 90%)
+              `,
+                                    backgroundSize: '250% 250%',
+                                    backgroundPosition: '0% 0%'
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
+                                lineNumber: 429,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
+                        lineNumber: 400,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 overflow-hidden pointer-events-none z-10",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 opacity-[0.18]",
+                                style: {
+                                    backgroundImage: `
+                linear-gradient(30deg, transparent 35%, rgba(255, 255, 255, 0.25) 35%, rgba(255, 255, 255, 0.25) 65%, transparent 65%),
+                linear-gradient(150deg, transparent 35%, rgba(255, 255, 255, 0.20) 35%, rgba(255, 255, 255, 0.20) 65%, transparent 65%),
+                repeating-linear-gradient(90deg, transparent 0px, transparent 20px, rgba(255, 255, 255, 0.05) 20px, rgba(255, 255, 255, 0.05) 22px)
+              `,
+                                    backgroundSize: '60px 60px, 60px 60px, 100% 100%'
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
+                                lineNumber: 445,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                 animate: {
                                     y: [
                                         0,
-                                        -60,
+                                        -80,
                                         0
                                     ],
                                     x: [
                                         0,
-                                        40,
+                                        50,
                                         0
                                     ],
                                     scale: [
                                         1,
-                                        1.2,
+                                        1.3,
                                         1
-                                    ],
-                                    rotate: [
-                                        0,
-                                        90,
-                                        0
                                     ]
                                 },
                                 transition: {
-                                    duration: 20,
+                                    duration: 25,
                                     repeat: Infinity,
                                     ease: "easeInOut"
                                 },
-                                className: "absolute -top-48 -left-48 w-96 h-96",
+                                className: "absolute -top-48 -left-48 w-[500px] h-[500px]",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full h-full bg-gradient-to-br from-white/10 via-white/5 to-transparent rounded-full blur-3xl"
+                                    className: "w-full h-full bg-gradient-to-br from-[#0047BB]/30 via-[#002677]/20 to-transparent rounded-full blur-3xl"
                                 }, void 0, false, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 442,
+                                    lineNumber: 471,
                                     columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 428,
+                                lineNumber: 458,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1122,15 +1164,15 @@ function VideosPage() {
                                 },
                                 className: "absolute top-1/4 -right-32 w-[600px] h-[600px]",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full h-full bg-gradient-to-bl from-white/12 via-white/6 to-transparent rounded-full blur-3xl"
+                                    className: "w-full h-full bg-gradient-to-bl from-[#0047BB]/25 via-[#002677]/15 to-transparent rounded-full blur-3xl"
                                 }, void 0, false, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 459,
+                                    lineNumber: 488,
                                     columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 445,
+                                lineNumber: 474,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1161,17 +1203,17 @@ function VideosPage() {
                                     repeat: Infinity,
                                     ease: "easeInOut"
                                 },
-                                className: "absolute bottom-0 left-1/3 w-[500px] h-[500px]",
+                                className: "absolute bottom-0 left-1/3 w-[700px] h-[700px]",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full h-full bg-gradient-to-tr from-white/10 via-white/5 to-transparent rounded-full blur-3xl"
+                                    className: "w-full h-full bg-gradient-to-tr from-[#002677]/20 via-[#0047BB]/10 to-transparent rounded-full blur-3xl"
                                 }, void 0, false, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 476,
+                                    lineNumber: 505,
                                     columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 462,
+                                lineNumber: 491,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1203,7 +1245,7 @@ function VideosPage() {
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 480,
+                                lineNumber: 509,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1233,7 +1275,7 @@ function VideosPage() {
                                 className: "absolute bottom-1/3 right-1/4 w-48 h-48 border-2 border-white/25 rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 495,
+                                lineNumber: 524,
                                 columnNumber: 9
                             }, this),
                             [
@@ -1269,7 +1311,7 @@ function VideosPage() {
                                     }
                                 }, i, false, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 512,
+                                    lineNumber: 541,
                                     columnNumber: 11
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1289,12 +1331,12 @@ function VideosPage() {
                                     className: "w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
                                 }, void 0, false, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 545,
+                                    lineNumber: 574,
                                     columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 534,
+                                lineNumber: 563,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1314,12 +1356,12 @@ function VideosPage() {
                                     className: "w-full h-full bg-gradient-to-r from-transparent via-white/15 to-transparent"
                                 }, void 0, false, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 559,
+                                    lineNumber: 588,
                                     columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 548,
+                                lineNumber: 577,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1343,7 +1385,7 @@ function VideosPage() {
                                 className: "absolute top-20 right-20 w-32 h-32 bg-white/15 rounded-full blur-2xl"
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 563,
+                                lineNumber: 592,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1368,14 +1410,14 @@ function VideosPage() {
                                 className: "absolute bottom-32 left-32 w-40 h-40 bg-white/12 rounded-full blur-2xl"
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 576,
+                                lineNumber: 605,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                        lineNumber: 400,
-                        columnNumber: 7
+                        lineNumber: 443,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
@@ -1406,28 +1448,38 @@ function VideosPage() {
                                             type: "spring"
                                         },
                                         className: "inline-block mb-4",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto shadow-xl",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                src: "/imagen2.png",
-                                                alt: "VALTO Play Icon",
-                                                className: "w-12 h-12 object-contain",
-                                                style: {
-                                                    transform: 'rotate(90deg)'
-                                                }
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                            className: "w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center shadow-2xl",
+                                            style: {
+                                                background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)'
+                                            },
+                                            animate: {
+                                                scale: [
+                                                    1,
+                                                    1.1,
+                                                    1
+                                                ]
+                                            },
+                                            transition: {
+                                                duration: 2,
+                                                repeat: Infinity,
+                                                ease: "easeInOut"
+                                            },
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__["Play"], {
+                                                className: "w-10 h-10 sm:w-12 sm:h-12 text-white fill-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 606,
-                                                columnNumber: 15
+                                                lineNumber: 646,
+                                                columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                            lineNumber: 605,
-                                            columnNumber: 13
+                                            lineNumber: 634,
+                                            columnNumber: 27
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 599,
+                                        lineNumber: 628,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1435,7 +1487,7 @@ function VideosPage() {
                                         children: "Centro de Aprendizaje"
                                     }, void 0, false, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 614,
+                                        lineNumber: 649,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1443,7 +1495,7 @@ function VideosPage() {
                                         children: "Videos educativos y recursos gratuitos para impulsar tu negocio"
                                     }, void 0, false, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 617,
+                                        lineNumber: 652,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].a, {
@@ -1462,7 +1514,7 @@ function VideosPage() {
                                                 className: "w-5 h-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 628,
+                                                lineNumber: 663,
                                                 columnNumber: 13
                                             }, this),
                                             "Ver canal de YouTube",
@@ -1470,19 +1522,19 @@ function VideosPage() {
                                                 className: "w-5 h-5 ml-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 630,
+                                                lineNumber: 665,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 620,
+                                        lineNumber: 655,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 593,
+                                lineNumber: 622,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1530,7 +1582,7 @@ function VideosPage() {
                                                 className: `w-8 h-8 mx-auto mb-3 ${selectedCategory === category.id ? 'text-[#0047BB]' : 'text-white'}`
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 661,
+                                                lineNumber: 696,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1538,7 +1590,7 @@ function VideosPage() {
                                                 children: category.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 664,
+                                                lineNumber: 699,
                                                 columnNumber: 17
                                             }, this),
                                             selectedCategory === category.id && category.id !== 'todos' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1549,19 +1601,19 @@ function VideosPage() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 666,
+                                                lineNumber: 701,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, category.id, true, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 644,
+                                        lineNumber: 679,
                                         columnNumber: 15
                                     }, this);
                                 })
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 635,
+                                lineNumber: 670,
                                 columnNumber: 9
                             }, this),
                             selectedVideo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1600,12 +1652,12 @@ function VideosPage() {
                                                 allowFullScreen: true
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 691,
+                                                lineNumber: 726,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                            lineNumber: 690,
+                                            lineNumber: 725,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1616,7 +1668,7 @@ function VideosPage() {
                                                     children: selectedVideo.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                    lineNumber: 701,
+                                                    lineNumber: 736,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1628,7 +1680,7 @@ function VideosPage() {
                                                             children: "Cerrar"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                            lineNumber: 705,
+                                                            lineNumber: 740,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1639,30 +1691,30 @@ function VideosPage() {
                                                             children: "Ver más videos"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                            lineNumber: 711,
+                                                            lineNumber: 746,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                    lineNumber: 704,
+                                                    lineNumber: 739,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                            lineNumber: 700,
+                                            lineNumber: 735,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                    lineNumber: 683,
+                                    lineNumber: 718,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 677,
+                                lineNumber: 712,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1688,7 +1740,7 @@ function VideosPage() {
                                                 children: currentCategory?.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 733,
+                                                lineNumber: 768,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1696,13 +1748,13 @@ function VideosPage() {
                                                 children: currentCategory?.description
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 736,
+                                                lineNumber: 771,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 732,
+                                        lineNumber: 767,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1735,7 +1787,7 @@ function VideosPage() {
                                                                 className: "w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                lineNumber: 751,
+                                                                lineNumber: 786,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1753,17 +1805,17 @@ function VideosPage() {
                                                                         fill: "currentColor"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                        lineNumber: 762,
+                                                                        lineNumber: 797,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                    lineNumber: 757,
+                                                                    lineNumber: 792,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                lineNumber: 756,
+                                                                lineNumber: 791,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1771,13 +1823,13 @@ function VideosPage() {
                                                                 children: video.duration
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                lineNumber: 765,
+                                                                lineNumber: 800,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                        lineNumber: 750,
+                                                        lineNumber: 785,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1788,7 +1840,7 @@ function VideosPage() {
                                                                 children: video.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                lineNumber: 770,
+                                                                lineNumber: 805,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1799,30 +1851,30 @@ function VideosPage() {
                                                                         className: "w-5 h-5 group-hover:translate-x-1 transition-transform"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                        lineNumber: 775,
+                                                                        lineNumber: 810,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                                lineNumber: 773,
+                                                                lineNumber: 808,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                        lineNumber: 769,
+                                                        lineNumber: 804,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, `${video.categoryId}-${video.id}`, true, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 741,
+                                                lineNumber: 776,
                                                 columnNumber: 15
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 739,
+                                        lineNumber: 774,
                                         columnNumber: 11
                                     }, this),
                                     displayVideos.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1840,12 +1892,12 @@ function VideosPage() {
                                                     className: "w-12 h-12 text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                    lineNumber: 789,
+                                                    lineNumber: 824,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 788,
+                                                lineNumber: 823,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1853,7 +1905,7 @@ function VideosPage() {
                                                 children: "Próximamente"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 791,
+                                                lineNumber: 826,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1861,7 +1913,7 @@ function VideosPage() {
                                                 children: "Estamos preparando contenido educativo para esta categoría"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 794,
+                                                lineNumber: 829,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1875,25 +1927,25 @@ function VideosPage() {
                                                         className: "w-5 h-5 ml-1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                        lineNumber: 804,
+                                                        lineNumber: 839,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 797,
+                                                lineNumber: 832,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 783,
+                                        lineNumber: 818,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 726,
+                                lineNumber: 761,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1916,7 +1968,7 @@ function VideosPage() {
                                         children: "¿Necesitas asesoría personalizada?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 817,
+                                        lineNumber: 852,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1924,11 +1976,11 @@ function VideosPage() {
                                         children: "Nuestro equipo de expertos está listo para ayudarte a llevar tu negocio al siguiente nivel"
                                     }, void 0, false, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 820,
+                                        lineNumber: 855,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].a, {
-                                        href: "#contacto",
+                                        href: "https://wa.me/51920000848?text=Hola,%20quisiera%20una%20asesoría",
                                         whileHover: {
                                             scale: 1.05
                                         },
@@ -1942,25 +1994,25 @@ function VideosPage() {
                                                 className: "w-6 h-6 ml-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                                lineNumber: 830,
+                                                lineNumber: 865,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                        lineNumber: 823,
+                                        lineNumber: 858,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                                lineNumber: 811,
+                                lineNumber: 846,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/centro-de-aprendizaje/page.tsx",
-                        lineNumber: 591,
+                        lineNumber: 620,
                         columnNumber: 7
                     }, this)
                 ]

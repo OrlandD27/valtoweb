@@ -1,14 +1,26 @@
-[00:00:01.259] Server  LOG      ✓ Ready in 857ms
-[00:00:09.216] Server  LOG      ○ Compiling / ...
-[00:00:10.697] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.076] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:01:39.355] Server  LOG      ✓ Compiled in 110ms
-[00:02:04.262] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:34.706] Server  LOG      ✓ Compiled in 92ms
-[00:04:30.777] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:31.195] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:04:57.739] Server  LOG      ✓ Compiled in 76ms
-[00:05:00.303] Server  LOG      ✓ Compiled in 41ms
-[00:05:25.867] Server  LOG      ✓ Compiled in 49ms
-[00:06:47.822] Server  LOG      ✓ Compiled in 44ms
-[00:09:01.754] Server  LOG      ✓ Compiled in 63ms
+[00:00:01.097] Server  LOG      ✓ Ready in 755ms
+[00:00:04.629] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.054] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:03:15.787] Server  LOG      ✓ Compiled in 61ms
+[00:03:40.818] Server  LOG      ✓ Compiled in 169ms
+[00:03:53.140] Server  LOG      ✓ Compiled in 74ms
+[00:04:12.078] Server  LOG      ✓ Compiled in 124ms
+[00:04:46.107] Server  LOG      ✓ Compiled in 71ms
+[00:04:48.442] Server  LOG      ✓ Compiled in 33ms
+[00:04:53.060] Server  LOG      ✓ Compiled in 61ms
+[00:04:56.210] Server  LOG      ✓ Compiled in 35ms
+[00:05:04.997] Server  LOG      ✓ Compiled in 76ms
+[00:05:06.778] Server  LOG      ✓ Compiled in 38ms
+[00:05:25.693] Server  LOG      ✓ Compiled in 81ms
+[00:06:41.137] Server  LOG      ✓ Compiled in 78ms
+[00:06:45.136] Server  LOG      ✓ Compiled in 65ms
+[00:06:47.957] Server  LOG      ✓ Compiled in 36ms
+[00:07:04.651] Server  LOG      ✓ Compiled in 41ms
+[00:07:08.749] Server  LOG      ✓ Compiled in 70ms
+[00:07:12.186] Server  LOG      ✓ Compiled in 37ms
+[00:07:15.985] Server  LOG      ✓ Compiled in 31ms
+[00:07:21.638] Server  LOG      ✓ Compiled in 29ms
+[00:13:38.473] Server  LOG      ✓ Compiled in 99ms
+[00:14:24.706] Server  LOG      ✓ Compiled in 31ms
+[00:14:58.546] Server  LOG      ✓ Compiled in 56ms
+[00:15:02.237] Server  LOG      ✓ Compiled in 68ms

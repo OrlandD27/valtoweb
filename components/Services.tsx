@@ -73,15 +73,21 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
   return (
     <motion.div
       ref={cardRef}
-      style={{ opacity, y }}
+      style={{ 
+        opacity, 
+        y,
+        borderRadius: '24px',
+        overflow: 'hidden',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+      }}
       className="mb-0"
     >
       <div 
-        className="grid md:grid-cols-2 min-h-[300px] md:min-h-[400px]"
+        className="grid md:grid-cols-2 min-h-[400px] md:min-h-[550px]"
         style={{ backgroundColor: service.bgColor }}
       >
         {/* Imagen - Izquierda en pares, derecha en impares */}
-        <div className={`relative overflow-hidden min-h-[250px] md:min-h-[400px] ${!isEven ? 'md:order-2' : ''}`}>
+        <div className={`relative overflow-hidden min-h-[350px] md:min-h-[550px] ${!isEven ? 'md:order-2' : ''}`}>
           <div className="absolute inset-0">
             <img
               src={service.image}
@@ -97,7 +103,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {/* Contenido - Derecha en pares, izquierda en impares */}
         <div className={`flex flex-col justify-center p-6 md:p-8 lg:p-12 ${!isEven ? 'md:order-1' : ''}`}>
           <motion.h3 
-            className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 md:mb-4 uppercase"
+            className="text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 uppercase"
             style={{ color: '#0047BB', fontFamily: 'Futura, Arial, sans-serif' }}
             initial={{ opacity: 0, x: isEven ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +114,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           </motion.h3>
 
           <motion.p
-            className="text-sm md:text-base text-gray-700 mb-4 md:mb-6 leading-relaxed"
+            className="text-base md:text-lg lg:text-xl text-gray-700 mb-6 md:mb-8 leading-relaxed"
             style={{ fontFamily: 'Arial, sans-serif' }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -146,7 +152,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
           <Link href={service.link}>
             <motion.button
-              className="inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 rounded-full text-white font-bold text-xs md:text-sm shadow-lg hover:shadow-xl transition-all"
+              className="inline-flex items-center px-6 py-3 md:px-8 md:py-4 rounded-full text-white font-bold text-sm md:text-base lg:text-lg shadow-lg hover:shadow-xl transition-all"
               style={{ backgroundColor: '#0047BB', fontFamily: 'Futura, Arial, sans-serif' }}
               whileHover={{ scale: 1.05, x: 5 }}
               whileTap={{ scale: 0.95 }}
@@ -187,7 +193,7 @@ export default function Services() {
   return (
     <section className="py-24 relative" style={{ background: '#F5F7FA' }} id="servicios">
       
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -137,7 +137,7 @@ export default function ValueProposition() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -152,16 +152,16 @@ export default function ValueProposition() {
             transition={{ type: "spring", duration: 0.6 }}
             className="inline-block mb-4"
           >
-            <span className="px-4 py-2 bg-valto-blue/10 text-[#9DA5B3] rounded-full text-[30px] font-semibold">
+            <span className="px-6 py-3 bg-valto-blue/10 text-[#9DA5B3] rounded-full text-[36px] font-semibold">
               ¿Por qué elegirnos?
             </span>
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-futura-lux">
-            <span style={{ color: '#0047BB ' }}>Lo que nos hace</span> <span className="font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 font-futura-lux">
+            <span style={{ color: '#0047BB ' }}>Lo que nos hace</span> <span className="font-bold text-white bg-[#0056D6] px-4 py-2 rounded-lg inline-block" style={{ fontFamily: 'Futura, sans-serif' }}>
                   DIFERENTES
                 </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-futura-book">
+          <p className="text-2xl md:text-3xl text-gray-600 max-w-4xl mx-auto font-futura-book">
             No somos solo consultores, somos tu socio estratégico comprometido con tu crecimiento
           </p>
         </motion.div>
@@ -206,38 +206,38 @@ export default function ValueProposition() {
                       <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full cursor-pointer bg-white">
                         <div className="grid grid-cols-2">
                           {/* Left side - White background */}
-                          <div className="p-8 bg-white">
-                            <p className="text-gray-700 text-base mb-6 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
+                          <div className="p-10 lg:p-14 bg-white">
+                            <p className="text-gray-700 text-lg lg:text-xl mb-8 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
                             
                             {/* Features list */}
-                            <div className="space-y-3">
+                            <div className="space-y-4">
                               {item.features.map((feature, i) => (
-                                <div key={i} className="flex items-center space-x-3">
-                                  <div className="w-6 h-6 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
-                                    <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div key={i} className="flex items-center space-x-4">
+                                  <div className="w-8 h-8 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
+                                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                     </svg>
                                   </div>
-                                  <span className="text-gray-700 text-sm font-medium">{feature}</span>
+                                  <span className="text-gray-700 text-base lg:text-lg font-medium">{feature}</span>
                                 </div>
                               ))}
                             </div>
                           </div>
                           
                           {/* Right side - Blue VALTO background with gradient */}
-                          <div className="p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
+                          <div className="p-10 lg:p-14 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
                             <motion.div
                               whileHover={{ scale: 1.1 }}
-                              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 bg-white/10 backdrop-blur-sm mx-auto"
+                              className="w-28 h-28 lg:w-32 lg:h-32 rounded-2xl flex items-center justify-center mb-8 bg-white/10 backdrop-blur-sm mx-auto"
                             >
-                              <item.icon className="w-10 h-10 text-white" />
+                              <item.icon className="w-14 h-14 lg:w-16 lg:h-16 text-white" />
                             </motion.div>
                             
-                            <h3 className="text-2xl font-bold text-white mb-4 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
+                            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
                               {item.title}
                             </h3>
                             
-                            <p className="text-white/90 leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+                            <p className="text-white/90 text-lg lg:text-xl leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
                               {item.description}
                             </p>
                           </div>
