@@ -44,7 +44,9 @@ export default function LibroReclamaciones() {
     aceptaTerminos: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.aceptaTerminos) {
@@ -52,38 +54,65 @@ export default function LibroReclamaciones() {
       return;
     }
     
-    // Aquí puedes enviar el formulario a tu backend o procesarlo
-    console.log("Formulario enviado:", formData);
-    alert("Su reclamo ha sido registrado exitosamente. Nos comunicaremos con usted en un plazo de 15 días hábiles.");
-    
-    // Resetear formulario
-    setFormData({
-      tipoDocumento: "",
-      numeroDocumento: "",
-      nombres: "",
-      apellidos: "",
-      domicilio: "",
-      departamento: "",
-      provincia: "",
-      distrito: "",
-      telefono: "",
-      email: "",
-      esApoderado: false,
-      apoderadoTipoDoc: "",
-      apoderadoNumDoc: "",
-      apoderadoNombres: "",
-      apoderadoApellidos: "",
-      apoderadoDomicilio: "",
-      apoderadoTelefono: "",
-      apoderadoEmail: "",
-      tipoSolicitud: "reclamo",
-      tipoServicio: "",
-      descripcionServicio: "",
-      montoReclamado: "",
-      detalleReclamacion: "",
-      pedidoConsumidor: "",
-      aceptaTerminos: false,
-    });
+    setIsSubmitting(true);
+
+    try {
+      console.log('📤 Enviando formulario...', formData);
+      
+      const response = await fetch('/api/libro-reclamaciones', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('📡 Response status:', response.status);
+      
+      const data = await response.json();
+      console.log('📦 Response data:', data);
+
+      if (response.ok && data.success) {
+        alert("✅ Su reclamo ha sido registrado exitosamente. Nos comunicaremos con usted en un plazo de 15 días hábiles.");
+        
+        // Resetear formulario
+        setFormData({
+          tipoDocumento: "",
+          numeroDocumento: "",
+          nombres: "",
+          apellidos: "",
+          domicilio: "",
+          departamento: "",
+          provincia: "",
+          distrito: "",
+          telefono: "",
+          email: "",
+          esApoderado: false,
+          apoderadoTipoDoc: "",
+          apoderadoNumDoc: "",
+          apoderadoNombres: "",
+          apoderadoApellidos: "",
+          apoderadoDomicilio: "",
+          apoderadoTelefono: "",
+          apoderadoEmail: "",
+          tipoSolicitud: "reclamo",
+          tipoServicio: "",
+          descripcionServicio: "",
+          montoReclamado: "",
+          detalleReclamacion: "",
+          pedidoConsumidor: "",
+          aceptaTerminos: false,
+        });
+      } else {
+        console.error('❌ Error en respuesta:', data);
+        alert(`Error: ${data.error || 'Hubo un error al enviar su reclamo. Por favor, intente nuevamente.'}`);
+      }
+    } catch (error) {
+      console.error('❌ Error de red:', error);
+      alert("Error de conexión. Por favor, verifique su internet e intente nuevamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -142,13 +171,7 @@ export default function LibroReclamaciones() {
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
               <p className="text-white text-lg mb-2" style={{ fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}>
-                Razón Social: VALTO Management Consulting
-              </p>
-              <p className="text-blue-100 mb-2" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
-                RUC: [Tu RUC aquí]
-              </p>
-              <p className="text-blue-100" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
-                Dirección: [Tu dirección aquí]
+                VALTO Management Consulting
               </p>
             </div>
           </motion.div>
@@ -612,13 +635,14 @@ export default function LibroReclamaciones() {
               <div className="pt-6">
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-4 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all inline-flex items-center justify-center gap-3"
+                  disabled={isSubmitting}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                  className={`w-full px-8 py-4 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all inline-flex items-center justify-center gap-3 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                   style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
                 >
-                  <Send className="w-6 h-6" />
-                  Enviar Reclamo
+                  <Send className={`w-6 h-6 ${isSubmitting ? 'animate-pulse' : ''}`} />
+                  {isSubmitting ? 'Enviando...' : 'Enviar Reclamo'}
                 </motion.button>
                 
                 <p className="text-sm text-gray-500 text-center mt-4" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>

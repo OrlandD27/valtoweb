@@ -157,8 +157,8 @@ export default function CapacitacionEmpresarial() {
             >
               <ImageCarousel
                 images={[
-                  "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
-                  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&q=80",
+                  "https://img.freepik.com/foto-gratis/gente-negocios-posando-sonriendo-sala-reuniones_1262-820.jpg?semt=ais_hybrid&w=740&q=80",
+                  "https://blog.egade.tec.mx/hs-fs/hubfs/VEC/Imported_Blog_Media/programas-capacitacion-empresas-min.jpg?width=5472&name=programas-capacitacion-empresas-min.jpg",
                   "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1200&q=80"
                 ]}
                 autoPlay={true}
@@ -257,17 +257,6 @@ export default function CapacitacionEmpresarial() {
             <p className="text-xl text-blue-100 mb-8" style={{ fontFamily: 'Futura Lt Book, Futura, Arial, sans-serif' }}>
               Da el primer paso hacia la excelencia empresarial. Nuestro equipo está listo para diseñar un programa de capacitación a la medida de tus necesidades.
             </p>
-            <Link href="/#contacto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all"
-                style={{ color: '#0047BB', fontFamily: 'Futura Lux, Futura, Arial, sans-serif' }}
-              >
-                Contactar Ahora
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </motion.button>
-            </Link>
           </motion.div>
         </div>
       </section>

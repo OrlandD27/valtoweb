@@ -395,51 +395,80 @@ export default function VideosPage() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-[#0047BB] via-[#0056D6] to-[#003088] pt-28 md:pt-32 pb-20 relative overflow-hidden">
-      {/* Animated background elements - Más dinámico */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Malla de fondo con patrón */}
-        <div 
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}
-        />
+      <div className="min-h-screen pt-28 md:pt-32 pb-20 relative overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 w-full h-full opacity-50"
+            style={{
+              backgroundImage: 'url(/valtoimage.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+          {/* Gradient Overlay - VALTO Colors */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(135deg, #0047BB 0%, #002677 50%, #0047BB 100%)'
+            }}
+          />
+          {/* Radial Light Circles - VALTO Colors */}
+          <div 
+            className="absolute inset-0 opacity-30"
+            style={{
+              background: `
+                radial-gradient(circle at 20% 30%, rgba(0,71,187,0.8) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(0,38,119,0.7) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(0,71,187,0.6) 0%, transparent 60%)
+              `
+            }}
+          />
+          {/* Diagonal Light Streaks */}
+          <div 
+            className="absolute inset-0 opacity-15"
+            style={{
+              background: `
+                linear-gradient(45deg, transparent 20%, rgba(255,255,255,0.6) 50%, transparent 80%),
+                linear-gradient(-45deg, transparent 30%, rgba(255,255,255,0.4) 60%, transparent 90%)
+              `,
+              backgroundSize: '250% 250%',
+              backgroundPosition: '0% 0%'
+            }}
+          />
+        </div>
+
+        {/* Animated background elements - Más dinámico */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+          {/* Patrón geométrico de aprendizaje - More visible */}
+          <div 
+            className="absolute inset-0 opacity-[0.18]"
+            style={{
+              backgroundImage: `
+                linear-gradient(30deg, transparent 35%, rgba(255, 255, 255, 0.25) 35%, rgba(255, 255, 255, 0.25) 65%, transparent 65%),
+                linear-gradient(150deg, transparent 35%, rgba(255, 255, 255, 0.20) 35%, rgba(255, 255, 255, 0.20) 65%, transparent 65%),
+                repeating-linear-gradient(90deg, transparent 0px, transparent 20px, rgba(255, 255, 255, 0.05) 20px, rgba(255, 255, 255, 0.05) 22px)
+              `,
+              backgroundSize: '60px 60px, 60px 60px, 100% 100%'
+            }}
+          />
         
-        {/* Gradiente animado superpuesto */}
+        {/* Círculos animados de conocimiento */}
         <motion.div
           animate={{
-            background: [
-              "radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.12) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)",
-            ],
+            y: [0, -80, 0],
+            x: [0, 50, 0],
+            scale: [1, 1.3, 1],
           }}
           transition={{
-            duration: 15,
+            duration: 25,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute inset-0"
-        />
-        
-        {/* Círculos grandes con gradiente */}
-        <motion.div
-          animate={{
-            y: [0, -60, 0],
-            x: [0, 40, 0],
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -top-48 -left-48 w-96 h-96"
+          className="absolute -top-48 -left-48 w-[500px] h-[500px]"
         >
-          <div className="w-full h-full bg-gradient-to-br from-white/10 via-white/5 to-transparent rounded-full blur-3xl" />
+          <div className="w-full h-full bg-gradient-to-br from-[#0047BB]/30 via-[#002677]/20 to-transparent rounded-full blur-3xl" />
         </motion.div>
         
         <motion.div
@@ -456,7 +485,7 @@ export default function VideosPage() {
           }}
           className="absolute top-1/4 -right-32 w-[600px] h-[600px]"
         >
-          <div className="w-full h-full bg-gradient-to-bl from-white/12 via-white/6 to-transparent rounded-full blur-3xl" />
+          <div className="w-full h-full bg-gradient-to-bl from-[#0047BB]/25 via-[#002677]/15 to-transparent rounded-full blur-3xl" />
         </motion.div>
         
         <motion.div
@@ -471,9 +500,9 @@ export default function VideosPage() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-0 left-1/3 w-[500px] h-[500px]"
+          className="absolute bottom-0 left-1/3 w-[700px] h-[700px]"
         >
-          <div className="w-full h-full bg-gradient-to-tr from-white/10 via-white/5 to-transparent rounded-full blur-3xl" />
+          <div className="w-full h-full bg-gradient-to-tr from-[#002677]/20 via-[#0047BB]/10 to-transparent rounded-full blur-3xl" />
         </motion.div>
         
         {/* Formas geométricas flotantes */}
@@ -602,14 +631,20 @@ export default function VideosPage() {
             transition={{ delay: 0.2, type: "spring" }}
             className="inline-block mb-4"
           >
-            <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto shadow-xl">
-              <img 
-                src="/imagen2.png" 
-                alt="VALTO Play Icon" 
-                className="w-12 h-12 object-contain"
-                style={{ transform: 'rotate(90deg)' }}
-              />
-            </div>
+                          <motion.div
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center shadow-2xl"
+                style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)' }}
+                animate={{
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Play className="w-10 h-10 sm:w-12 sm:h-12 text-white fill-white" />
+              </motion.div>
           </motion.div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             Centro de Aprendizaje
@@ -821,7 +856,7 @@ export default function VideosPage() {
             Nuestro equipo de expertos está listo para ayudarte a llevar tu negocio al siguiente nivel
           </p>
           <motion.a
-            href="#contacto"
+            href="https://wa.me/51920000848?text=Hola,%20quisiera%20una%20asesoría"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center px-8 py-4 bg-white text-[#0047BB] rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl"

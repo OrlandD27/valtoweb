@@ -110,7 +110,7 @@ export default function FAQ() {
         >
           <p className="text-gray-600 mb-6">¿Deseas más información sobre estas preguntas? ¡te podemos ayudar!</p>
           <a
-            href="#contacto"
+            href="https://wa.me/51920000848?text=Hola,%20quisiera%20información%20sobre%20su%20servicio"
             className="inline-block px-8 py-4 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg transform hover:scale-105"
             style={{ backgroundColor: '#0047BB' }}
           >

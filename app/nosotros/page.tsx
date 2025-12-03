@@ -96,12 +96,12 @@ export default function NosotrosPage() {
       <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax Background */}
         <motion.div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 pt-16 sm:pt-0"
           style={{ scale }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0047BB]/60 via-purple-900/40 to-black/60 z-10 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0047BB]/60 via-purple-900/40 to-black/60 z-10 mix-blend-multiply pt-16" />
           <Image 
-            src="/capacitaciones2.png" 
+            src="/fotoportada2.png" 
             alt="VALTO Team" 
             fill
             className="object-cover object-top"
@@ -120,11 +120,12 @@ export default function NosotrosPage() {
         </motion.div>
 
         {/* Hero Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 text-center flex items-end h-full pb-22 sm:pb-28 md:pb-32">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
+            className="w-full"
           >
             <motion.div
               initial={{ scale: 0 }}
@@ -132,20 +133,6 @@ export default function NosotrosPage() {
               transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
               className="inline-block mb-6"
             >
-              <motion.div
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center shadow-2xl"
-                style={{ background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)' }}
-                animate={{
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <Play className="w-10 h-10 sm:w-12 sm:h-12 text-white fill-white" />
-              </motion.div>
             </motion.div>
 
             <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold mb-8 leading-none font-futura-lux">
@@ -184,7 +171,7 @@ export default function NosotrosPage() {
             >
               <motion.a
                 href="#mision"
-                className="group bg-white text-[#0047BB] px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#0047BB] hover:text-white transition-all shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
+                className="group bg-[#0047BB] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#0047BB] hover:text-white transition-all shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 inline-flex items-center gap-2 font-futura-lux"
                 animate={{
                   scale: [1, 1.05, 1],
                 }}
@@ -625,7 +612,7 @@ export default function NosotrosPage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="https://wa.me/51999999999"
+              href="https://wa.me/51920000848?text=Hola,%20quisiera%20una%20Capacitación%20"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 inline-flex items-center justify-center gap-2 font-futura-lux"

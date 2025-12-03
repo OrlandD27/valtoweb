@@ -134,9 +134,9 @@ export default function ConsultoriaNegocios() {
             >
               <ImageCarousel
                 images={[
-                  "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1200&q=80",
+                  "https://blog.edutin.com/wp-content/uploads/2024/11/freepik__candid-image-photography-natural-textures-highly-r__16537-2-min.webp",
                   "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
-                  "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=80"
+                  "https://www.corporacionlideres.com/wp-content/uploads/2023/03/arq-63d26e881b910-scaled.jpg"
                 ]}
                 autoPlay={true}
                 interval={5000}
@@ -235,7 +235,7 @@ export default function ConsultoriaNegocios() {
               No dejes al azar el futuro de tu negocio. Trabaja con expertos que han ayudado a decenas de empresas a establecerse y crecer exitosamente.
             </p>
             <motion.a
-              href="https://wa.me/51920000848?text=Hola,%20quisiera%20agendar%20una%20consulta%20de%20negocios"
+              href="/agendar-cita"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

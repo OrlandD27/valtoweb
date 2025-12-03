@@ -76,18 +76,18 @@ export default function Navbar() {
           : "backdrop-blur-md"
       }`}
       style={{
-        backgroundColor: scrolled ? 'rgba(245, 247, 250, 0.98)' : 'rgba(0, 71, 187, 0.92)'
+        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(0, 71, 187, 0.95)'
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-3' : 'h-24 py-3'}`}>
+        <div className={`flex justify-around items-center transition-all duration-500 ${scrolled ? 'h-24 py-4' : 'h-28 py-5'}`}>
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div>
+            <div className="flex items-center">
               <img 
                 src="/logo222.png" 
                 alt="VALTO Management Consulting" 
-                className="h-20 w-auto object-contain transition-all duration-500"
+                className="h-16 md:h-22 w-auto object-contain transition-all duration-500"
                 style={{ filter: scrolled ? 'brightness(0) saturate(100%) invert(22%) sepia(93%) saturate(2878%) hue-rotate(210deg) brightness(97%) contrast(101%)' : 'brightness(0) invert(1)' }}
               />
             </div>
@@ -104,7 +104,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`relative px-4 py- text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${
+                  className={`relative px-5 py-3 text-base font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 group ${
                     item.featured
                       ? scrolled
                         ? "bg-valto-blue text-white hover:bg-[#003088]"
@@ -152,7 +152,7 @@ export default function Navbar() {
             
             <Link
               href="/agendar-cita"
-              className={`ml-4 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl ${
+              className={`ml-4 px-7 py-3.5 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl ${
                 scrolled 
                   ? "bg-valto-blue text-white hover:bg-[#003088]" 
                   : "bg-white text-valto-blue hover:bg-blue-50"

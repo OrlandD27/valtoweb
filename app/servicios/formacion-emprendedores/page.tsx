@@ -145,8 +145,8 @@ export default function FormacionEmprendedores() {
             >
               <ImageCarousel
                 images={[
-                  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80",
-                  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+                  "https://cie.ort.edu.uy/innovaportal/file/122383/1/formacion-emprender-desde-la-demanda.jpg",
+                  "https://www.fguell.com/blog/wp-content/uploads/2019/04/iStock-927805948-1024x683.jpg",
                   "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
                 ]}
                 autoPlay={true}

@@ -147,7 +147,7 @@ export default function ConsultoriaFinanciera() {
                 images={[
                   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
                   "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80",
-                  "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=80"
+                  "https://gerens.pe/blog/wp-content/uploads/2016/04/consultor-financiero.jpg"
                 ]}
                 autoPlay={true}
                 interval={5000}

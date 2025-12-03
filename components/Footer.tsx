@@ -38,18 +38,23 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Servicios</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/servicios" className="text-white/80 hover:text-white transition-colors">
-                  Asesoría en Créditos
+                <Link href="/servicios/capacitacion-empresarial" className="text-white/80 hover:text-white transition-colors">
+                  Capacitacion Empresarial
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" className="text-white/80 hover:text-white transition-colors">
-                  Financiamiento Empresarial
+                <Link href="/servicios/consultoria-negocios" className="text-white/80 hover:text-white transition-colors">
+                  Consultoria de Negocios
                 </Link>
               </li>
               <li>
-                <Link href="/servicios" className="text-white/80 hover:text-white transition-colors">
-                  Capacitación Empresarial
+                <Link href="/servicios/consultoria-financiera" className="text-white/80 hover:text-white transition-colors">
+                  Consultoria Financiera
+                </Link>
+              </li>
+              <li>
+                <Link href="/servicios/formacion-emprendedores" className="text-white/80 hover:text-white transition-colors">
+                  Formacion de Emprendedores
                 </Link>
               </li>
             </ul>
@@ -100,6 +105,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/80">
           <p>© 2025 VALTO Management Consulting. Todos los derechos reservados.</p>
+          <p>Marca registrada por indecopi.</p>
           <p>
             Diseñado por{' '}
             <a 
@@ -112,7 +118,6 @@ export default function Footer() {
             </a>
             {''}💙
           </p>
-          <p>Marca registrada por indecopi.</p>
         </div>
       </div>
     </footer>

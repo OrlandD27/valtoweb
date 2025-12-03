@@ -60,6 +60,40 @@ export default function TipoCambioPage() {
 
   useEffect(() => {
     fetchExchangeRate();
+    
+    // Función para verificar si estamos en horario de operación
+    const isOperatingHours = () => {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Domingo, 6 = Sábado
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTime = hours * 60 + minutes; // Tiempo en minutos
+      
+      // Domingo no opera
+      if (day === 0) return false;
+      
+      // Sábado: 9:00 am - 2:30 pm
+      if (day === 6) {
+        const startTime = 9 * 60; // 9:00 am
+        const endTime = 14 * 60 + 30; // 2:30 pm
+        return currentTime >= startTime && currentTime <= endTime;
+      }
+      
+      // Lunes - Viernes: 8:30 am - 7:30 pm
+      const startTime = 8 * 60 + 30; // 8:30 am
+      const endTime = 19 * 60 + 30; // 7:30 pm
+      return currentTime >= startTime && currentTime <= endTime;
+    };
+    
+    // Actualizar cada 1 minuto solo durante horario de operación
+    const interval = setInterval(() => {
+      if (isOperatingHours()) {
+        fetchExchangeRate();
+      }
+    }, 60000); // 60 segundos
+    
+    // Limpiar el intervalo cuando el componente se desmonte
+    return () => clearInterval(interval);
   }, [timeFilter]);
 
   const formatCurrency = (value: number, currency: string) => {
@@ -198,7 +232,11 @@ export default function TipoCambioPage() {
                 transition={{ delay: 0.2, type: "spring" }}
                 className="inline-block mb-4"
               >
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto shadow-xl">
+                <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto shadow-xl"
+                  style={{
+                    background: 'linear-gradient(135deg, #0047BB 0%, #002677 100%)'
+                  }}
+                >
                   <DollarSign className="w-10 h-10 text-white" />
                 </div>
               </motion.div>
@@ -632,7 +670,7 @@ export default function TipoCambioPage() {
             className="mt-8 text-center"
           >
             <p className="text-blue-100 text-sm">
-              * Tipo de cambio referencial de SUNAT. Los valores pueden variar según la entidad financiera.
+              Tipo de cambio referencial de BCR.
             </p>
           </motion.div>
         </div>
