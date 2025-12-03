@@ -193,7 +193,7 @@ export default function Services() {
   return (
     <section className="py-24 relative" style={{ background: '#F5F7FA' }} id="servicios">
       
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-[1250px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
