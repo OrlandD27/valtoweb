@@ -59,7 +59,7 @@ export default function Hero() {
             transform: 'translateZ(0)'
           }}
         >
-          <source src="/valtoweb.mp4" type="video/mp4" />
+          <source src="/valtoportada2.mp4" type="video/mp4" />
         </video>
         <div 
           className="absolute inset-0"
@@ -70,14 +70,14 @@ export default function Hero() {
       </div>
 
       {/* Content Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex flex-col md:flex-row md:items-center pb-8 md:pb-20 pt-32 md:pt-28">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex flex-col justify-end pb-12 md:pb-20 pt-32 md:pt-28">
         
-        {/* Text Content - Top on mobile */}
+        {/* Text Content - Bottom aligned and centered */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:max-w-4xl md:mx-auto text-center space-y-5 md:space-y-6 mb-6 md:mb-0"
+          className="w-full md:max-w-4xl mx-auto text-center space-y-5 md:space-y-6"
         >
           {/* Main Title */}
           <h1 
@@ -98,31 +98,6 @@ export default function Hero() {
             </motion.span>
           </h1>
         </motion.div>
-
-        {/* Video Section - Bottom on mobile only */}
-        <div className="w-full md:hidden relative rounded-2xl overflow-hidden" style={{ height: '50vh' }}>
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="w-full h-full object-cover"
-            style={{
-              WebkitBackfaceVisibility: 'hidden',
-              WebkitTransform: 'translateZ(0)',
-              transform: 'translateZ(0)',
-              objectPosition: 'center 30%'
-            }}
-          >
-            <source src="/valtoweb.mp4" type="video/mp4" />
-          </video>
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to top, rgba(0,38,119,0.4) 0%, transparent 100%)'
-            }}
-          />
-        </div>
       </div>
     </section>
   );

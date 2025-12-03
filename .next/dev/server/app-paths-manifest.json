@@ -1,3 +1,5 @@
 {
-  "/page": "app/page.js"
+  "/nosotros/page": "app/nosotros/page.js",
+  "/page": "app/page.js",
+  "/servicios/consultoria-financiera/page": "app/servicios/consultoria-financiera/page.js"
 }

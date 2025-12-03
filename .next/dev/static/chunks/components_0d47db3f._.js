@@ -123,16 +123,16 @@ const navItems = [
         hasDropdown: true,
         dropdownItems: [
             {
+                name: "Asesoria Financiera",
+                href: "/servicios/consultoria-financiera"
+            },
+            {
                 name: "Capacitación Empresarial",
                 href: "/servicios/capacitacion-empresarial"
             },
             {
                 name: "Consultoría de Negocios",
                 href: "/servicios/consultoria-negocios"
-            },
-            {
-                name: "Consultoría Financiera",
-                href: "/servicios/consultoria-financiera"
             },
             {
                 name: "Formación de Emprendedores",
@@ -145,13 +145,13 @@ const navItems = [
         href: "/nosotros"
     },
     {
-        name: "Tipo De Cambio",
-        href: "/tipo-cambio"
-    },
-    {
         name: "Centro De Aprendizaje",
         href: "/centro-de-aprendizaje",
         featured: false
+    },
+    {
+        name: "Tipo De Cambio",
+        href: "/tipo-cambio"
     }
 ];
 function Navbar() {
@@ -672,7 +672,7 @@ function Hero() {
                             transform: 'translateZ(0)'
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
-                            src: "/valtoweb.mp4",
+                            src: "/valtoportada2.mp4",
                             type: "video/mp4"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.tsx",
@@ -701,121 +701,72 @@ function Hero() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex flex-col md:flex-row md:items-center pb-8 md:pb-20 pt-32 md:pt-28",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                        initial: {
-                            opacity: 0,
-                            y: 30
-                        },
-                        animate: {
-                            opacity: 1,
-                            y: 0
-                        },
-                        transition: {
-                            duration: 0.8
-                        },
-                        className: "w-full md:max-w-4xl md:mx-auto text-center space-y-5 md:space-y-6 mb-6 md:mb-0",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-3xl sm:text-4xl md:text-5xl lg:text-4x5 font-black leading-tight text-white uppercase",
-                            style: {
-                                fontFamily: 'Futura Lux, Arial, sans-serif',
-                                letterSpacing: '0.02em'
-                            },
-                            children: [
-                                "TRANSFORMA TU NEGOCIO,",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                    fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 87,
-                                    columnNumber: 35
-                                }, this),
-                                "EN UNA ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                                    initial: {
-                                        opacity: 0,
-                                        y: 20
-                                    },
-                                    animate: {
-                                        opacity: 1,
-                                        y: 0
-                                    },
-                                    exit: {
-                                        opacity: 0,
-                                        y: -20
-                                    },
-                                    transition: {
-                                        duration: 0.5
-                                    },
-                                    className: "font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block",
-                                    style: {
-                                        fontFamily: 'Futura, sans-serif'
-                                    },
-                                    children: lemas[lemaActual]
-                                }, lemaActual, false, {
-                                    fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 88,
-                                    columnNumber: 20
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/Hero.tsx",
-                            lineNumber: 83,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 76,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-full md:hidden relative rounded-2xl overflow-hidden",
+                className: "relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex flex-col justify-end pb-12 md:pb-20 pt-32 md:pt-28",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                    initial: {
+                        opacity: 0,
+                        y: 30
+                    },
+                    animate: {
+                        opacity: 1,
+                        y: 0
+                    },
+                    transition: {
+                        duration: 0.8
+                    },
+                    className: "w-full md:max-w-4xl mx-auto text-center space-y-5 md:space-y-6",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        className: "text-3xl sm:text-4xl md:text-5xl lg:text-4x5 font-black leading-tight text-white uppercase",
                         style: {
-                            height: '50vh'
+                            fontFamily: 'Futura Lux, Arial, sans-serif',
+                            letterSpacing: '0.02em'
                         },
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                                autoPlay: true,
-                                loop: true,
-                                muted: true,
-                                playsInline: true,
-                                className: "w-full h-full object-cover",
-                                style: {
-                                    WebkitBackfaceVisibility: 'hidden',
-                                    WebkitTransform: 'translateZ(0)',
-                                    transform: 'translateZ(0)',
-                                    objectPosition: 'center 30%'
-                                },
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
-                                    src: "/valtoweb.mp4",
-                                    type: "video/mp4"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 117,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
+                            "TRANSFORMA TU NEGOCIO,",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 104,
-                                columnNumber: 11
+                                lineNumber: 87,
+                                columnNumber: 35
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute inset-0",
+                            "EN UNA ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
+                                initial: {
+                                    opacity: 0,
+                                    y: 20
+                                },
+                                animate: {
+                                    opacity: 1,
+                                    y: 0
+                                },
+                                exit: {
+                                    opacity: 0,
+                                    y: -20
+                                },
+                                transition: {
+                                    duration: 0.5
+                                },
+                                className: "font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block",
                                 style: {
-                                    background: 'linear-gradient(to top, rgba(0,38,119,0.4) 0%, transparent 100%)'
-                                }
-                            }, void 0, false, {
+                                    fontFamily: 'Futura, sans-serif'
+                                },
+                                children: lemas[lemaActual]
+                            }, lemaActual, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 119,
-                                columnNumber: 11
+                                lineNumber: 88,
+                                columnNumber: 20
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 103,
-                        columnNumber: 9
+                        lineNumber: 83,
+                        columnNumber: 11
                     }, this)
-                ]
-            }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "[project]/components/Hero.tsx",
+                    lineNumber: 76,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/components/Hero.tsx",
                 lineNumber: 73,
                 columnNumber: 7
@@ -884,7 +835,7 @@ const services = [
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$graduation$2d$cap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__GraduationCap$3e$__["GraduationCap"],
-        title: "CONTULTORIA FINANCIERA",
+        title: "CONSULTORIA FINANCIERA",
         description: "Conoce nuestro servicio de Gestión Empresarial: Planeamiento financiero y tributario – Diagnóstico empresarial – Planeamiento estratégico – Atención al proceso – Organigrama empresarial – Manuales de función – Flujo de caja.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
         features: [],
@@ -940,13 +891,13 @@ function ServiceCard({ service, index }) {
         },
         className: "mb-0",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "grid md:grid-cols-2 min-h-[400px] md:min-h-[550px]",
+            className: "grid md:grid-cols-2 min-h-[320px] md:min-h-[440px]",
             style: {
                 backgroundColor: service.bgColor
             },
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `relative overflow-hidden min-h-[350px] md:min-h-[550px] ${!isEven ? 'md:order-2' : ''}`,
+                    className: `relative overflow-hidden min-h-[240px] md:min-h-[440px] ${!isEven ? 'md:order-2' : ''}`,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0",
                         children: [
@@ -981,10 +932,10 @@ function ServiceCard({ service, index }) {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: `flex flex-col justify-center p-6 md:p-8 lg:p-12 ${!isEven ? 'md:order-1' : ''}`,
+                    className: `flex flex-col justify-center p-5 md:p-6 lg:p-8 ${!isEven ? 'md:order-1' : ''}`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h3, {
-                            className: "text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6 uppercase",
+                            className: "text-2xl md:text-3xl lg:text-4xl font-black mb-3 md:mb-5 uppercase",
                             style: {
                                 color: '#0047BB',
                                 fontFamily: 'Futura, Arial, sans-serif'
@@ -1010,7 +961,7 @@ function ServiceCard({ service, index }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
-                            className: "text-base md:text-lg lg:text-xl text-gray-700 mb-6 md:mb-8 leading-relaxed",
+                            className: "text-sm md:text-base lg:text-lg text-gray-700 mb-5 md:mb-6 leading-relaxed",
                             style: {
                                 fontFamily: 'Arial, sans-serif'
                             },
@@ -1092,7 +1043,7 @@ function ServiceCard({ service, index }) {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: service.link,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                className: "inline-flex items-center px-6 py-3 md:px-8 md:py-4 rounded-full text-white font-bold text-sm md:text-base lg:text-lg shadow-lg hover:shadow-xl transition-all",
+                                className: "inline-flex items-center px-5 py-2.5 md:px-6 md:py-3 rounded-full text-white font-bold text-sm md:text-base shadow-lg hover:shadow-xl transition-all",
                                 style: {
                                     backgroundColor: '#0047BB',
                                     fontFamily: 'Futura, Arial, sans-serif'
@@ -1177,13 +1128,13 @@ function Services() {
         }
     }["Services.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-24 relative",
+        className: "py-20 relative",
         style: {
             background: '#F5F7FA'
         },
         id: "servicios",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
+            className: "w-full max-w-[1250px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     initial: {
@@ -1454,7 +1405,7 @@ function ValueProposition() {
         }
     }["ValueProposition.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-24 relative overflow-hidden",
+        className: "py-20 relative overflow-hidden",
         style: {
             background: 'linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 50%, #FFFFFF 100%)'
         },
@@ -1523,7 +1474,7 @@ function ValueProposition() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
+                className: "w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                         initial: {
@@ -1682,10 +1633,10 @@ function ValueProposition() {
                                                     className: "grid grid-cols-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "p-10 lg:p-14 bg-white",
+                                                            className: "p-6 lg:p-8 bg-white",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-gray-700 text-lg lg:text-xl mb-8 leading-relaxed",
+                                                                    className: "text-gray-700 text-sm lg:text-base mb-4 leading-relaxed",
                                                                     style: {
                                                                         fontFamily: 'Arial, sans-serif'
                                                                     },
@@ -1698,14 +1649,14 @@ function ValueProposition() {
                                                                     columnNumber: 29
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "space-y-4",
+                                                                    className: "space-y-2",
                                                                     children: item.features.map((feature, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                            className: "flex items-center space-x-4",
+                                                                            className: "flex items-center space-x-3",
                                                                             children: [
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                    className: "w-8 h-8 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0",
+                                                                                    className: "w-6 h-6 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0",
                                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                                        className: "w-5 h-5 text-white",
+                                                                                        className: "w-3.5 h-3.5 text-white",
                                                                                         fill: "none",
                                                                                         stroke: "currentColor",
                                                                                         viewBox: "0 0 24 24",
@@ -1730,7 +1681,7 @@ function ValueProposition() {
                                                                                     columnNumber: 35
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                    className: "text-gray-700 text-base lg:text-lg font-medium",
+                                                                                    className: "text-gray-700 text-xs lg:text-sm font-medium",
                                                                                     children: feature
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/components/ValueProposition.tsx",
@@ -1755,15 +1706,15 @@ function ValueProposition() {
                                                             columnNumber: 27
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "p-10 lg:p-14 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center",
+                                                            className: "p-6 lg:p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                                                     whileHover: {
                                                                         scale: 1.1
                                                                     },
-                                                                    className: "w-28 h-28 lg:w-32 lg:h-32 rounded-2xl flex items-center justify-center mb-8 bg-white/10 backdrop-blur-sm mx-auto",
+                                                                    className: "w-16 h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center mb-4 bg-white/10 backdrop-blur-sm mx-auto",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(item.icon, {
-                                                                        className: "w-14 h-14 lg:w-16 lg:h-16 text-white"
+                                                                        className: "w-8 h-8 lg:w-10 lg:h-10 text-white"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/ValueProposition.tsx",
                                                                         lineNumber: 233,
@@ -1775,7 +1726,7 @@ function ValueProposition() {
                                                                     columnNumber: 29
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                    className: "text-3xl lg:text-4xl font-bold text-white mb-6 text-center",
+                                                                    className: "text-xl lg:text-2xl font-bold text-white mb-3 text-center",
                                                                     style: {
                                                                         fontFamily: 'Futura, sans-serif'
                                                                     },
@@ -1786,7 +1737,7 @@ function ValueProposition() {
                                                                     columnNumber: 29
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                    className: "text-white/90 text-lg lg:text-xl leading-relaxed text-center",
+                                                                    className: "text-white/90 text-sm lg:text-base leading-relaxed text-center",
                                                                     style: {
                                                                         fontFamily: 'Arial, sans-serif'
                                                                     },
@@ -1823,10 +1774,10 @@ function ValueProposition() {
                                                 className: "grid grid-cols-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "p-8 bg-white",
+                                                        className: "p-6 lg:p-8 bg-white",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-gray-700 text-base mb-6 leading-relaxed",
+                                                                className: "text-gray-700 text-sm lg:text-base mb-4 leading-relaxed",
                                                                 style: {
                                                                     fontFamily: 'Arial, sans-serif'
                                                                 },
@@ -1839,7 +1790,7 @@ function ValueProposition() {
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "space-y-3",
+                                                                className: "space-y-2",
                                                                 children: item.features.map((feature, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         className: "flex items-center space-x-3",
                                                                         children: [
@@ -1871,7 +1822,7 @@ function ValueProposition() {
                                                                                 columnNumber: 33
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: "text-gray-700 text-sm font-medium",
+                                                                                className: "text-gray-700 text-xs lg:text-sm font-medium",
                                                                                 children: feature
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/ValueProposition.tsx",
@@ -1896,15 +1847,15 @@ function ValueProposition() {
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center",
+                                                        className: "p-6 lg:p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                                                 whileHover: {
                                                                     scale: 1.1
                                                                 },
-                                                                className: "w-20 h-20 rounded-2xl flex items-center justify-center mb-6 bg-white/10 backdrop-blur-sm mx-auto",
+                                                                className: "w-16 h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center mb-4 bg-white/10 backdrop-blur-sm mx-auto",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(item.icon, {
-                                                                    className: "w-10 h-10 text-white"
+                                                                    className: "w-8 h-8 lg:w-10 lg:h-10 text-white"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/ValueProposition.tsx",
                                                                     lineNumber: 275,
@@ -1916,7 +1867,7 @@ function ValueProposition() {
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                className: "text-2xl font-bold text-white mb-4 text-center",
+                                                                className: "text-xl lg:text-2xl font-bold text-white mb-3 text-center",
                                                                 style: {
                                                                     fontFamily: 'Futura, sans-serif'
                                                                 },
@@ -1927,7 +1878,7 @@ function ValueProposition() {
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "text-white/90 leading-relaxed text-center",
+                                                                className: "text-white/90 text-sm lg:text-base leading-relaxed text-center",
                                                                 style: {
                                                                     fontFamily: 'Arial, sans-serif'
                                                                 },

@@ -248,38 +248,38 @@ export default function ValueProposition() {
                     <div className="rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full bg-white">
                       <div className="grid grid-cols-2">
                         {/* Left side - White background */}
-                        <div className="p-6 bg-white">
-                          <p className="text-gray-700 text-sm mb-5 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
+                        <div className="p-6 lg:p-8 bg-white">
+                          <p className="text-gray-700 text-sm lg:text-base mb-4 leading-relaxed" style={{ fontFamily: 'Arial, sans-serif' }} dangerouslySetInnerHTML={{ __html: item.leftDescription }} />
                           
                           {/* Features list */}
-                          <div className="space-y-2.5">
+                          <div className="space-y-2">
                             {item.features.map((feature, i) => (
                               <div key={i} className="flex items-center space-x-3">
-                                <div className="w-5 h-5 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
-                                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-6 h-6 rounded-full bg-[#0047BB] flex items-center justify-center flex-shrink-0">
+                                  <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                   </svg>
                                 </div>
-                                <span className="text-gray-700 text-xs font-medium">{feature}</span>
+                                <span className="text-gray-700 text-xs lg:text-sm font-medium">{feature}</span>
                               </div>
                             ))}
                           </div>
                         </div>
                         
                         {/* Right side - Blue VALTO background with gradient */}
-                        <div className="p-6 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
+                        <div className="p-6 lg:p-8 bg-gradient-to-br from-[#002677] to-[#0047BB] flex flex-col justify-center">
                           <motion.div
-                            whileHover={{ scale: 1.08 }}
-                            className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 bg-white/10 backdrop-blur-sm mx-auto"
+                            whileHover={{ scale: 1.1 }}
+                            className="w-16 h-16 lg:w-20 lg:h-20 rounded-2xl flex items-center justify-center mb-4 bg-white/10 backdrop-blur-sm mx-auto"
                           >
-                            <item.icon className="w-8 h-8 text-white" />
+                            <item.icon className="w-8 h-8 lg:w-10 lg:h-10 text-white" />
                           </motion.div>
                           
-                          <h3 className="text-xl font-bold text-white mb-3 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
+                          <h3 className="text-xl lg:text-2xl font-bold text-white mb-3 text-center" style={{ fontFamily: 'Futura, sans-serif' }}>
                             {item.title}
                           </h3>
                           
-                          <p className="text-white/90 text-sm leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
+                          <p className="text-white/90 text-sm lg:text-base leading-relaxed text-center" style={{ fontFamily: 'Arial, sans-serif' }}>
                             {item.description}
                           </p>
                         </div>

@@ -123,16 +123,16 @@ const navItems = [
         hasDropdown: true,
         dropdownItems: [
             {
+                name: "Asesoria Financiera",
+                href: "/servicios/consultoria-financiera"
+            },
+            {
                 name: "Capacitación Empresarial",
                 href: "/servicios/capacitacion-empresarial"
             },
             {
                 name: "Consultoría de Negocios",
                 href: "/servicios/consultoria-negocios"
-            },
-            {
-                name: "Consultoría Financiera",
-                href: "/servicios/consultoria-financiera"
             },
             {
                 name: "Formación de Emprendedores",
@@ -145,13 +145,13 @@ const navItems = [
         href: "/nosotros"
     },
     {
-        name: "Tipo De Cambio",
-        href: "/tipo-cambio"
-    },
-    {
         name: "Centro De Aprendizaje",
         href: "/centro-de-aprendizaje",
         featured: false
+    },
+    {
+        name: "Tipo De Cambio",
+        href: "/tipo-cambio"
     }
 ];
 function Navbar() {
