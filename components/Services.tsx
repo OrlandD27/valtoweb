@@ -33,7 +33,7 @@ const services = [
   },
   {
     icon: GraduationCap,
-    title: "CONTULTORIA FINANCIERA",
+    title: "CONSULTORIA FINANCIERA",
     description:
       "Conoce nuestro servicio de Gestión Empresarial: Planeamiento financiero y tributario – Diagnóstico empresarial – Planeamiento estratégico – Atención al proceso – Organigrama empresarial – Manuales de función – Flujo de caja.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
