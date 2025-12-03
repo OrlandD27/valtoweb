@@ -39,3 +39,27 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 [00:23:06.813] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
 [00:23:27.337] Server  LOG      ✓ Compiled in 80ms
 [00:23:41.626] Server  LOG      ✓ Compiled in 216ms
+[00:25:59.848] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:27:46.509] Server  LOG      ✓ Compiled in 46ms
+[00:28:44.812] Server  LOG      ✓ Compiled in 102ms
+[00:29:28.243] Server  LOG      ✓ Compiled in 84ms
+[00:30:37.165] Server  LOG      ✓ Compiled in 126ms
+[00:31:14.079] Server  LOG      ✓ Compiled in 35ms
+[00:31:19.070] Server  LOG      ✓ Compiled in 36ms
+[00:31:20.777] Server  LOG      ✓ Compiled in 73ms
+[00:31:29.386] Server  LOG      ✓ Compiled in 31ms
+[00:31:32.983] Server  LOG      ✓ Compiled in 32ms
+[00:31:34.957] Server  LOG      ✓ Compiled in 59ms
+[00:31:38.818] Server  LOG      ✓ Compiled in 64ms
+[00:32:43.378] Server  LOG      ✓ Compiled in 47ms
+[00:32:54.372] Server  LOG      ✓ Compiled in 31ms
+[00:33:15.175] Server  LOG      ✓ Compiled in 33ms
+[00:33:23.112] Server  LOG      ✓ Compiled in 35ms
+[00:33:58.693] Server  LOG      ✓ Compiled in 102ms
+[00:34:05.973] Server  LOG      ✓ Compiled in 35ms
+[00:34:46.483] Browser WARN    Image with src "/fotoportada2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:35:00.901] Browser WARN    Image with src "/valtoimage.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:35:01.193] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
+[00:35:01.283] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353

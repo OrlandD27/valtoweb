@@ -45,7 +45,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: '#002677' }}>
-      {/* Background Video with Overlay - Hidden on mobile, visible on desktop */}
+      {/* Background Video for Desktop */}
       <div className="absolute inset-0 hidden md:block">
         <video 
           autoPlay 
@@ -69,8 +69,55 @@ export default function Hero() {
         />
       </div>
 
-      {/* Content Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex flex-col justify-end pb-12 md:pb-20 pt-32 md:pt-28">
+      {/* Mobile Layout - Video + Text Stacked */}
+      <div className="md:hidden relative z-10 flex flex-col min-h-screen pt-20">
+        {/* Video Container for Mobile */}
+        <div className="flex-1 relative w-full flex items-center justify-center">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-auto max-h-[70vh]"
+            style={{
+              WebkitBackfaceVisibility: 'hidden',
+              WebkitTransform: 'translateZ(0)',
+              transform: 'translateZ(0)'
+            }}
+          >
+            <source src="/valtoportada2.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* Text Content for Mobile */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full px-20 pb-35 pt-6 text-center space-y-5"
+        >
+          <h1 
+            className="text-3xl sm:text-4xl font-black leading-tight text-white uppercase"
+            style={{ fontFamily: 'Futura Lux, Arial, sans-serif', letterSpacing: '0.02em' }}
+          >
+            TRANSFORMA TU NEGOCIO,<br />
+            EN UNA <motion.span 
+              key={lemaActual}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="font-bold text-white bg-[#0056D6] px-3 py-1 rounded-lg inline-block" 
+              style={{ fontFamily: 'Futura, sans-serif' }}
+            >
+              {lemas[lemaActual]}
+            </motion.span>
+          </h1>
+        </motion.div>
+      </div>
+
+      {/* Desktop Content */}
+      <div className="hidden md:flex relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 min-h-screen flex-col justify-end pb-12 md:pb-20 pt-32 md:pt-28">
         
         {/* Text Content - Bottom aligned and centered */}
         <motion.div
