@@ -52,6 +52,9 @@ export default function Hero() {
           loop 
           muted 
           playsInline
+          webkit-playsinline="true"
+          preload="auto"
+          disablePictureInPicture
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{
             WebkitBackfaceVisibility: 'hidden',
@@ -78,6 +81,9 @@ export default function Hero() {
             loop 
             muted 
             playsInline
+            webkit-playsinline="true"
+            preload="auto"
+            disablePictureInPicture
             className="w-full h-auto max-h-[70vh]"
             style={{
               WebkitBackfaceVisibility: 'hidden',

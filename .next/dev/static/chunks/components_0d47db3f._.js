@@ -665,6 +665,9 @@ function Hero() {
                         loop: true,
                         muted: true,
                         playsInline: true,
+                        "webkit-playsinline": "true",
+                        preload: "auto",
+                        disablePictureInPicture: true,
                         className: "absolute inset-0 w-full h-full object-cover object-center",
                         style: {
                             WebkitBackfaceVisibility: 'hidden',
@@ -676,7 +679,7 @@ function Hero() {
                             type: "video/mp4"
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.tsx",
-                            lineNumber: 62,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
@@ -691,7 +694,7 @@ function Hero() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 64,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this)
                 ]
@@ -710,6 +713,9 @@ function Hero() {
                             loop: true,
                             muted: true,
                             playsInline: true,
+                            "webkit-playsinline": "true",
+                            preload: "auto",
+                            disablePictureInPicture: true,
                             className: "w-full h-auto max-h-[70vh]",
                             style: {
                                 WebkitBackfaceVisibility: 'hidden',
@@ -721,17 +727,17 @@ function Hero() {
                                 type: "video/mp4"
                             }, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 88,
+                                lineNumber: 94,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/Hero.tsx",
-                            lineNumber: 76,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 75,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -757,7 +763,7 @@ function Hero() {
                                 "TRANSFORMA TU NEGOCIO,",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 109,
                                     columnNumber: 35
                                 }, this),
                                 "EN UNA ",
@@ -784,24 +790,24 @@ function Hero() {
                                     children: lemas[lemaActual]
                                 }, lemaActual, false, {
                                     fileName: "[project]/components/Hero.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 110,
                                     columnNumber: 20
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/Hero.tsx",
-                            lineNumber: 99,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 93,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Hero.tsx",
-                lineNumber: 73,
+                lineNumber: 76,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -829,7 +835,7 @@ function Hero() {
                             "TRANSFORMA TU NEGOCIO,",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 134,
+                                lineNumber: 140,
                                 columnNumber: 35
                             }, this),
                             "EN UNA ",
@@ -856,23 +862,23 @@ function Hero() {
                                 children: lemas[lemaActual]
                             }, lemaActual, false, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 135,
+                                lineNumber: 141,
                                 columnNumber: 20
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 130,
+                        lineNumber: 136,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Hero.tsx",
-                    lineNumber: 123,
+                    lineNumber: 129,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Hero.tsx",
-                lineNumber: 120,
+                lineNumber: 126,
                 columnNumber: 7
             }, this)
         ]

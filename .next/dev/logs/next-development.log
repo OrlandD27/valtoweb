@@ -63,3 +63,15 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 [00:35:01.193] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
 [00:35:01.283] Server  LOG     ✅ Tasa interbancaria: 3.369717 "→ Tasa comercial ajustada:" 3.353
+[00:35:41.945] Server  WARN    Image with src "/fotoportada2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:35:42.171] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:35:42.354] Browser WARN    Image with src "/fotoportada2.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:35:42.354] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:36:55.503] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:55.811] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:36:58.071] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:58.098] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:36:58.479] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:58.692] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
