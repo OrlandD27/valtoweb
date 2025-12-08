@@ -9,6 +9,7 @@
     "/_full",
     "/servicios/__PAGE__",
     "/servicios",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }

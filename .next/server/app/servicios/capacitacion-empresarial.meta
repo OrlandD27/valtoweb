@@ -10,6 +10,7 @@
     "/servicios/capacitacion-empresarial/__PAGE__",
     "/servicios/capacitacion-empresarial",
     "/servicios",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }

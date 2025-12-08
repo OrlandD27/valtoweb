@@ -46,6 +46,12 @@
       "namedRegex": "^/agendar\\-cita(?:/)?$"
     },
     {
+      "page": "/api/libro-reclamaciones",
+      "regex": "^/api/libro\\-reclamaciones(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/libro\\-reclamaciones(?:/)?$"
+    },
+    {
       "page": "/api/tipo-cambio",
       "regex": "^/api/tipo\\-cambio(?:/)?$",
       "routeKeys": {},

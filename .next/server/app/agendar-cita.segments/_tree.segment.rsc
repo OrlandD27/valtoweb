@@ -1,9 +1,3 @@
-1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/64c0a5e3a0354479.js"],"ViewportBoundary"]
-4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/64c0a5e3a0354479.js"],"MetadataBoundary"]
-5:"$Sreact.suspense"
-:HL["/_next/static/chunks/53d1f3bb92bf0e3e.css","style"]
+:HL["/_next/static/chunks/a537ccb4acd01791.css","style"]
 :HL["/_next/static/chunks/947b6a80bcdd8921.css","style"]
-0:{"buildId":"_ug7JIFtO6mX_KfwsOqe-","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"agendar-cita","paramType":null,"paramKey":"agendar-cita","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"head":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],null]}],"isHeadPartial":false,"staleTime":300}
-3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-6:[["$","title","0",{"children":"VALTO Management Consulting | Asesoría Financiera y Empresarial"}],["$","meta","1",{"name":"description","content":"Brindamos asesoría para créditos, financiamiento y capacitación empresarial a emprendedores y empresarios."}]]
+0:{"buildId":"6iwqQ7ZFpKgfzGFS6QOrz","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"agendar-cita","paramType":null,"paramKey":"agendar-cita","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

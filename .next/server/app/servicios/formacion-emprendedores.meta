@@ -10,6 +10,7 @@
     "/servicios/formacion-emprendedores/__PAGE__",
     "/servicios/formacion-emprendedores",
     "/servicios",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }

@@ -2,6 +2,7 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/agendar-cita/page": "app/agendar-cita/page.js",
+  "/api/libro-reclamaciones/route": "app/api/libro-reclamaciones/route.js",
   "/api/tipo-cambio/route": "app/api/tipo-cambio/route.js",
   "/centro-de-aprendizaje/page": "app/centro-de-aprendizaje/page.js",
   "/libro-de-reclamaciones/page": "app/libro-de-reclamaciones/page.js",

@@ -10,6 +10,7 @@
     "/servicios/consultoria-negocios/__PAGE__",
     "/servicios/consultoria-negocios",
     "/servicios",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }

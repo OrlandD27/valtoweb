@@ -74,6 +74,10 @@
         {
           "protocol": "https",
           "hostname": "www.pwc.pe"
+        },
+        {
+          "protocol": "https",
+          "hostname": "images.unsplash.com"
         }
       ],
       "qualities": [
@@ -162,7 +166,6 @@
       "serverSourceMaps": false,
       "linkNoTouchStart": false,
       "caseSensitiveRoutes": false,
-      "clientSegmentCache": true,
       "dynamicOnHover": false,
       "preloadEntriesOnStart": true,
       "clientRouterFilter": true,

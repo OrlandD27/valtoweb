@@ -2,6 +2,7 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/agendar-cita/page": "/agendar-cita",
+  "/api/libro-reclamaciones/route": "/api/libro-reclamaciones",
   "/api/tipo-cambio/route": "/api/tipo-cambio",
   "/centro-de-aprendizaje/page": "/centro-de-aprendizaje",
   "/libro-de-reclamaciones/page": "/libro-de-reclamaciones",

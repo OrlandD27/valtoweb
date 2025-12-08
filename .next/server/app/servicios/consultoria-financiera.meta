@@ -10,6 +10,7 @@
     "/servicios/consultoria-financiera/__PAGE__",
     "/servicios/consultoria-financiera",
     "/servicios",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }
